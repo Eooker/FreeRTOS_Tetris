@@ -1,0 +1,1452 @@
+\doxysection{E\+:/\+STM32文件/练习/\+LTDC\+\_\+\+DMA2\+D\+\_\+2023\+\_\+12\+\_\+5/\+HAL\+\_\+\+F429/\+User/\+LCD/bsp\+\_\+lcd.h 文件参考}
+\hypertarget{bsp__lcd_8h}{}\label{bsp__lcd_8h}\index{E:/STM32文件/练习/LTDC\_DMA2D\_2023\_12\_5/HAL\_F429/User/LCD/bsp\_lcd.h@{E:/STM32文件/练习/LTDC\_DMA2D\_2023\_12\_5/HAL\_F429/User/LCD/bsp\_lcd.h}}
+{\ttfamily \#include "{}stm32f4xx.\+h"{}}\newline
+{\ttfamily \#include "{}fonts.\+h"{}}\newline
+\doxysubsubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_c_d___draw_prop_type_def}{LCD\+\_\+\+Draw\+Prop\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a1c5ab4b6c3330335a1b0fdf796f89224}{LTDC\+\_\+\+R0\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOH
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ac20ad72b94a27b353aefbd997234c8b6}{LTDC\+\_\+\+R0\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+2
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4826f4f1ea9ea19eb05cb53b6a542b42}{LTDC\+\_\+\+R1\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOH
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a81cfb5ff9357b8b8be9337f4a891c739}{LTDC\+\_\+\+R1\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+3
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ab2d140bb3a765bd70ab379fcce0304a8}{LTDC\+\_\+\+R2\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOH
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a064e324111a5f60bb1de7a048eefe5af}{LTDC\+\_\+\+R2\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+8
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a92cc820208ffa8cbec1d8c114bd0681e}{LTDC\+\_\+\+R3\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a93617bc0bad5d732a3a094490911208e}{LTDC\+\_\+\+R3\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a429a729e8ff1613cfc659cabd6055db5}{LTDC\+\_\+\+R4\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOA
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ad386f2922635ea084179e56edec9ba4e}{LTDC\+\_\+\+R4\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+11
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ae2454422543e60a86aff1f1e647d97cf}{LTDC\+\_\+\+R5\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOA
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_acd0e34ff92c7e1b27f262ccabc23daa0}{LTDC\+\_\+\+R5\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+12
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_adcf18d5cebc0d5e39785da7c49103c53}{LTDC\+\_\+\+R6\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a67fe9fcdcca7993984c27f9ef2aff1fa}{LTDC\+\_\+\+R6\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+1
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a22ea33a32476074177df5a65c11447b1}{LTDC\+\_\+\+R7\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOG
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af122d2d8f6e8cc2c7fb85bbc5fc80667}{LTDC\+\_\+\+R7\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af77b3a29d9cb8f49c6530700fdcd3863}{LTDC\+\_\+\+G0\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOE
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af910df0275c9362c33eb2d630e62ac09}{LTDC\+\_\+\+G0\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4fbf33af27757720f9734758f99b32f4}{LTDC\+\_\+\+G1\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOE
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af79d03f4c770a6619f58b9d3964aeb3c}{LTDC\+\_\+\+G1\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4a91f61d15d7f6080b6309fda1f09bf2}{LTDC\+\_\+\+G2\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOH
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a87687e5b23115bd8738a80d4366335eb}{LTDC\+\_\+\+G2\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+13
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aafe6d6da3668f28c7bdaefa0d055b569}{LTDC\+\_\+\+G3\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOG
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a932de36d8b6e7c32ac4f89d378bd7c78}{LTDC\+\_\+\+G3\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+10
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a179c8c3724d1af69ae42b6c32ddfd7aa}{LTDC\+\_\+\+G4\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOH
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4449aca86afe3c857397b7e1c07bc27f}{LTDC\+\_\+\+G4\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+15
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a5c0a061ebb8c9dcab543a4b7b5a8c903}{LTDC\+\_\+\+G5\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOI
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a9a7b47eaaab744a7470fb71113e103a4}{LTDC\+\_\+\+G5\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aaa34caebaae2f42d3a3d0240f102992d}{LTDC\+\_\+\+G6\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOC
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af6232635ec9969ad988f676a63f0cdc2}{LTDC\+\_\+\+G6\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a10a2ac89db4e17053d86ff660151bbf3}{LTDC\+\_\+\+G7\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOI
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a90c5d19f4267d31690f664846fe26fb7}{LTDC\+\_\+\+G7\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+2
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a79af58b7660fdb743048b3be90ee46c9}{LTDC\+\_\+\+B0\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOE
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a32965c9ea71523cc985d39b74f548c44}{LTDC\+\_\+\+B0\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ad328d6cdf6ed1d83605d953fdd059262}{LTDC\+\_\+\+B1\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOG
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ad3937bb8a5304967c8b15adfa2234dc1}{LTDC\+\_\+\+B1\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+12
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a7931b879385ded12de6ea796eb32414d}{LTDC\+\_\+\+B2\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOD
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_adbf5c6ba2076d1787fa9aeb7f811ac0b}{LTDC\+\_\+\+B2\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ab8340085b4d04d5868318c3ae24cbb96}{LTDC\+\_\+\+B3\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOG
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a1bd5cea61b627c803b128c6bc88c501e}{LTDC\+\_\+\+B3\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+11
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ae655ddc3a773e72a6a6a81dbdd457fcb}{LTDC\+\_\+\+B4\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOI
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a09ee11b7ce669792d575979ac54b2e06}{LTDC\+\_\+\+B4\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a05558dbe3e369d9fc845221dbed9e084}{LTDC\+\_\+\+B5\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOA
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4a15df777784b4ec61c775cbd62a3e1f}{LTDC\+\_\+\+B5\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+3
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a495e719e7ed55808392ffc88f50b7c91}{LTDC\+\_\+\+B6\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a51878a3c6218c8ff04baecfb5a089a99}{LTDC\+\_\+\+B6\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+8
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a559ae5ccddb28d557670ef607ffc27d0}{LTDC\+\_\+\+B7\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aae48957e4b24e62174895bb58cb9359a}{LTDC\+\_\+\+B7\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+9
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_acfff6f0aa0436b59872deca5e966e47b}{LTDC\+\_\+\+CLK\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOG
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a124475377b6506069ffb8f7a34f322a0}{LTDC\+\_\+\+CLK\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aa1654d844a7482659e24bbd5eaf03837}{LTDC\+\_\+\+HSYNC\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOI
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a6b32afec29268a58a0a94da0f0a1b732}{LTDC\+\_\+\+HSYNC\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+10
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a274d6e19dd2f7288d8ad9c36eee8600f}{LTDC\+\_\+\+VSYNC\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOI
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a9e2024e3aac78a79a2eaafb3ae63d2ce}{LTDC\+\_\+\+VSYNC\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+9
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aa6ecbbfd496d5328002c35d7db859459}{LTDC\+\_\+\+DE\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOF
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ae3a3fbdb92fd57b813990f57a79bfb6a}{LTDC\+\_\+\+DE\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+10
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ad67037bac69bbed3168851ee5d7d1e51}{LTDC\+\_\+\+DISP\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOD
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af2853d86716514d92fa96a71b56ec1ce}{LTDC\+\_\+\+DISP\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af745db49c2539e75e6e07ef0831a3140}{LTDC\+\_\+\+BL\+\_\+\+GPIO\+\_\+\+PORT}}~GPIOD
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4e7bf4c13bfab0bb50910201162560f7}{LTDC\+\_\+\+BL\+\_\+\+GPIO\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_afda119803ff9a1e2ea2b121f622fd511}{LTDC\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}}()
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a5647ec8a40b49d6662226601eb9eb452}{LCD\+\_\+\+COLOR\+\_\+\+BLUE}}~((uint32\+\_\+t)0x\+FF0000\+FF)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aaee512e5955e0ed1bf67c7a3bc76fc53}{LCD\+\_\+\+COLOR\+\_\+\+GREEN}}~((uint32\+\_\+t)0x\+FF00\+FF00)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af125d28a3cd79b94a81fc572990f300e}{LCD\+\_\+\+COLOR\+\_\+\+RED}}~((uint32\+\_\+t)0x\+FFFF0000)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a5a921cf0f9febd5de4fa3c40cda4dd7d}{LCD\+\_\+\+COLOR\+\_\+\+CYAN}}~((uint32\+\_\+t)0x\+FF00\+FFFF)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ad65d67388318c734a32cdfb7a5935f59}{LCD\+\_\+\+COLOR\+\_\+\+MAGENTA}}~((uint32\+\_\+t)0x\+FFFF00\+FF)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a11062db6ba403700019e98a8b7c56f18}{LCD\+\_\+\+COLOR\+\_\+\+YELLOW}}~((uint32\+\_\+t)0x\+FFFFFF00)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a347a89173e8bfce09a85beea805ee202}{LCD\+\_\+\+COLOR\+\_\+\+LIGHTBLUE}}~((uint32\+\_\+t)0x\+FF8080\+FF)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a9d4e0fc799fada640cccf87cbf7d89ce}{LCD\+\_\+\+COLOR\+\_\+\+LIGHTGREEN}}~((uint32\+\_\+t)0x\+FF80\+FF80)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af03b9162384eeefe4381927c28e5ef1c}{LCD\+\_\+\+COLOR\+\_\+\+LIGHTRED}}~((uint32\+\_\+t)0x\+FFFF8080)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af33fd44a04804e04e93b0d341d89d813}{LCD\+\_\+\+COLOR\+\_\+\+LIGHTCYAN}}~((uint32\+\_\+t)0x\+FF80\+FFFF)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aa1f38c83f7a484fe440eb9ef0122f7f1}{LCD\+\_\+\+COLOR\+\_\+\+LIGHTMAGENTA}}~((uint32\+\_\+t)0x\+FFFF80\+FF)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aaaea2b5bd2d8b6fd01187f61e80e5820}{LCD\+\_\+\+COLOR\+\_\+\+LIGHTYELLOW}}~((uint32\+\_\+t)0x\+FFFFFF80)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a67921b0000a7f8890d660a8725edbc19}{LCD\+\_\+\+COLOR\+\_\+\+DARKBLUE}}~((uint32\+\_\+t)0x\+FF000080)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4d604eacac3f85176b721eb590689ee0}{LCD\+\_\+\+COLOR\+\_\+\+DARKGREEN}}~((uint32\+\_\+t)0x\+FF008000)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a12d859a7de90215057fee241f1b67eb6}{LCD\+\_\+\+COLOR\+\_\+\+DARKRED}}~((uint32\+\_\+t)0x\+FF800000)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af9e9a56d88620375c5826fb0a56381f8}{LCD\+\_\+\+COLOR\+\_\+\+DARKCYAN}}~((uint32\+\_\+t)0x\+FF008080)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a795752bdd0506d1a8cd1ad5e2c35f93e}{LCD\+\_\+\+COLOR\+\_\+\+DARKMAGENTA}}~((uint32\+\_\+t)0x\+FF800080)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a49fdaac69765cd63a68d30cc753b77fb}{LCD\+\_\+\+COLOR\+\_\+\+DARKYELLOW}}~((uint32\+\_\+t)0x\+FF808000)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0}{LCD\+\_\+\+COLOR\+\_\+\+WHITE}}~((uint32\+\_\+t)0x\+FFFFFFFF)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a1fe85812ee1d9975211e1bd329664afc}{LCD\+\_\+\+COLOR\+\_\+\+LIGHTGRAY}}~((uint32\+\_\+t)0x\+FFD3\+D3\+D3)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a424fdb50026cdfc18a287b01965983f0}{LCD\+\_\+\+COLOR\+\_\+\+GRAY}}~((uint32\+\_\+t)0x\+FF808080)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aed58783a24f35617da7c12b1053bcbbf}{LCD\+\_\+\+COLOR\+\_\+\+DARKGRAY}}~((uint32\+\_\+t)0x\+FF404040)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b}{LCD\+\_\+\+COLOR\+\_\+\+BLACK}}~((uint32\+\_\+t)0x\+FF000000)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ab6ed75970fe02ebf907864cfe8e112ad}{LCD\+\_\+\+COLOR\+\_\+\+BROWN}}~((uint32\+\_\+t)0x\+FFA52\+A2A)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a5da26295a6c0a7af2095b2579ce7c0f9}{LCD\+\_\+\+COLOR\+\_\+\+ORANGE}}~((uint32\+\_\+t)0x\+FFFFA500)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4b140f901775e4563eea22ea0885e834}{LCD\+\_\+\+COLOR\+\_\+\+TRANSPARENT}}~((uint32\+\_\+t)0x\+FF000000)
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a95bc19f28c2c0fdca40f6070c09f7a71}{LCD\+\_\+\+DEFAULT\+\_\+\+FONT}}~Font24
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a215a46e7477262a8280bcb27b63aaabd}{LCD\+\_\+\+PIXEL\+\_\+\+WIDTH}}~(uint16\+\_\+t)800
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_af796d6844b178c92f38b8cb4b9e41c78}{LCD\+\_\+\+PIXEL\+\_\+\+HEIGHT}}~(uint16\+\_\+t)480
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aa9625d05e06981f0fef5e2463857aa06}{HBP}}~46
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_ac7be230cb2251f6c64469f4f6a5c8801}{VBP}}~23
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a4c7bfeb24a7c59a5df72fb6dbb6b3a01}{HSW}}~1
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_aea3fdadabf655347d1e4da024ce049ad}{VSW}}~1
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a0f41581c8fb5199646fb7875bfeec108}{HFP}}~22
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a7216a9d43a70a221209fc3a7dd0b0163}{VFP}}~22
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a03f08faebee92aa36fbcbf4cf77b5173}{MAX\+\_\+\+LAYER\+\_\+\+NUMBER}}~(uint32\+\_\+t)2
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_a5fa41785a8748c49b61639f4ddd8610b}{LTDC\+\_\+\+ACTIVE\+\_\+\+LAYER}}~(uint32\+\_\+t)1
+\item 
+\#define \mbox{\hyperlink{bsp__lcd_8h_abce6a3e4f22835ff690f563ff366ffcf}{LCD\+\_\+\+FB\+\_\+\+START\+\_\+\+ADDRESS}}~(uint32\+\_\+t)0x\+D0000000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp__lcd_8h_aed5bd5f3f7340dbdb2e7f50f94163789}{LCD\+\_\+\+Display\+On}} (void)
+\item 
+void \mbox{\hyperlink{bsp__lcd_8h_ae06ea1bb5f28922b6017676d1aaa61e4}{LCD\+\_\+\+Display\+Off}} (void)
+\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a05a9b470a504b444eb29d34bea640652}{LTDC\+\_\+\+GPIO\+\_\+\+Config}} (void)
+\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a6750a89764ac496272315a241ff377f5}{LCD\+\_\+\+CLK\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em STM32与液晶屏通讯的时钟配置 时钟配置为9.6MHz \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a6657ebb2be9c7538015074a022af9d3c}{LTDC\+\_\+\+Config}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{bsp__lcd_8h_a6a405abda5e830f0f33dacfd21ec1e51}{LCD\+\_\+\+Get\+XSize}} (void)
+\begin{DoxyCompactList}\small\item\em 获取\+LCD当前层\+X轴的大小 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{bsp__lcd_8h_aadafb98eeb93c99b8468d36e406ac90e}{LCD\+\_\+\+Get\+YSize}} (void)
+\begin{DoxyCompactList}\small\item\em 获取\+LCD当前层\+Y轴的大小 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a8e3dca6342e3dd739edbec8a23488e56}{LCD\+\_\+\+Set\+XSize}} (uint32\+\_\+t image\+Width\+Pixels)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD当前层\+X轴的大小 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a320415ea9b549dd0a4fa2452bde4565c}{LCD\+\_\+\+Set\+YSize}} (uint32\+\_\+t image\+Height\+Pixels)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD当前层\+Y轴的大小 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a1fb167c16cf7ec34f8170915d2302b7a}{LCD\+\_\+\+Layer\+Init}} (uint16\+\_\+t Layer\+Index, uint32\+\_\+t FB\+\_\+\+Address, uint32\+\_\+t Pixel\+Format)
+\begin{DoxyCompactList}\small\item\em 层级初始化 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a06ea822c4061bfb2e466b851411c0aa9}{LCD\+\_\+\+Config}} (void)
+\item 
+void \mbox{\hyperlink{bsp__lcd_8h_af1420ea7b39dd570d4d6edbf789f7640}{LCD\+\_\+\+Select\+Layer}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em 选择\+LCD的当前层 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a4b7c3b9a5af160da3faedc9baa0bf459}{LCD\+\_\+\+Set\+Layer\+Visible}} (uint32\+\_\+t Layer\+Index, Functional\+State State)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD层的可视化(即禁止或使能某一层) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a0568836139e5177b6ce37e470e255c77}{LCD\+\_\+\+Set\+Transparency}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD的透明度常量，即\+Alpha \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_affaff29c7f76c5bb37da2501f9799aaf}{LCD\+\_\+\+Set\+Layer\+Address}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t Address)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD缓冲帧的首地址 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{bsp__lcd_8h_a846fbcfe435b2eb20d412c1793350a03}{LL\+\_\+\+Fill\+Buffer}} (uint32\+\_\+t Layer\+Index, void \texorpdfstring{$\ast$}{*}p\+Dst, uint32\+\_\+t x\+Size, uint32\+\_\+t y\+Size, uint32\+\_\+t Off\+Line, uint32\+\_\+t Color\+Index)
+\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a10cbb1fbca34e835f98e1172c2756990}{LCD\+\_\+\+Draw\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint32\+\_\+t RGB\+\_\+\+Code)
+\begin{DoxyCompactList}\small\item\em 绘制一个点 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a268429ba50ca073c233224309fac9f46}{LCD\+\_\+\+Draw\+HLine}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em 绘制一条水平直线 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a370ea7eacea2dd8fcc352ce8dcbaa151}{LCD\+\_\+\+Draw\+VLine}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em 绘制一条垂直直线 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a398e124cc5572547086d78fc9b7fc1f4}{LCD\+\_\+\+Draw\+Any\+Line}} (uint16\+\_\+t X1pos, uint16\+\_\+t Y1pos, uint16\+\_\+t X2pos, uint16\+\_\+t Y2pos)
+\begin{DoxyCompactList}\small\item\em 绘制任意两点之间的一条直线 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_adfc663e63fa8138ef0c4f4a1b31c7807}{LCD\+\_\+\+Fill\+Rect}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em 填充一个实心矩形 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_ae57144a5b4342ddd500fb50018123dc6}{LCD\+\_\+\+Clear}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em LCD当前层清屏 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a83e11eb72448bdf1c3e729aea39e921c}{LCD\+\_\+\+Clear\+Line}} (uint32\+\_\+t Line)
+\begin{DoxyCompactList}\small\item\em 清除一行 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{bsp__lcd_8h_ac0735470c4c9bc0130dd03ae6cb2b056}{LCD\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em 读取\+LCD的像素值 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a31a4bb3bde55452bbb8370f5d935e41d}{LCD\+\_\+\+Set\+Text\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD当前层的文字颜色 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_aeca000116f289bc36b8892a6c64164dd}{LCD\+\_\+\+Set\+Back\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD当前层的文字背景颜色 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_ab06250d18ef0123a92381333a7e464e0}{LCD\+\_\+\+Set\+Colors}} (uint32\+\_\+t Text\+Color, uint32\+\_\+t Back\+Color)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD当前层的文字颜色和文字背景颜色 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a6c26f6fcddd0bf89f71d71131c7a206a}{LCD\+\_\+\+Set\+Font}} (s\+FONT \texorpdfstring{$\ast$}{*}fonts)
+\begin{DoxyCompactList}\small\item\em 设置\+LCD当前层显示的字体 \end{DoxyCompactList}\item 
+s\+FONT \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bsp__lcd_8h_a7b2f00b73ed9209df1077ec5a975cc37}{LCD\+\_\+\+Get\+Font}} (void)
+\begin{DoxyCompactList}\small\item\em 获取\+LCD当前层显示的字体 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_aa97156afb28b2fb2877ae97efa92f3ee}{LCD\+\_\+\+Set\+Layer\+Window}} (uint16\+\_\+t Layer\+Index, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em 设置显示窗口 \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{bsp__lcd_8h_aaf28c2494c1a232d68d8b63af20ea3ec}{LCD\+\_\+\+Get\+Start\+Address}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\item 
+static void \mbox{\hyperlink{bsp__lcd_8h_a2cfdb76c5b920f5a8fcaed02cf318c45}{LCD\+\_\+\+Draw\+Char}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}c)
+\item 
+void \mbox{\hyperlink{bsp__lcd_8h_aa500186c114aaea3dd6cdc11d306617e}{LCD\+\_\+\+Display\+Char}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Ascii)
+\begin{DoxyCompactList}\small\item\em 在指定位置显示一个字符(英文) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a7fe6db0bfd3cabc4e99d5ce8b7343c6b}{LCD\+\_\+\+Display\+String\+At}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Text)
+\begin{DoxyCompactList}\small\item\em 在指定位置显示一个字符串(英文) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_acced1d191675f150cb4cccd377a7c11c}{LCD\+\_\+\+Display\+String\+Line}} (uint8\+\_\+t Line, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Text)
+\begin{DoxyCompactList}\small\item\em 在指定行显示一个字符串(英文) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bsp__lcd_8h_a0bb03a44ef3f80528979b5cd8091dd84}{Get\+GB2312\+Code\+\_\+from\+\_\+\+EXFlash}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Buffer, uint16\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em 获取一个中文\+GB2312编码字符的字模数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a413cecd8e18e5715925c0831a5946d29}{LCD\+\_\+\+Display\+Char\+\_\+\+CH}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t char\+\_\+\+CH)
+\begin{DoxyCompactList}\small\item\em 绘制一个中文字符 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__lcd_8h_a01fbccb17e918648c31a30525f0eda6a}{LCD\+\_\+\+Display\+String\+Line\+\_\+\+EN\+\_\+\+CH}} (uint16\+\_\+t Line, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Text)
+\begin{DoxyCompactList}\small\item\em 显示一句可以包含中英文的句子 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\Hypertarget{bsp__lcd_8h_aa9625d05e06981f0fef5e2463857aa06}\label{bsp__lcd_8h_aa9625d05e06981f0fef5e2463857aa06} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!HBP@{HBP}}
+\index{HBP@{HBP}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{HBP}{HBP}}
+{\footnotesize\ttfamily \#define HBP~46}
+
+\Hypertarget{bsp__lcd_8h_a0f41581c8fb5199646fb7875bfeec108}\label{bsp__lcd_8h_a0f41581c8fb5199646fb7875bfeec108} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!HFP@{HFP}}
+\index{HFP@{HFP}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{HFP}{HFP}}
+{\footnotesize\ttfamily \#define HFP~22}
+
+\Hypertarget{bsp__lcd_8h_a4c7bfeb24a7c59a5df72fb6dbb6b3a01}\label{bsp__lcd_8h_a4c7bfeb24a7c59a5df72fb6dbb6b3a01} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!HSW@{HSW}}
+\index{HSW@{HSW}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{HSW}{HSW}}
+{\footnotesize\ttfamily \#define HSW~1}
+
+\Hypertarget{bsp__lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b}\label{bsp__lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_BLACK@{LCD\_COLOR\_BLACK}}
+\index{LCD\_COLOR\_BLACK@{LCD\_COLOR\_BLACK}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_BLACK}{LCD\_COLOR\_BLACK}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+BLACK~((uint32\+\_\+t)0x\+FF000000)}
+
+\Hypertarget{bsp__lcd_8h_a5647ec8a40b49d6662226601eb9eb452}\label{bsp__lcd_8h_a5647ec8a40b49d6662226601eb9eb452} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_BLUE@{LCD\_COLOR\_BLUE}}
+\index{LCD\_COLOR\_BLUE@{LCD\_COLOR\_BLUE}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_BLUE}{LCD\_COLOR\_BLUE}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+BLUE~((uint32\+\_\+t)0x\+FF0000\+FF)}
+
+\Hypertarget{bsp__lcd_8h_ab6ed75970fe02ebf907864cfe8e112ad}\label{bsp__lcd_8h_ab6ed75970fe02ebf907864cfe8e112ad} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_BROWN@{LCD\_COLOR\_BROWN}}
+\index{LCD\_COLOR\_BROWN@{LCD\_COLOR\_BROWN}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_BROWN}{LCD\_COLOR\_BROWN}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+BROWN~((uint32\+\_\+t)0x\+FFA52\+A2A)}
+
+\Hypertarget{bsp__lcd_8h_a5a921cf0f9febd5de4fa3c40cda4dd7d}\label{bsp__lcd_8h_a5a921cf0f9febd5de4fa3c40cda4dd7d} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_CYAN@{LCD\_COLOR\_CYAN}}
+\index{LCD\_COLOR\_CYAN@{LCD\_COLOR\_CYAN}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_CYAN}{LCD\_COLOR\_CYAN}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+CYAN~((uint32\+\_\+t)0x\+FF00\+FFFF)}
+
+\Hypertarget{bsp__lcd_8h_a67921b0000a7f8890d660a8725edbc19}\label{bsp__lcd_8h_a67921b0000a7f8890d660a8725edbc19} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_DARKBLUE@{LCD\_COLOR\_DARKBLUE}}
+\index{LCD\_COLOR\_DARKBLUE@{LCD\_COLOR\_DARKBLUE}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKBLUE}{LCD\_COLOR\_DARKBLUE}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+DARKBLUE~((uint32\+\_\+t)0x\+FF000080)}
+
+\Hypertarget{bsp__lcd_8h_af9e9a56d88620375c5826fb0a56381f8}\label{bsp__lcd_8h_af9e9a56d88620375c5826fb0a56381f8} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_DARKCYAN@{LCD\_COLOR\_DARKCYAN}}
+\index{LCD\_COLOR\_DARKCYAN@{LCD\_COLOR\_DARKCYAN}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKCYAN}{LCD\_COLOR\_DARKCYAN}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+DARKCYAN~((uint32\+\_\+t)0x\+FF008080)}
+
+\Hypertarget{bsp__lcd_8h_aed58783a24f35617da7c12b1053bcbbf}\label{bsp__lcd_8h_aed58783a24f35617da7c12b1053bcbbf} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_DARKGRAY@{LCD\_COLOR\_DARKGRAY}}
+\index{LCD\_COLOR\_DARKGRAY@{LCD\_COLOR\_DARKGRAY}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKGRAY}{LCD\_COLOR\_DARKGRAY}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+DARKGRAY~((uint32\+\_\+t)0x\+FF404040)}
+
+\Hypertarget{bsp__lcd_8h_a4d604eacac3f85176b721eb590689ee0}\label{bsp__lcd_8h_a4d604eacac3f85176b721eb590689ee0} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_DARKGREEN@{LCD\_COLOR\_DARKGREEN}}
+\index{LCD\_COLOR\_DARKGREEN@{LCD\_COLOR\_DARKGREEN}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKGREEN}{LCD\_COLOR\_DARKGREEN}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+DARKGREEN~((uint32\+\_\+t)0x\+FF008000)}
+
+\Hypertarget{bsp__lcd_8h_a795752bdd0506d1a8cd1ad5e2c35f93e}\label{bsp__lcd_8h_a795752bdd0506d1a8cd1ad5e2c35f93e} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_DARKMAGENTA@{LCD\_COLOR\_DARKMAGENTA}}
+\index{LCD\_COLOR\_DARKMAGENTA@{LCD\_COLOR\_DARKMAGENTA}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKMAGENTA}{LCD\_COLOR\_DARKMAGENTA}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+DARKMAGENTA~((uint32\+\_\+t)0x\+FF800080)}
+
+\Hypertarget{bsp__lcd_8h_a12d859a7de90215057fee241f1b67eb6}\label{bsp__lcd_8h_a12d859a7de90215057fee241f1b67eb6} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_DARKRED@{LCD\_COLOR\_DARKRED}}
+\index{LCD\_COLOR\_DARKRED@{LCD\_COLOR\_DARKRED}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKRED}{LCD\_COLOR\_DARKRED}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+DARKRED~((uint32\+\_\+t)0x\+FF800000)}
+
+\Hypertarget{bsp__lcd_8h_a49fdaac69765cd63a68d30cc753b77fb}\label{bsp__lcd_8h_a49fdaac69765cd63a68d30cc753b77fb} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_DARKYELLOW@{LCD\_COLOR\_DARKYELLOW}}
+\index{LCD\_COLOR\_DARKYELLOW@{LCD\_COLOR\_DARKYELLOW}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKYELLOW}{LCD\_COLOR\_DARKYELLOW}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+DARKYELLOW~((uint32\+\_\+t)0x\+FF808000)}
+
+\Hypertarget{bsp__lcd_8h_a424fdb50026cdfc18a287b01965983f0}\label{bsp__lcd_8h_a424fdb50026cdfc18a287b01965983f0} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_GRAY@{LCD\_COLOR\_GRAY}}
+\index{LCD\_COLOR\_GRAY@{LCD\_COLOR\_GRAY}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_GRAY}{LCD\_COLOR\_GRAY}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+GRAY~((uint32\+\_\+t)0x\+FF808080)}
+
+\Hypertarget{bsp__lcd_8h_aaee512e5955e0ed1bf67c7a3bc76fc53}\label{bsp__lcd_8h_aaee512e5955e0ed1bf67c7a3bc76fc53} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_GREEN@{LCD\_COLOR\_GREEN}}
+\index{LCD\_COLOR\_GREEN@{LCD\_COLOR\_GREEN}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_GREEN}{LCD\_COLOR\_GREEN}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+GREEN~((uint32\+\_\+t)0x\+FF00\+FF00)}
+
+\Hypertarget{bsp__lcd_8h_a347a89173e8bfce09a85beea805ee202}\label{bsp__lcd_8h_a347a89173e8bfce09a85beea805ee202} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_LIGHTBLUE@{LCD\_COLOR\_LIGHTBLUE}}
+\index{LCD\_COLOR\_LIGHTBLUE@{LCD\_COLOR\_LIGHTBLUE}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTBLUE}{LCD\_COLOR\_LIGHTBLUE}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+LIGHTBLUE~((uint32\+\_\+t)0x\+FF8080\+FF)}
+
+\Hypertarget{bsp__lcd_8h_af33fd44a04804e04e93b0d341d89d813}\label{bsp__lcd_8h_af33fd44a04804e04e93b0d341d89d813} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_LIGHTCYAN@{LCD\_COLOR\_LIGHTCYAN}}
+\index{LCD\_COLOR\_LIGHTCYAN@{LCD\_COLOR\_LIGHTCYAN}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTCYAN}{LCD\_COLOR\_LIGHTCYAN}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+LIGHTCYAN~((uint32\+\_\+t)0x\+FF80\+FFFF)}
+
+\Hypertarget{bsp__lcd_8h_a1fe85812ee1d9975211e1bd329664afc}\label{bsp__lcd_8h_a1fe85812ee1d9975211e1bd329664afc} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_LIGHTGRAY@{LCD\_COLOR\_LIGHTGRAY}}
+\index{LCD\_COLOR\_LIGHTGRAY@{LCD\_COLOR\_LIGHTGRAY}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTGRAY}{LCD\_COLOR\_LIGHTGRAY}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+LIGHTGRAY~((uint32\+\_\+t)0x\+FFD3\+D3\+D3)}
+
+\Hypertarget{bsp__lcd_8h_a9d4e0fc799fada640cccf87cbf7d89ce}\label{bsp__lcd_8h_a9d4e0fc799fada640cccf87cbf7d89ce} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_LIGHTGREEN@{LCD\_COLOR\_LIGHTGREEN}}
+\index{LCD\_COLOR\_LIGHTGREEN@{LCD\_COLOR\_LIGHTGREEN}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTGREEN}{LCD\_COLOR\_LIGHTGREEN}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+LIGHTGREEN~((uint32\+\_\+t)0x\+FF80\+FF80)}
+
+\Hypertarget{bsp__lcd_8h_aa1f38c83f7a484fe440eb9ef0122f7f1}\label{bsp__lcd_8h_aa1f38c83f7a484fe440eb9ef0122f7f1} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_LIGHTMAGENTA@{LCD\_COLOR\_LIGHTMAGENTA}}
+\index{LCD\_COLOR\_LIGHTMAGENTA@{LCD\_COLOR\_LIGHTMAGENTA}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTMAGENTA}{LCD\_COLOR\_LIGHTMAGENTA}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+LIGHTMAGENTA~((uint32\+\_\+t)0x\+FFFF80\+FF)}
+
+\Hypertarget{bsp__lcd_8h_af03b9162384eeefe4381927c28e5ef1c}\label{bsp__lcd_8h_af03b9162384eeefe4381927c28e5ef1c} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_LIGHTRED@{LCD\_COLOR\_LIGHTRED}}
+\index{LCD\_COLOR\_LIGHTRED@{LCD\_COLOR\_LIGHTRED}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTRED}{LCD\_COLOR\_LIGHTRED}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+LIGHTRED~((uint32\+\_\+t)0x\+FFFF8080)}
+
+\Hypertarget{bsp__lcd_8h_aaaea2b5bd2d8b6fd01187f61e80e5820}\label{bsp__lcd_8h_aaaea2b5bd2d8b6fd01187f61e80e5820} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_LIGHTYELLOW@{LCD\_COLOR\_LIGHTYELLOW}}
+\index{LCD\_COLOR\_LIGHTYELLOW@{LCD\_COLOR\_LIGHTYELLOW}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTYELLOW}{LCD\_COLOR\_LIGHTYELLOW}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+LIGHTYELLOW~((uint32\+\_\+t)0x\+FFFFFF80)}
+
+\Hypertarget{bsp__lcd_8h_ad65d67388318c734a32cdfb7a5935f59}\label{bsp__lcd_8h_ad65d67388318c734a32cdfb7a5935f59} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_MAGENTA@{LCD\_COLOR\_MAGENTA}}
+\index{LCD\_COLOR\_MAGENTA@{LCD\_COLOR\_MAGENTA}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_MAGENTA}{LCD\_COLOR\_MAGENTA}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+MAGENTA~((uint32\+\_\+t)0x\+FFFF00\+FF)}
+
+\Hypertarget{bsp__lcd_8h_a5da26295a6c0a7af2095b2579ce7c0f9}\label{bsp__lcd_8h_a5da26295a6c0a7af2095b2579ce7c0f9} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_ORANGE@{LCD\_COLOR\_ORANGE}}
+\index{LCD\_COLOR\_ORANGE@{LCD\_COLOR\_ORANGE}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_ORANGE}{LCD\_COLOR\_ORANGE}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+ORANGE~((uint32\+\_\+t)0x\+FFFFA500)}
+
+\Hypertarget{bsp__lcd_8h_af125d28a3cd79b94a81fc572990f300e}\label{bsp__lcd_8h_af125d28a3cd79b94a81fc572990f300e} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_RED@{LCD\_COLOR\_RED}}
+\index{LCD\_COLOR\_RED@{LCD\_COLOR\_RED}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_RED}{LCD\_COLOR\_RED}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+RED~((uint32\+\_\+t)0x\+FFFF0000)}
+
+\Hypertarget{bsp__lcd_8h_a4b140f901775e4563eea22ea0885e834}\label{bsp__lcd_8h_a4b140f901775e4563eea22ea0885e834} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_TRANSPARENT@{LCD\_COLOR\_TRANSPARENT}}
+\index{LCD\_COLOR\_TRANSPARENT@{LCD\_COLOR\_TRANSPARENT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_TRANSPARENT}{LCD\_COLOR\_TRANSPARENT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+TRANSPARENT~((uint32\+\_\+t)0x\+FF000000)}
+
+\Hypertarget{bsp__lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0}\label{bsp__lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_WHITE@{LCD\_COLOR\_WHITE}}
+\index{LCD\_COLOR\_WHITE@{LCD\_COLOR\_WHITE}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_WHITE}{LCD\_COLOR\_WHITE}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+WHITE~((uint32\+\_\+t)0x\+FFFFFFFF)}
+
+\Hypertarget{bsp__lcd_8h_a11062db6ba403700019e98a8b7c56f18}\label{bsp__lcd_8h_a11062db6ba403700019e98a8b7c56f18} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_COLOR\_YELLOW@{LCD\_COLOR\_YELLOW}}
+\index{LCD\_COLOR\_YELLOW@{LCD\_COLOR\_YELLOW}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_YELLOW}{LCD\_COLOR\_YELLOW}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLOR\+\_\+\+YELLOW~((uint32\+\_\+t)0x\+FFFFFF00)}
+
+\Hypertarget{bsp__lcd_8h_a95bc19f28c2c0fdca40f6070c09f7a71}\label{bsp__lcd_8h_a95bc19f28c2c0fdca40f6070c09f7a71} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DEFAULT\_FONT@{LCD\_DEFAULT\_FONT}}
+\index{LCD\_DEFAULT\_FONT@{LCD\_DEFAULT\_FONT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DEFAULT\_FONT}{LCD\_DEFAULT\_FONT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+DEFAULT\+\_\+\+FONT~Font24}
+
+\Hypertarget{bsp__lcd_8h_abce6a3e4f22835ff690f563ff366ffcf}\label{bsp__lcd_8h_abce6a3e4f22835ff690f563ff366ffcf} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_FB\_START\_ADDRESS@{LCD\_FB\_START\_ADDRESS}}
+\index{LCD\_FB\_START\_ADDRESS@{LCD\_FB\_START\_ADDRESS}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_FB\_START\_ADDRESS}{LCD\_FB\_START\_ADDRESS}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+FB\+\_\+\+START\+\_\+\+ADDRESS~(uint32\+\_\+t)0x\+D0000000}
+
+\Hypertarget{bsp__lcd_8h_af796d6844b178c92f38b8cb4b9e41c78}\label{bsp__lcd_8h_af796d6844b178c92f38b8cb4b9e41c78} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_PIXEL\_HEIGHT@{LCD\_PIXEL\_HEIGHT}}
+\index{LCD\_PIXEL\_HEIGHT@{LCD\_PIXEL\_HEIGHT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_PIXEL\_HEIGHT}{LCD\_PIXEL\_HEIGHT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+PIXEL\+\_\+\+HEIGHT~(uint16\+\_\+t)480}
+
+\Hypertarget{bsp__lcd_8h_a215a46e7477262a8280bcb27b63aaabd}\label{bsp__lcd_8h_a215a46e7477262a8280bcb27b63aaabd} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_PIXEL\_WIDTH@{LCD\_PIXEL\_WIDTH}}
+\index{LCD\_PIXEL\_WIDTH@{LCD\_PIXEL\_WIDTH}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_PIXEL\_WIDTH}{LCD\_PIXEL\_WIDTH}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+PIXEL\+\_\+\+WIDTH~(uint16\+\_\+t)800}
+
+\Hypertarget{bsp__lcd_8h_a5fa41785a8748c49b61639f4ddd8610b}\label{bsp__lcd_8h_a5fa41785a8748c49b61639f4ddd8610b} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_ACTIVE\_LAYER@{LTDC\_ACTIVE\_LAYER}}
+\index{LTDC\_ACTIVE\_LAYER@{LTDC\_ACTIVE\_LAYER}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_ACTIVE\_LAYER}{LTDC\_ACTIVE\_LAYER}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+ACTIVE\+\_\+\+LAYER~(uint32\+\_\+t)1}
+
+\Hypertarget{bsp__lcd_8h_a32965c9ea71523cc985d39b74f548c44}\label{bsp__lcd_8h_a32965c9ea71523cc985d39b74f548c44} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B0\_GPIO\_Pin@{LTDC\_B0\_GPIO\_Pin}}
+\index{LTDC\_B0\_GPIO\_Pin@{LTDC\_B0\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B0\_GPIO\_Pin}{LTDC\_B0\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B0\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+4}
+
+\Hypertarget{bsp__lcd_8h_a79af58b7660fdb743048b3be90ee46c9}\label{bsp__lcd_8h_a79af58b7660fdb743048b3be90ee46c9} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B0\_GPIO\_PORT@{LTDC\_B0\_GPIO\_PORT}}
+\index{LTDC\_B0\_GPIO\_PORT@{LTDC\_B0\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B0\_GPIO\_PORT}{LTDC\_B0\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B0\+\_\+\+GPIO\+\_\+\+PORT~GPIOE}
+
+\Hypertarget{bsp__lcd_8h_ad3937bb8a5304967c8b15adfa2234dc1}\label{bsp__lcd_8h_ad3937bb8a5304967c8b15adfa2234dc1} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B1\_GPIO\_Pin@{LTDC\_B1\_GPIO\_Pin}}
+\index{LTDC\_B1\_GPIO\_Pin@{LTDC\_B1\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B1\_GPIO\_Pin}{LTDC\_B1\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B1\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+12}
+
+\Hypertarget{bsp__lcd_8h_ad328d6cdf6ed1d83605d953fdd059262}\label{bsp__lcd_8h_ad328d6cdf6ed1d83605d953fdd059262} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B1\_GPIO\_PORT@{LTDC\_B1\_GPIO\_PORT}}
+\index{LTDC\_B1\_GPIO\_PORT@{LTDC\_B1\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B1\_GPIO\_PORT}{LTDC\_B1\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B1\+\_\+\+GPIO\+\_\+\+PORT~GPIOG}
+
+\Hypertarget{bsp__lcd_8h_adbf5c6ba2076d1787fa9aeb7f811ac0b}\label{bsp__lcd_8h_adbf5c6ba2076d1787fa9aeb7f811ac0b} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B2\_GPIO\_Pin@{LTDC\_B2\_GPIO\_Pin}}
+\index{LTDC\_B2\_GPIO\_Pin@{LTDC\_B2\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B2\_GPIO\_Pin}{LTDC\_B2\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B2\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+6}
+
+\Hypertarget{bsp__lcd_8h_a7931b879385ded12de6ea796eb32414d}\label{bsp__lcd_8h_a7931b879385ded12de6ea796eb32414d} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B2\_GPIO\_PORT@{LTDC\_B2\_GPIO\_PORT}}
+\index{LTDC\_B2\_GPIO\_PORT@{LTDC\_B2\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B2\_GPIO\_PORT}{LTDC\_B2\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B2\+\_\+\+GPIO\+\_\+\+PORT~GPIOD}
+
+\Hypertarget{bsp__lcd_8h_a1bd5cea61b627c803b128c6bc88c501e}\label{bsp__lcd_8h_a1bd5cea61b627c803b128c6bc88c501e} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B3\_GPIO\_Pin@{LTDC\_B3\_GPIO\_Pin}}
+\index{LTDC\_B3\_GPIO\_Pin@{LTDC\_B3\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B3\_GPIO\_Pin}{LTDC\_B3\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B3\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+11}
+
+\Hypertarget{bsp__lcd_8h_ab8340085b4d04d5868318c3ae24cbb96}\label{bsp__lcd_8h_ab8340085b4d04d5868318c3ae24cbb96} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B3\_GPIO\_PORT@{LTDC\_B3\_GPIO\_PORT}}
+\index{LTDC\_B3\_GPIO\_PORT@{LTDC\_B3\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B3\_GPIO\_PORT}{LTDC\_B3\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B3\+\_\+\+GPIO\+\_\+\+PORT~GPIOG}
+
+\Hypertarget{bsp__lcd_8h_a09ee11b7ce669792d575979ac54b2e06}\label{bsp__lcd_8h_a09ee11b7ce669792d575979ac54b2e06} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B4\_GPIO\_Pin@{LTDC\_B4\_GPIO\_Pin}}
+\index{LTDC\_B4\_GPIO\_Pin@{LTDC\_B4\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B4\_GPIO\_Pin}{LTDC\_B4\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B4\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+4}
+
+\Hypertarget{bsp__lcd_8h_ae655ddc3a773e72a6a6a81dbdd457fcb}\label{bsp__lcd_8h_ae655ddc3a773e72a6a6a81dbdd457fcb} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B4\_GPIO\_PORT@{LTDC\_B4\_GPIO\_PORT}}
+\index{LTDC\_B4\_GPIO\_PORT@{LTDC\_B4\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B4\_GPIO\_PORT}{LTDC\_B4\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B4\+\_\+\+GPIO\+\_\+\+PORT~GPIOI}
+
+\Hypertarget{bsp__lcd_8h_a4a15df777784b4ec61c775cbd62a3e1f}\label{bsp__lcd_8h_a4a15df777784b4ec61c775cbd62a3e1f} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B5\_GPIO\_Pin@{LTDC\_B5\_GPIO\_Pin}}
+\index{LTDC\_B5\_GPIO\_Pin@{LTDC\_B5\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B5\_GPIO\_Pin}{LTDC\_B5\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B5\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+3}
+
+\Hypertarget{bsp__lcd_8h_a05558dbe3e369d9fc845221dbed9e084}\label{bsp__lcd_8h_a05558dbe3e369d9fc845221dbed9e084} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B5\_GPIO\_PORT@{LTDC\_B5\_GPIO\_PORT}}
+\index{LTDC\_B5\_GPIO\_PORT@{LTDC\_B5\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B5\_GPIO\_PORT}{LTDC\_B5\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B5\+\_\+\+GPIO\+\_\+\+PORT~GPIOA}
+
+\Hypertarget{bsp__lcd_8h_a51878a3c6218c8ff04baecfb5a089a99}\label{bsp__lcd_8h_a51878a3c6218c8ff04baecfb5a089a99} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B6\_GPIO\_Pin@{LTDC\_B6\_GPIO\_Pin}}
+\index{LTDC\_B6\_GPIO\_Pin@{LTDC\_B6\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B6\_GPIO\_Pin}{LTDC\_B6\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B6\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+8}
+
+\Hypertarget{bsp__lcd_8h_a495e719e7ed55808392ffc88f50b7c91}\label{bsp__lcd_8h_a495e719e7ed55808392ffc88f50b7c91} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B6\_GPIO\_PORT@{LTDC\_B6\_GPIO\_PORT}}
+\index{LTDC\_B6\_GPIO\_PORT@{LTDC\_B6\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B6\_GPIO\_PORT}{LTDC\_B6\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B6\+\_\+\+GPIO\+\_\+\+PORT~GPIOB}
+
+\Hypertarget{bsp__lcd_8h_aae48957e4b24e62174895bb58cb9359a}\label{bsp__lcd_8h_aae48957e4b24e62174895bb58cb9359a} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B7\_GPIO\_Pin@{LTDC\_B7\_GPIO\_Pin}}
+\index{LTDC\_B7\_GPIO\_Pin@{LTDC\_B7\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B7\_GPIO\_Pin}{LTDC\_B7\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B7\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+9}
+
+\Hypertarget{bsp__lcd_8h_a559ae5ccddb28d557670ef607ffc27d0}\label{bsp__lcd_8h_a559ae5ccddb28d557670ef607ffc27d0} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_B7\_GPIO\_PORT@{LTDC\_B7\_GPIO\_PORT}}
+\index{LTDC\_B7\_GPIO\_PORT@{LTDC\_B7\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_B7\_GPIO\_PORT}{LTDC\_B7\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+B7\+\_\+\+GPIO\+\_\+\+PORT~GPIOB}
+
+\Hypertarget{bsp__lcd_8h_a4e7bf4c13bfab0bb50910201162560f7}\label{bsp__lcd_8h_a4e7bf4c13bfab0bb50910201162560f7} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_BL\_GPIO\_Pin@{LTDC\_BL\_GPIO\_Pin}}
+\index{LTDC\_BL\_GPIO\_Pin@{LTDC\_BL\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_BL\_GPIO\_Pin}{LTDC\_BL\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+BL\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+7}
+
+\Hypertarget{bsp__lcd_8h_af745db49c2539e75e6e07ef0831a3140}\label{bsp__lcd_8h_af745db49c2539e75e6e07ef0831a3140} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_BL\_GPIO\_PORT@{LTDC\_BL\_GPIO\_PORT}}
+\index{LTDC\_BL\_GPIO\_PORT@{LTDC\_BL\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_BL\_GPIO\_PORT}{LTDC\_BL\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+BL\+\_\+\+GPIO\+\_\+\+PORT~GPIOD}
+
+\Hypertarget{bsp__lcd_8h_a124475377b6506069ffb8f7a34f322a0}\label{bsp__lcd_8h_a124475377b6506069ffb8f7a34f322a0} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_CLK\_GPIO\_Pin@{LTDC\_CLK\_GPIO\_Pin}}
+\index{LTDC\_CLK\_GPIO\_Pin@{LTDC\_CLK\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_CLK\_GPIO\_Pin}{LTDC\_CLK\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+CLK\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+7}
+
+\Hypertarget{bsp__lcd_8h_acfff6f0aa0436b59872deca5e966e47b}\label{bsp__lcd_8h_acfff6f0aa0436b59872deca5e966e47b} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_CLK\_GPIO\_PORT@{LTDC\_CLK\_GPIO\_PORT}}
+\index{LTDC\_CLK\_GPIO\_PORT@{LTDC\_CLK\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_CLK\_GPIO\_PORT}{LTDC\_CLK\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+CLK\+\_\+\+GPIO\+\_\+\+PORT~GPIOG}
+
+\Hypertarget{bsp__lcd_8h_ae3a3fbdb92fd57b813990f57a79bfb6a}\label{bsp__lcd_8h_ae3a3fbdb92fd57b813990f57a79bfb6a} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_DE\_GPIO\_Pin@{LTDC\_DE\_GPIO\_Pin}}
+\index{LTDC\_DE\_GPIO\_Pin@{LTDC\_DE\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_DE\_GPIO\_Pin}{LTDC\_DE\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+DE\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+10}
+
+\Hypertarget{bsp__lcd_8h_aa6ecbbfd496d5328002c35d7db859459}\label{bsp__lcd_8h_aa6ecbbfd496d5328002c35d7db859459} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_DE\_GPIO\_PORT@{LTDC\_DE\_GPIO\_PORT}}
+\index{LTDC\_DE\_GPIO\_PORT@{LTDC\_DE\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_DE\_GPIO\_PORT}{LTDC\_DE\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+DE\+\_\+\+GPIO\+\_\+\+PORT~GPIOF}
+
+\Hypertarget{bsp__lcd_8h_af2853d86716514d92fa96a71b56ec1ce}\label{bsp__lcd_8h_af2853d86716514d92fa96a71b56ec1ce} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_DISP\_GPIO\_Pin@{LTDC\_DISP\_GPIO\_Pin}}
+\index{LTDC\_DISP\_GPIO\_Pin@{LTDC\_DISP\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_DISP\_GPIO\_Pin}{LTDC\_DISP\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+DISP\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+4}
+
+\Hypertarget{bsp__lcd_8h_ad67037bac69bbed3168851ee5d7d1e51}\label{bsp__lcd_8h_ad67037bac69bbed3168851ee5d7d1e51} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_DISP\_GPIO\_PORT@{LTDC\_DISP\_GPIO\_PORT}}
+\index{LTDC\_DISP\_GPIO\_PORT@{LTDC\_DISP\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_DISP\_GPIO\_PORT}{LTDC\_DISP\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+DISP\+\_\+\+GPIO\+\_\+\+PORT~GPIOD}
+
+\Hypertarget{bsp__lcd_8h_af910df0275c9362c33eb2d630e62ac09}\label{bsp__lcd_8h_af910df0275c9362c33eb2d630e62ac09} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G0\_GPIO\_Pin@{LTDC\_G0\_GPIO\_Pin}}
+\index{LTDC\_G0\_GPIO\_Pin@{LTDC\_G0\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G0\_GPIO\_Pin}{LTDC\_G0\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G0\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+5}
+
+\Hypertarget{bsp__lcd_8h_af77b3a29d9cb8f49c6530700fdcd3863}\label{bsp__lcd_8h_af77b3a29d9cb8f49c6530700fdcd3863} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G0\_GPIO\_PORT@{LTDC\_G0\_GPIO\_PORT}}
+\index{LTDC\_G0\_GPIO\_PORT@{LTDC\_G0\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G0\_GPIO\_PORT}{LTDC\_G0\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G0\+\_\+\+GPIO\+\_\+\+PORT~GPIOE}
+
+\Hypertarget{bsp__lcd_8h_af79d03f4c770a6619f58b9d3964aeb3c}\label{bsp__lcd_8h_af79d03f4c770a6619f58b9d3964aeb3c} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G1\_GPIO\_Pin@{LTDC\_G1\_GPIO\_Pin}}
+\index{LTDC\_G1\_GPIO\_Pin@{LTDC\_G1\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G1\_GPIO\_Pin}{LTDC\_G1\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G1\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+6}
+
+\Hypertarget{bsp__lcd_8h_a4fbf33af27757720f9734758f99b32f4}\label{bsp__lcd_8h_a4fbf33af27757720f9734758f99b32f4} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G1\_GPIO\_PORT@{LTDC\_G1\_GPIO\_PORT}}
+\index{LTDC\_G1\_GPIO\_PORT@{LTDC\_G1\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G1\_GPIO\_PORT}{LTDC\_G1\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G1\+\_\+\+GPIO\+\_\+\+PORT~GPIOE}
+
+\Hypertarget{bsp__lcd_8h_a87687e5b23115bd8738a80d4366335eb}\label{bsp__lcd_8h_a87687e5b23115bd8738a80d4366335eb} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G2\_GPIO\_Pin@{LTDC\_G2\_GPIO\_Pin}}
+\index{LTDC\_G2\_GPIO\_Pin@{LTDC\_G2\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G2\_GPIO\_Pin}{LTDC\_G2\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G2\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+13}
+
+\Hypertarget{bsp__lcd_8h_a4a91f61d15d7f6080b6309fda1f09bf2}\label{bsp__lcd_8h_a4a91f61d15d7f6080b6309fda1f09bf2} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G2\_GPIO\_PORT@{LTDC\_G2\_GPIO\_PORT}}
+\index{LTDC\_G2\_GPIO\_PORT@{LTDC\_G2\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G2\_GPIO\_PORT}{LTDC\_G2\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G2\+\_\+\+GPIO\+\_\+\+PORT~GPIOH}
+
+\Hypertarget{bsp__lcd_8h_a932de36d8b6e7c32ac4f89d378bd7c78}\label{bsp__lcd_8h_a932de36d8b6e7c32ac4f89d378bd7c78} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G3\_GPIO\_Pin@{LTDC\_G3\_GPIO\_Pin}}
+\index{LTDC\_G3\_GPIO\_Pin@{LTDC\_G3\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G3\_GPIO\_Pin}{LTDC\_G3\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G3\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+10}
+
+\Hypertarget{bsp__lcd_8h_aafe6d6da3668f28c7bdaefa0d055b569}\label{bsp__lcd_8h_aafe6d6da3668f28c7bdaefa0d055b569} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G3\_GPIO\_PORT@{LTDC\_G3\_GPIO\_PORT}}
+\index{LTDC\_G3\_GPIO\_PORT@{LTDC\_G3\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G3\_GPIO\_PORT}{LTDC\_G3\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G3\+\_\+\+GPIO\+\_\+\+PORT~GPIOG}
+
+\Hypertarget{bsp__lcd_8h_a4449aca86afe3c857397b7e1c07bc27f}\label{bsp__lcd_8h_a4449aca86afe3c857397b7e1c07bc27f} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G4\_GPIO\_Pin@{LTDC\_G4\_GPIO\_Pin}}
+\index{LTDC\_G4\_GPIO\_Pin@{LTDC\_G4\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G4\_GPIO\_Pin}{LTDC\_G4\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G4\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+15}
+
+\Hypertarget{bsp__lcd_8h_a179c8c3724d1af69ae42b6c32ddfd7aa}\label{bsp__lcd_8h_a179c8c3724d1af69ae42b6c32ddfd7aa} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G4\_GPIO\_PORT@{LTDC\_G4\_GPIO\_PORT}}
+\index{LTDC\_G4\_GPIO\_PORT@{LTDC\_G4\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G4\_GPIO\_PORT}{LTDC\_G4\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G4\+\_\+\+GPIO\+\_\+\+PORT~GPIOH}
+
+\Hypertarget{bsp__lcd_8h_a9a7b47eaaab744a7470fb71113e103a4}\label{bsp__lcd_8h_a9a7b47eaaab744a7470fb71113e103a4} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G5\_GPIO\_Pin@{LTDC\_G5\_GPIO\_Pin}}
+\index{LTDC\_G5\_GPIO\_Pin@{LTDC\_G5\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G5\_GPIO\_Pin}{LTDC\_G5\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G5\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+0}
+
+\Hypertarget{bsp__lcd_8h_a5c0a061ebb8c9dcab543a4b7b5a8c903}\label{bsp__lcd_8h_a5c0a061ebb8c9dcab543a4b7b5a8c903} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G5\_GPIO\_PORT@{LTDC\_G5\_GPIO\_PORT}}
+\index{LTDC\_G5\_GPIO\_PORT@{LTDC\_G5\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G5\_GPIO\_PORT}{LTDC\_G5\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G5\+\_\+\+GPIO\+\_\+\+PORT~GPIOI}
+
+\Hypertarget{bsp__lcd_8h_af6232635ec9969ad988f676a63f0cdc2}\label{bsp__lcd_8h_af6232635ec9969ad988f676a63f0cdc2} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G6\_GPIO\_Pin@{LTDC\_G6\_GPIO\_Pin}}
+\index{LTDC\_G6\_GPIO\_Pin@{LTDC\_G6\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G6\_GPIO\_Pin}{LTDC\_G6\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G6\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+7}
+
+\Hypertarget{bsp__lcd_8h_aaa34caebaae2f42d3a3d0240f102992d}\label{bsp__lcd_8h_aaa34caebaae2f42d3a3d0240f102992d} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G6\_GPIO\_PORT@{LTDC\_G6\_GPIO\_PORT}}
+\index{LTDC\_G6\_GPIO\_PORT@{LTDC\_G6\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G6\_GPIO\_PORT}{LTDC\_G6\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G6\+\_\+\+GPIO\+\_\+\+PORT~GPIOC}
+
+\Hypertarget{bsp__lcd_8h_a90c5d19f4267d31690f664846fe26fb7}\label{bsp__lcd_8h_a90c5d19f4267d31690f664846fe26fb7} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G7\_GPIO\_Pin@{LTDC\_G7\_GPIO\_Pin}}
+\index{LTDC\_G7\_GPIO\_Pin@{LTDC\_G7\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G7\_GPIO\_Pin}{LTDC\_G7\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G7\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+2}
+
+\Hypertarget{bsp__lcd_8h_a10a2ac89db4e17053d86ff660151bbf3}\label{bsp__lcd_8h_a10a2ac89db4e17053d86ff660151bbf3} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_G7\_GPIO\_PORT@{LTDC\_G7\_GPIO\_PORT}}
+\index{LTDC\_G7\_GPIO\_PORT@{LTDC\_G7\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_G7\_GPIO\_PORT}{LTDC\_G7\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+G7\+\_\+\+GPIO\+\_\+\+PORT~GPIOI}
+
+\Hypertarget{bsp__lcd_8h_afda119803ff9a1e2ea2b121f622fd511}\label{bsp__lcd_8h_afda119803ff9a1e2ea2b121f622fd511} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_GPIO\_CLK\_ENABLE@{LTDC\_GPIO\_CLK\_ENABLE}}
+\index{LTDC\_GPIO\_CLK\_ENABLE@{LTDC\_GPIO\_CLK\_ENABLE}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_GPIO\_CLK\_ENABLE}{LTDC\_GPIO\_CLK\_ENABLE}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\_\_GPIOA\_CLK\_ENABLE();\_\_GPIOB\_CLK\_ENABLE();\_\_GPIOC\_CLK\_ENABLE();\_\_GPIOD\_CLK\_ENABLE();\_\_GPIOE\_CLK\_ENABLE();\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_GPIOF\_CLK\_ENABLE();\_\_GPIOG\_CLK\_ENABLE();\_\_GPIOH\_CLK\_ENABLE();\}}
+
+\end{DoxyCode}
+\Hypertarget{bsp__lcd_8h_a6b32afec29268a58a0a94da0f0a1b732}\label{bsp__lcd_8h_a6b32afec29268a58a0a94da0f0a1b732} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_HSYNC\_GPIO\_Pin@{LTDC\_HSYNC\_GPIO\_Pin}}
+\index{LTDC\_HSYNC\_GPIO\_Pin@{LTDC\_HSYNC\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_HSYNC\_GPIO\_Pin}{LTDC\_HSYNC\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+HSYNC\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+10}
+
+\Hypertarget{bsp__lcd_8h_aa1654d844a7482659e24bbd5eaf03837}\label{bsp__lcd_8h_aa1654d844a7482659e24bbd5eaf03837} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_HSYNC\_GPIO\_PORT@{LTDC\_HSYNC\_GPIO\_PORT}}
+\index{LTDC\_HSYNC\_GPIO\_PORT@{LTDC\_HSYNC\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_HSYNC\_GPIO\_PORT}{LTDC\_HSYNC\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+HSYNC\+\_\+\+GPIO\+\_\+\+PORT~GPIOI}
+
+\Hypertarget{bsp__lcd_8h_ac20ad72b94a27b353aefbd997234c8b6}\label{bsp__lcd_8h_ac20ad72b94a27b353aefbd997234c8b6} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R0\_GPIO\_Pin@{LTDC\_R0\_GPIO\_Pin}}
+\index{LTDC\_R0\_GPIO\_Pin@{LTDC\_R0\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R0\_GPIO\_Pin}{LTDC\_R0\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R0\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+2}
+
+\Hypertarget{bsp__lcd_8h_a1c5ab4b6c3330335a1b0fdf796f89224}\label{bsp__lcd_8h_a1c5ab4b6c3330335a1b0fdf796f89224} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R0\_GPIO\_PORT@{LTDC\_R0\_GPIO\_PORT}}
+\index{LTDC\_R0\_GPIO\_PORT@{LTDC\_R0\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R0\_GPIO\_PORT}{LTDC\_R0\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R0\+\_\+\+GPIO\+\_\+\+PORT~GPIOH}
+
+\Hypertarget{bsp__lcd_8h_a81cfb5ff9357b8b8be9337f4a891c739}\label{bsp__lcd_8h_a81cfb5ff9357b8b8be9337f4a891c739} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R1\_GPIO\_Pin@{LTDC\_R1\_GPIO\_Pin}}
+\index{LTDC\_R1\_GPIO\_Pin@{LTDC\_R1\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R1\_GPIO\_Pin}{LTDC\_R1\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R1\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+3}
+
+\Hypertarget{bsp__lcd_8h_a4826f4f1ea9ea19eb05cb53b6a542b42}\label{bsp__lcd_8h_a4826f4f1ea9ea19eb05cb53b6a542b42} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R1\_GPIO\_PORT@{LTDC\_R1\_GPIO\_PORT}}
+\index{LTDC\_R1\_GPIO\_PORT@{LTDC\_R1\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R1\_GPIO\_PORT}{LTDC\_R1\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R1\+\_\+\+GPIO\+\_\+\+PORT~GPIOH}
+
+\Hypertarget{bsp__lcd_8h_a064e324111a5f60bb1de7a048eefe5af}\label{bsp__lcd_8h_a064e324111a5f60bb1de7a048eefe5af} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R2\_GPIO\_Pin@{LTDC\_R2\_GPIO\_Pin}}
+\index{LTDC\_R2\_GPIO\_Pin@{LTDC\_R2\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R2\_GPIO\_Pin}{LTDC\_R2\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R2\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+8}
+
+\Hypertarget{bsp__lcd_8h_ab2d140bb3a765bd70ab379fcce0304a8}\label{bsp__lcd_8h_ab2d140bb3a765bd70ab379fcce0304a8} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R2\_GPIO\_PORT@{LTDC\_R2\_GPIO\_PORT}}
+\index{LTDC\_R2\_GPIO\_PORT@{LTDC\_R2\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R2\_GPIO\_PORT}{LTDC\_R2\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R2\+\_\+\+GPIO\+\_\+\+PORT~GPIOH}
+
+\Hypertarget{bsp__lcd_8h_a93617bc0bad5d732a3a094490911208e}\label{bsp__lcd_8h_a93617bc0bad5d732a3a094490911208e} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R3\_GPIO\_Pin@{LTDC\_R3\_GPIO\_Pin}}
+\index{LTDC\_R3\_GPIO\_Pin@{LTDC\_R3\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R3\_GPIO\_Pin}{LTDC\_R3\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R3\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+0}
+
+\Hypertarget{bsp__lcd_8h_a92cc820208ffa8cbec1d8c114bd0681e}\label{bsp__lcd_8h_a92cc820208ffa8cbec1d8c114bd0681e} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R3\_GPIO\_PORT@{LTDC\_R3\_GPIO\_PORT}}
+\index{LTDC\_R3\_GPIO\_PORT@{LTDC\_R3\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R3\_GPIO\_PORT}{LTDC\_R3\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R3\+\_\+\+GPIO\+\_\+\+PORT~GPIOB}
+
+\Hypertarget{bsp__lcd_8h_ad386f2922635ea084179e56edec9ba4e}\label{bsp__lcd_8h_ad386f2922635ea084179e56edec9ba4e} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R4\_GPIO\_Pin@{LTDC\_R4\_GPIO\_Pin}}
+\index{LTDC\_R4\_GPIO\_Pin@{LTDC\_R4\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R4\_GPIO\_Pin}{LTDC\_R4\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R4\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+11}
+
+\Hypertarget{bsp__lcd_8h_a429a729e8ff1613cfc659cabd6055db5}\label{bsp__lcd_8h_a429a729e8ff1613cfc659cabd6055db5} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R4\_GPIO\_PORT@{LTDC\_R4\_GPIO\_PORT}}
+\index{LTDC\_R4\_GPIO\_PORT@{LTDC\_R4\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R4\_GPIO\_PORT}{LTDC\_R4\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R4\+\_\+\+GPIO\+\_\+\+PORT~GPIOA}
+
+\Hypertarget{bsp__lcd_8h_acd0e34ff92c7e1b27f262ccabc23daa0}\label{bsp__lcd_8h_acd0e34ff92c7e1b27f262ccabc23daa0} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R5\_GPIO\_Pin@{LTDC\_R5\_GPIO\_Pin}}
+\index{LTDC\_R5\_GPIO\_Pin@{LTDC\_R5\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R5\_GPIO\_Pin}{LTDC\_R5\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R5\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+12}
+
+\Hypertarget{bsp__lcd_8h_ae2454422543e60a86aff1f1e647d97cf}\label{bsp__lcd_8h_ae2454422543e60a86aff1f1e647d97cf} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R5\_GPIO\_PORT@{LTDC\_R5\_GPIO\_PORT}}
+\index{LTDC\_R5\_GPIO\_PORT@{LTDC\_R5\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R5\_GPIO\_PORT}{LTDC\_R5\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R5\+\_\+\+GPIO\+\_\+\+PORT~GPIOA}
+
+\Hypertarget{bsp__lcd_8h_a67fe9fcdcca7993984c27f9ef2aff1fa}\label{bsp__lcd_8h_a67fe9fcdcca7993984c27f9ef2aff1fa} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R6\_GPIO\_Pin@{LTDC\_R6\_GPIO\_Pin}}
+\index{LTDC\_R6\_GPIO\_Pin@{LTDC\_R6\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R6\_GPIO\_Pin}{LTDC\_R6\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R6\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+1}
+
+\Hypertarget{bsp__lcd_8h_adcf18d5cebc0d5e39785da7c49103c53}\label{bsp__lcd_8h_adcf18d5cebc0d5e39785da7c49103c53} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R6\_GPIO\_PORT@{LTDC\_R6\_GPIO\_PORT}}
+\index{LTDC\_R6\_GPIO\_PORT@{LTDC\_R6\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R6\_GPIO\_PORT}{LTDC\_R6\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R6\+\_\+\+GPIO\+\_\+\+PORT~GPIOB}
+
+\Hypertarget{bsp__lcd_8h_af122d2d8f6e8cc2c7fb85bbc5fc80667}\label{bsp__lcd_8h_af122d2d8f6e8cc2c7fb85bbc5fc80667} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R7\_GPIO\_Pin@{LTDC\_R7\_GPIO\_Pin}}
+\index{LTDC\_R7\_GPIO\_Pin@{LTDC\_R7\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R7\_GPIO\_Pin}{LTDC\_R7\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R7\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+6}
+
+\Hypertarget{bsp__lcd_8h_a22ea33a32476074177df5a65c11447b1}\label{bsp__lcd_8h_a22ea33a32476074177df5a65c11447b1} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_R7\_GPIO\_PORT@{LTDC\_R7\_GPIO\_PORT}}
+\index{LTDC\_R7\_GPIO\_PORT@{LTDC\_R7\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_R7\_GPIO\_PORT}{LTDC\_R7\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+R7\+\_\+\+GPIO\+\_\+\+PORT~GPIOG}
+
+\Hypertarget{bsp__lcd_8h_a9e2024e3aac78a79a2eaafb3ae63d2ce}\label{bsp__lcd_8h_a9e2024e3aac78a79a2eaafb3ae63d2ce} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_VSYNC\_GPIO\_Pin@{LTDC\_VSYNC\_GPIO\_Pin}}
+\index{LTDC\_VSYNC\_GPIO\_Pin@{LTDC\_VSYNC\_GPIO\_Pin}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_VSYNC\_GPIO\_Pin}{LTDC\_VSYNC\_GPIO\_Pin}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+VSYNC\+\_\+\+GPIO\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+9}
+
+\Hypertarget{bsp__lcd_8h_a274d6e19dd2f7288d8ad9c36eee8600f}\label{bsp__lcd_8h_a274d6e19dd2f7288d8ad9c36eee8600f} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_VSYNC\_GPIO\_PORT@{LTDC\_VSYNC\_GPIO\_PORT}}
+\index{LTDC\_VSYNC\_GPIO\_PORT@{LTDC\_VSYNC\_GPIO\_PORT}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_VSYNC\_GPIO\_PORT}{LTDC\_VSYNC\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define LTDC\+\_\+\+VSYNC\+\_\+\+GPIO\+\_\+\+PORT~GPIOI}
+
+\Hypertarget{bsp__lcd_8h_a03f08faebee92aa36fbcbf4cf77b5173}\label{bsp__lcd_8h_a03f08faebee92aa36fbcbf4cf77b5173} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!MAX\_LAYER\_NUMBER@{MAX\_LAYER\_NUMBER}}
+\index{MAX\_LAYER\_NUMBER@{MAX\_LAYER\_NUMBER}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LAYER\_NUMBER}{MAX\_LAYER\_NUMBER}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+LAYER\+\_\+\+NUMBER~(uint32\+\_\+t)2}
+
+\Hypertarget{bsp__lcd_8h_ac7be230cb2251f6c64469f4f6a5c8801}\label{bsp__lcd_8h_ac7be230cb2251f6c64469f4f6a5c8801} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!VBP@{VBP}}
+\index{VBP@{VBP}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{VBP}{VBP}}
+{\footnotesize\ttfamily \#define VBP~23}
+
+\Hypertarget{bsp__lcd_8h_a7216a9d43a70a221209fc3a7dd0b0163}\label{bsp__lcd_8h_a7216a9d43a70a221209fc3a7dd0b0163} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!VFP@{VFP}}
+\index{VFP@{VFP}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{VFP}{VFP}}
+{\footnotesize\ttfamily \#define VFP~22}
+
+\Hypertarget{bsp__lcd_8h_aea3fdadabf655347d1e4da024ce049ad}\label{bsp__lcd_8h_aea3fdadabf655347d1e4da024ce049ad} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!VSW@{VSW}}
+\index{VSW@{VSW}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{VSW}{VSW}}
+{\footnotesize\ttfamily \#define VSW~1}
+
+
+
+\doxysubsection{函数说明}
+\Hypertarget{bsp__lcd_8h_a0bb03a44ef3f80528979b5cd8091dd84}\label{bsp__lcd_8h_a0bb03a44ef3f80528979b5cd8091dd84} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!GetGB2312Code\_from\_EXFlash@{GetGB2312Code\_from\_EXFlash}}
+\index{GetGB2312Code\_from\_EXFlash@{GetGB2312Code\_from\_EXFlash}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{GetGB2312Code\_from\_EXFlash()}{GetGB2312Code\_from\_EXFlash()}}
+{\footnotesize\ttfamily int Get\+GB2312\+Code\+\_\+from\+\_\+\+EXFlash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Buffer,  }\item[{uint16\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+
+
+获取一个中文\+GB2312编码字符的字模数据 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+Buffer} & 用于存放字模数据的缓冲区 \\
+\hline
+{\em c} & GB2312编码字符 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+int 无意义 
+\end{DoxyReturn}
+\Hypertarget{bsp__lcd_8h_ae57144a5b4342ddd500fb50018123dc6}\label{bsp__lcd_8h_ae57144a5b4342ddd500fb50018123dc6} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_Clear@{LCD\_Clear}}
+\index{LCD\_Clear@{LCD\_Clear}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Clear()}{LCD\_Clear()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+LCD当前层清屏 
+
+
+\begin{DoxyParams}{参数}
+{\em Color} & 用于填充的背景颜色 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a83e11eb72448bdf1c3e729aea39e921c}\label{bsp__lcd_8h_a83e11eb72448bdf1c3e729aea39e921c} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_ClearLine@{LCD\_ClearLine}}
+\index{LCD\_ClearLine@{LCD\_ClearLine}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_ClearLine()}{LCD\_ClearLine()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Clear\+Line (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Line }\end{DoxyParamCaption})}
+
+
+
+清除一行 
+
+
+\begin{DoxyParams}{参数}
+{\em Line} & 要清除的行 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a6750a89764ac496272315a241ff377f5}\label{bsp__lcd_8h_a6750a89764ac496272315a241ff377f5} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_CLK\_Config@{LCD\_CLK\_Config}}
+\index{LCD\_CLK\_Config@{LCD\_CLK\_Config}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_CLK\_Config()}{LCD\_CLK\_Config()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+CLK\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+STM32与液晶屏通讯的时钟配置 时钟配置为9.6MHz 
+
+\Hypertarget{bsp__lcd_8h_a06ea822c4061bfb2e466b851411c0aa9}\label{bsp__lcd_8h_a06ea822c4061bfb2e466b851411c0aa9} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_Config@{LCD\_Config}}
+\index{LCD\_Config@{LCD\_Config}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Config()}{LCD\_Config()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{bsp__lcd_8h_aa500186c114aaea3dd6cdc11d306617e}\label{bsp__lcd_8h_aa500186c114aaea3dd6cdc11d306617e} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DisplayChar@{LCD\_DisplayChar}}
+\index{LCD\_DisplayChar@{LCD\_DisplayChar}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayChar()}{LCD\_DisplayChar()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Display\+Char (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t}]{Ascii }\end{DoxyParamCaption})}
+
+
+
+在指定位置显示一个字符(英文) 
+
+
+\begin{DoxyParams}{参数}
+{\em Xpos} & 显示的\+X坐标 \\
+\hline
+{\em Ypos} & 显示的\+Y坐标 \\
+\hline
+{\em Ascii} & 需要显示的字符 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a413cecd8e18e5715925c0831a5946d29}\label{bsp__lcd_8h_a413cecd8e18e5715925c0831a5946d29} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DisplayChar\_CH@{LCD\_DisplayChar\_CH}}
+\index{LCD\_DisplayChar\_CH@{LCD\_DisplayChar\_CH}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayChar\_CH()}{LCD\_DisplayChar\_CH()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Display\+Char\+\_\+\+CH (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{char\+\_\+\+CH }\end{DoxyParamCaption})}
+
+
+
+绘制一个中文字符 
+
+
+\begin{DoxyParams}{参数}
+{\em Xpos} & 绘制字符的\+X坐标 \\
+\hline
+{\em Ypos} & 绘制字符的\+Y坐标 \\
+\hline
+{\em char\+\_\+\+CH} & 中文字符 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_ae06ea1bb5f28922b6017676d1aaa61e4}\label{bsp__lcd_8h_ae06ea1bb5f28922b6017676d1aaa61e4} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DisplayOff@{LCD\_DisplayOff}}
+\index{LCD\_DisplayOff@{LCD\_DisplayOff}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayOff()}{LCD\_DisplayOff()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Display\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{bsp__lcd_8h_aed5bd5f3f7340dbdb2e7f50f94163789}\label{bsp__lcd_8h_aed5bd5f3f7340dbdb2e7f50f94163789} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DisplayOn@{LCD\_DisplayOn}}
+\index{LCD\_DisplayOn@{LCD\_DisplayOn}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayOn()}{LCD\_DisplayOn()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Display\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{bsp__lcd_8h_a7fe6db0bfd3cabc4e99d5ce8b7343c6b}\label{bsp__lcd_8h_a7fe6db0bfd3cabc4e99d5ce8b7343c6b} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DisplayStringAt@{LCD\_DisplayStringAt}}
+\index{LCD\_DisplayStringAt@{LCD\_DisplayStringAt}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayStringAt()}{LCD\_DisplayStringAt()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Display\+String\+At (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Text }\end{DoxyParamCaption})}
+
+
+
+在指定位置显示一个字符串(英文) 
+
+
+\begin{DoxyParams}{参数}
+{\em Xpos} & 显示的起始位置\+X坐标 \\
+\hline
+{\em Ypos} & 显示的起始位置\+Y坐标 \\
+\hline
+{\em Text} & 指向字符串的指针 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_acced1d191675f150cb4cccd377a7c11c}\label{bsp__lcd_8h_acced1d191675f150cb4cccd377a7c11c} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DisplayStringLine@{LCD\_DisplayStringLine}}
+\index{LCD\_DisplayStringLine@{LCD\_DisplayStringLine}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayStringLine()}{LCD\_DisplayStringLine()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Display\+String\+Line (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Line,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Text }\end{DoxyParamCaption})}
+
+
+
+在指定行显示一个字符串(英文) 
+
+
+\begin{DoxyParams}{参数}
+{\em Line} & 显示的起始行(超出行宽会自动换行) \\
+\hline
+{\em Text} & 指向字符串的指针 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a01fbccb17e918648c31a30525f0eda6a}\label{bsp__lcd_8h_a01fbccb17e918648c31a30525f0eda6a} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DisplayStringLine\_EN\_CH@{LCD\_DisplayStringLine\_EN\_CH}}
+\index{LCD\_DisplayStringLine\_EN\_CH@{LCD\_DisplayStringLine\_EN\_CH}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayStringLine\_EN\_CH()}{LCD\_DisplayStringLine\_EN\_CH()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Display\+String\+Line\+\_\+\+EN\+\_\+\+CH (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Line,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Text }\end{DoxyParamCaption})}
+
+
+
+显示一句可以包含中英文的句子 
+
+
+\begin{DoxyParams}{参数}
+{\em Line} & 显示的起始行(超出行宽会自动换行) \\
+\hline
+{\em Text} & 指向需要显示的句子的指针 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a398e124cc5572547086d78fc9b7fc1f4}\label{bsp__lcd_8h_a398e124cc5572547086d78fc9b7fc1f4} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DrawAnyLine@{LCD\_DrawAnyLine}}
+\index{LCD\_DrawAnyLine@{LCD\_DrawAnyLine}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawAnyLine()}{LCD\_DrawAnyLine()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+Any\+Line (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{X1pos,  }\item[{uint16\+\_\+t}]{Y1pos,  }\item[{uint16\+\_\+t}]{X2pos,  }\item[{uint16\+\_\+t}]{Y2pos }\end{DoxyParamCaption})}
+
+
+
+绘制任意两点之间的一条直线 
+
+
+\begin{DoxyParams}{参数}
+{\em X1pos} & 点1的\+X坐标 \\
+\hline
+{\em Y1pos} & 点1的\+Y坐标 \\
+\hline
+{\em X2pos} & 点2的\+X坐标 \\
+\hline
+{\em Y2pos} & 点2的\+Y坐标 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a2cfdb76c5b920f5a8fcaed02cf318c45}\label{bsp__lcd_8h_a2cfdb76c5b920f5a8fcaed02cf318c45} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DrawChar@{LCD\_DrawChar}}
+\index{LCD\_DrawChar@{LCD\_DrawChar}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawChar()}{LCD\_DrawChar()}}
+{\footnotesize\ttfamily static void LCD\+\_\+\+Draw\+Char (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{bsp__lcd_8h_a268429ba50ca073c233224309fac9f46}\label{bsp__lcd_8h_a268429ba50ca073c233224309fac9f46} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DrawHLine@{LCD\_DrawHLine}}
+\index{LCD\_DrawHLine@{LCD\_DrawHLine}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawHLine()}{LCD\_DrawHLine()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+HLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+绘制一条水平直线 
+
+
+\begin{DoxyParams}{参数}
+{\em Xpos} & X轴起始坐标 \\
+\hline
+{\em Ypos} & Y轴起始坐标 \\
+\hline
+{\em Length} & 线的长度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a10cbb1fbca34e835f98e1172c2756990}\label{bsp__lcd_8h_a10cbb1fbca34e835f98e1172c2756990} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DrawPixel@{LCD\_DrawPixel}}
+\index{LCD\_DrawPixel@{LCD\_DrawPixel}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawPixel()}{LCD\_DrawPixel()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint32\+\_\+t}]{RGB\+\_\+\+Code }\end{DoxyParamCaption})}
+
+
+
+绘制一个点 
+
+
+\begin{DoxyParams}{参数}
+{\em Xpos} & X轴坐标 \\
+\hline
+{\em Ypos} & Y轴坐标 \\
+\hline
+{\em RGB\+\_\+\+Code} & 像素颜色值 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a370ea7eacea2dd8fcc352ce8dcbaa151}\label{bsp__lcd_8h_a370ea7eacea2dd8fcc352ce8dcbaa151} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_DrawVLine@{LCD\_DrawVLine}}
+\index{LCD\_DrawVLine@{LCD\_DrawVLine}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawVLine()}{LCD\_DrawVLine()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Draw\+VLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+绘制一条垂直直线 
+
+
+\begin{DoxyParams}{参数}
+{\em Xpos} & X轴起始坐标 \\
+\hline
+{\em Ypos} & Y轴起始坐标 \\
+\hline
+{\em Length} & 线的长度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_adfc663e63fa8138ef0c4f4a1b31c7807}\label{bsp__lcd_8h_adfc663e63fa8138ef0c4f4a1b31c7807} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_FillRect@{LCD\_FillRect}}
+\index{LCD\_FillRect@{LCD\_FillRect}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_FillRect()}{LCD\_FillRect()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Fill\+Rect (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+填充一个实心矩形 
+
+
+\begin{DoxyParams}{参数}
+{\em Xpos} & 矩形起始位置的\+X坐标 \\
+\hline
+{\em Ypos} & 矩形起始位置的\+Y坐标 \\
+\hline
+{\em Width} & 矩形宽度 \\
+\hline
+{\em Height} & 矩形高度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a7b2f00b73ed9209df1077ec5a975cc37}\label{bsp__lcd_8h_a7b2f00b73ed9209df1077ec5a975cc37} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_GetFont@{LCD\_GetFont}}
+\index{LCD\_GetFont@{LCD\_GetFont}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetFont()}{LCD\_GetFont()}}
+{\footnotesize\ttfamily s\+FONT \texorpdfstring{$\ast$}{*} LCD\+\_\+\+Get\+Font (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取\+LCD当前层显示的字体 
+
+\begin{DoxyReturn}{返回}
+s\+FONT\texorpdfstring{$\ast$}{*} LCD当前层的字体类型 
+\end{DoxyReturn}
+\Hypertarget{bsp__lcd_8h_aaf28c2494c1a232d68d8b63af20ea3ec}\label{bsp__lcd_8h_aaf28c2494c1a232d68d8b63af20ea3ec} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_GetStartAddress@{LCD\_GetStartAddress}}
+\index{LCD\_GetStartAddress@{LCD\_GetStartAddress}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetStartAddress()}{LCD\_GetStartAddress()}}
+{\footnotesize\ttfamily static uint32\+\_\+t LCD\+\_\+\+Get\+Start\+Address (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{bsp__lcd_8h_a6a405abda5e830f0f33dacfd21ec1e51}\label{bsp__lcd_8h_a6a405abda5e830f0f33dacfd21ec1e51} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_GetXSize@{LCD\_GetXSize}}
+\index{LCD\_GetXSize@{LCD\_GetXSize}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetXSize()}{LCD\_GetXSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t LCD\+\_\+\+Get\+XSize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取\+LCD当前层\+X轴的大小 
+
+\begin{DoxyReturn}{返回}
+uint32\+\_\+t X轴的大小 
+\end{DoxyReturn}
+\Hypertarget{bsp__lcd_8h_aadafb98eeb93c99b8468d36e406ac90e}\label{bsp__lcd_8h_aadafb98eeb93c99b8468d36e406ac90e} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_GetYSize@{LCD\_GetYSize}}
+\index{LCD\_GetYSize@{LCD\_GetYSize}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetYSize()}{LCD\_GetYSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t LCD\+\_\+\+Get\+YSize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取\+LCD当前层\+Y轴的大小 
+
+\begin{DoxyReturn}{返回}
+uint32\+\_\+t Y轴的大小 
+\end{DoxyReturn}
+\Hypertarget{bsp__lcd_8h_a1fb167c16cf7ec34f8170915d2302b7a}\label{bsp__lcd_8h_a1fb167c16cf7ec34f8170915d2302b7a} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_LayerInit@{LCD\_LayerInit}}
+\index{LCD\_LayerInit@{LCD\_LayerInit}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_LayerInit()}{LCD\_LayerInit()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Layer\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{FB\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Pixel\+Format }\end{DoxyParamCaption})}
+
+
+
+层级初始化 
+
+
+\begin{DoxyParams}{参数}
+{\em Layer\+Index} & 要设置的层 \\
+\hline
+{\em FB\+\_\+\+Address} & 该层的显存首地址 \\
+\hline
+{\em Pixel\+Format} & 该层的像素格式 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_ac0735470c4c9bc0130dd03ae6cb2b056}\label{bsp__lcd_8h_ac0735470c4c9bc0130dd03ae6cb2b056} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_ReadPixel@{LCD\_ReadPixel}}
+\index{LCD\_ReadPixel@{LCD\_ReadPixel}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_ReadPixel()}{LCD\_ReadPixel()}}
+{\footnotesize\ttfamily uint32\+\_\+t LCD\+\_\+\+Read\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+读取\+LCD的像素值 
+
+
+\begin{DoxyParams}{参数}
+{\em Xpos} & 需要读取的像素点的\+X坐标 \\
+\hline
+{\em Ypos} & 需要读取的像素点的\+Y坐标 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+uint32\+\_\+t 指定像素点的像素值 
+\end{DoxyReturn}
+\Hypertarget{bsp__lcd_8h_af1420ea7b39dd570d4d6edbf789f7640}\label{bsp__lcd_8h_af1420ea7b39dd570d4d6edbf789f7640} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SelectLayer@{LCD\_SelectLayer}}
+\index{LCD\_SelectLayer@{LCD\_SelectLayer}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SelectLayer()}{LCD\_SelectLayer()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Select\+Layer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index }\end{DoxyParamCaption})}
+
+
+
+选择\+LCD的当前层 
+
+
+\begin{DoxyParams}{参数}
+{\em Layer\+Index} & 1：前景层 0：背景层 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_aeca000116f289bc36b8892a6c64164dd}\label{bsp__lcd_8h_aeca000116f289bc36b8892a6c64164dd} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetBackColor@{LCD\_SetBackColor}}
+\index{LCD\_SetBackColor@{LCD\_SetBackColor}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetBackColor()}{LCD\_SetBackColor()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Back\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD当前层的文字背景颜色 
+
+
+\begin{DoxyParams}{参数}
+{\em Color} & 文字背景颜色 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_ab06250d18ef0123a92381333a7e464e0}\label{bsp__lcd_8h_ab06250d18ef0123a92381333a7e464e0} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetColors@{LCD\_SetColors}}
+\index{LCD\_SetColors@{LCD\_SetColors}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetColors()}{LCD\_SetColors()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Colors (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Text\+Color,  }\item[{uint32\+\_\+t}]{Back\+Color }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD当前层的文字颜色和文字背景颜色 
+
+
+\begin{DoxyParams}{参数}
+{\em Text\+Color} & 文字颜色 \\
+\hline
+{\em Back\+Color} & 文字背景颜色 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a6c26f6fcddd0bf89f71d71131c7a206a}\label{bsp__lcd_8h_a6c26f6fcddd0bf89f71d71131c7a206a} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetFont@{LCD\_SetFont}}
+\index{LCD\_SetFont@{LCD\_SetFont}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetFont()}{LCD\_SetFont()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Font (\begin{DoxyParamCaption}\item[{s\+FONT \texorpdfstring{$\ast$}{*}}]{fonts }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD当前层显示的字体 
+
+
+\begin{DoxyParams}{参数}
+{\em fonts} & 字体类型 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_affaff29c7f76c5bb37da2501f9799aaf}\label{bsp__lcd_8h_affaff29c7f76c5bb37da2501f9799aaf} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetLayerAddress@{LCD\_SetLayerAddress}}
+\index{LCD\_SetLayerAddress@{LCD\_SetLayerAddress}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetLayerAddress()}{LCD\_SetLayerAddress()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Layer\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{Address }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD缓冲帧的首地址 
+
+
+\begin{DoxyParams}{参数}
+{\em Layer\+Index} & 1：前景层 0：背景层 \\
+\hline
+{\em Address} & LCD缓冲帧的首地址 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a4b7c3b9a5af160da3faedc9baa0bf459}\label{bsp__lcd_8h_a4b7c3b9a5af160da3faedc9baa0bf459} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetLayerVisible@{LCD\_SetLayerVisible}}
+\index{LCD\_SetLayerVisible@{LCD\_SetLayerVisible}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetLayerVisible()}{LCD\_SetLayerVisible()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Layer\+Visible (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{Functional\+State}]{State }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD层的可视化(即禁止或使能某一层) 
+
+
+\begin{DoxyParams}{参数}
+{\em Layer\+Index} & 1：前景层 0：背景层 \\
+\hline
+{\em State} & 禁止或使能 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_aa97156afb28b2fb2877ae97efa92f3ee}\label{bsp__lcd_8h_aa97156afb28b2fb2877ae97efa92f3ee} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetLayerWindow@{LCD\_SetLayerWindow}}
+\index{LCD\_SetLayerWindow@{LCD\_SetLayerWindow}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetLayerWindow()}{LCD\_SetLayerWindow()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Layer\+Window (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Layer\+Index,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+设置显示窗口 
+
+
+\begin{DoxyParams}{参数}
+{\em Layer\+Index} & \\
+\hline
+{\em Xpos} & 窗口起始位置\+X坐标 \\
+\hline
+{\em Ypos} & 窗口起始位置\+Y坐标 \\
+\hline
+{\em Width} & 窗口宽度 \\
+\hline
+{\em Height} & 窗口高度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a31a4bb3bde55452bbb8370f5d935e41d}\label{bsp__lcd_8h_a31a4bb3bde55452bbb8370f5d935e41d} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetTextColor@{LCD\_SetTextColor}}
+\index{LCD\_SetTextColor@{LCD\_SetTextColor}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetTextColor()}{LCD\_SetTextColor()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Text\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD当前层的文字颜色 
+
+
+\begin{DoxyParams}{参数}
+{\em Color} & 文字颜色 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a0568836139e5177b6ce37e470e255c77}\label{bsp__lcd_8h_a0568836139e5177b6ce37e470e255c77} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetTransparency@{LCD\_SetTransparency}}
+\index{LCD\_SetTransparency@{LCD\_SetTransparency}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetTransparency()}{LCD\_SetTransparency()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+Transparency (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint8\+\_\+t}]{Transparency }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD的透明度常量，即\+Alpha 
+
+
+\begin{DoxyParams}{参数}
+{\em Layer\+Index} & 1：前景层 0：背景层 \\
+\hline
+{\em Transparency} & 透明度，范围(0-\/255)，0为完全透明 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a8e3dca6342e3dd739edbec8a23488e56}\label{bsp__lcd_8h_a8e3dca6342e3dd739edbec8a23488e56} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetXSize@{LCD\_SetXSize}}
+\index{LCD\_SetXSize@{LCD\_SetXSize}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetXSize()}{LCD\_SetXSize()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+XSize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{image\+Width\+Pixels }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD当前层\+X轴的大小 
+
+
+\begin{DoxyParams}{参数}
+{\em image\+Height\+Pixels} & 图像宽度像素个数 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a320415ea9b549dd0a4fa2452bde4565c}\label{bsp__lcd_8h_a320415ea9b549dd0a4fa2452bde4565c} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LCD\_SetYSize@{LCD\_SetYSize}}
+\index{LCD\_SetYSize@{LCD\_SetYSize}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetYSize()}{LCD\_SetYSize()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Set\+YSize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{image\+Height\+Pixels }\end{DoxyParamCaption})}
+
+
+
+设置\+LCD当前层\+Y轴的大小 
+
+
+\begin{DoxyParams}{参数}
+{\em image\+Height\+Pixels} & 图像高度像素个数 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bsp__lcd_8h_a846fbcfe435b2eb20d412c1793350a03}\label{bsp__lcd_8h_a846fbcfe435b2eb20d412c1793350a03} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LL\_FillBuffer@{LL\_FillBuffer}}
+\index{LL\_FillBuffer@{LL\_FillBuffer}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LL\_FillBuffer()}{LL\_FillBuffer()}}
+{\footnotesize\ttfamily static void LL\+\_\+\+Fill\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Dst,  }\item[{uint32\+\_\+t}]{x\+Size,  }\item[{uint32\+\_\+t}]{y\+Size,  }\item[{uint32\+\_\+t}]{Off\+Line,  }\item[{uint32\+\_\+t}]{Color\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{bsp__lcd_8h_a6657ebb2be9c7538015074a022af9d3c}\label{bsp__lcd_8h_a6657ebb2be9c7538015074a022af9d3c} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_Config@{LTDC\_Config}}
+\index{LTDC\_Config@{LTDC\_Config}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_Config()}{LTDC\_Config()}}
+{\footnotesize\ttfamily void LTDC\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{bsp__lcd_8h_a05a9b470a504b444eb29d34bea640652}\label{bsp__lcd_8h_a05a9b470a504b444eb29d34bea640652} 
+\index{bsp\_lcd.h@{bsp\_lcd.h}!LTDC\_GPIO\_Config@{LTDC\_GPIO\_Config}}
+\index{LTDC\_GPIO\_Config@{LTDC\_GPIO\_Config}!bsp\_lcd.h@{bsp\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_GPIO\_Config()}{LTDC\_GPIO\_Config()}}
+{\footnotesize\ttfamily void LTDC\+\_\+\+GPIO\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

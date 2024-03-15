@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: E:/STM32文件/练习/LTDC_DMA2D_2023_12_5/HAL_F429/User/LCD/bsp_lcd.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0afb7792c915fb345a807f62382969eb.html">STM32文件</a></li><li class="navelem"><a class="el" href="dir_0d9437dc2651859363976f9a69b1e272.html">练习</a></li><li class="navelem"><a class="el" href="dir_8d7489c74f9593fbba64e510c9223109.html">LTDC_DMA2D_2023_12_5</a></li><li class="navelem"><a class="el" href="dir_87a7cdec703cf680837d0f305c34528e.html">HAL_F429</a></li><li class="navelem"><a class="el" href="dir_65b47df50fb6a2f025f338e2d63ce7b1.html">User</a></li><li class="navelem"><a class="el" href="dir_8506b64e121e3d702184f16785b2061e.html">LCD</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">bsp_lcd.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bsp__lcd_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __BSP_LCD_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __BSP_LCD_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;stm32f4xx.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;fonts.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a1c5ab4b6c3330335a1b0fdf796f89224">    7</a></span><span class="preprocessor">#define LTDC_R0_GPIO_PORT GPIOH</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ac20ad72b94a27b353aefbd997234c8b6">    8</a></span><span class="preprocessor">#define LTDC_R0_GPIO_Pin GPIO_PIN_2</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4826f4f1ea9ea19eb05cb53b6a542b42">   10</a></span><span class="preprocessor">#define LTDC_R1_GPIO_PORT GPIOH</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a81cfb5ff9357b8b8be9337f4a891c739">   11</a></span><span class="preprocessor">#define LTDC_R1_GPIO_Pin GPIO_PIN_3</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ab2d140bb3a765bd70ab379fcce0304a8">   13</a></span><span class="preprocessor">#define LTDC_R2_GPIO_PORT GPIOH</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a064e324111a5f60bb1de7a048eefe5af">   14</a></span><span class="preprocessor">#define LTDC_R2_GPIO_Pin GPIO_PIN_8</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a92cc820208ffa8cbec1d8c114bd0681e">   16</a></span><span class="preprocessor">#define LTDC_R3_GPIO_PORT GPIOB</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a93617bc0bad5d732a3a094490911208e">   17</a></span><span class="preprocessor">#define LTDC_R3_GPIO_Pin GPIO_PIN_0</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a429a729e8ff1613cfc659cabd6055db5">   19</a></span><span class="preprocessor">#define LTDC_R4_GPIO_PORT GPIOA</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ad386f2922635ea084179e56edec9ba4e">   20</a></span><span class="preprocessor">#define LTDC_R4_GPIO_Pin GPIO_PIN_11</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ae2454422543e60a86aff1f1e647d97cf">   22</a></span><span class="preprocessor">#define LTDC_R5_GPIO_PORT GPIOA</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#acd0e34ff92c7e1b27f262ccabc23daa0">   23</a></span><span class="preprocessor">#define LTDC_R5_GPIO_Pin GPIO_PIN_12</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#adcf18d5cebc0d5e39785da7c49103c53">   25</a></span><span class="preprocessor">#define LTDC_R6_GPIO_PORT GPIOB</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a67fe9fcdcca7993984c27f9ef2aff1fa">   26</a></span><span class="preprocessor">#define LTDC_R6_GPIO_Pin GPIO_PIN_1</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a22ea33a32476074177df5a65c11447b1">   28</a></span><span class="preprocessor">#define LTDC_R7_GPIO_PORT GPIOG</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af122d2d8f6e8cc2c7fb85bbc5fc80667">   29</a></span><span class="preprocessor">#define LTDC_R7_GPIO_Pin GPIO_PIN_6</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af77b3a29d9cb8f49c6530700fdcd3863">   32</a></span><span class="preprocessor">#define LTDC_G0_GPIO_PORT GPIOE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af910df0275c9362c33eb2d630e62ac09">   33</a></span><span class="preprocessor">#define LTDC_G0_GPIO_Pin GPIO_PIN_5</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4fbf33af27757720f9734758f99b32f4">   35</a></span><span class="preprocessor">#define LTDC_G1_GPIO_PORT GPIOE</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af79d03f4c770a6619f58b9d3964aeb3c">   36</a></span><span class="preprocessor">#define LTDC_G1_GPIO_Pin GPIO_PIN_6</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4a91f61d15d7f6080b6309fda1f09bf2">   38</a></span><span class="preprocessor">#define LTDC_G2_GPIO_PORT GPIOH</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a87687e5b23115bd8738a80d4366335eb">   39</a></span><span class="preprocessor">#define LTDC_G2_GPIO_Pin GPIO_PIN_13</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aafe6d6da3668f28c7bdaefa0d055b569">   41</a></span><span class="preprocessor">#define LTDC_G3_GPIO_PORT GPIOG</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a932de36d8b6e7c32ac4f89d378bd7c78">   42</a></span><span class="preprocessor">#define LTDC_G3_GPIO_Pin GPIO_PIN_10</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a179c8c3724d1af69ae42b6c32ddfd7aa">   44</a></span><span class="preprocessor">#define LTDC_G4_GPIO_PORT GPIOH</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4449aca86afe3c857397b7e1c07bc27f">   45</a></span><span class="preprocessor">#define LTDC_G4_GPIO_Pin GPIO_PIN_15</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a5c0a061ebb8c9dcab543a4b7b5a8c903">   47</a></span><span class="preprocessor">#define LTDC_G5_GPIO_PORT GPIOI</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a9a7b47eaaab744a7470fb71113e103a4">   48</a></span><span class="preprocessor">#define LTDC_G5_GPIO_Pin GPIO_PIN_0</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aaa34caebaae2f42d3a3d0240f102992d">   50</a></span><span class="preprocessor">#define LTDC_G6_GPIO_PORT GPIOC</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af6232635ec9969ad988f676a63f0cdc2">   51</a></span><span class="preprocessor">#define LTDC_G6_GPIO_Pin GPIO_PIN_7</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a10a2ac89db4e17053d86ff660151bbf3">   53</a></span><span class="preprocessor">#define LTDC_G7_GPIO_PORT GPIOI</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a90c5d19f4267d31690f664846fe26fb7">   54</a></span><span class="preprocessor">#define LTDC_G7_GPIO_Pin GPIO_PIN_2</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a79af58b7660fdb743048b3be90ee46c9">   57</a></span><span class="preprocessor">#define LTDC_B0_GPIO_PORT GPIOE</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a32965c9ea71523cc985d39b74f548c44">   58</a></span><span class="preprocessor">#define LTDC_B0_GPIO_Pin GPIO_PIN_4</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ad328d6cdf6ed1d83605d953fdd059262">   60</a></span><span class="preprocessor">#define LTDC_B1_GPIO_PORT GPIOG</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ad3937bb8a5304967c8b15adfa2234dc1">   61</a></span><span class="preprocessor">#define LTDC_B1_GPIO_Pin GPIO_PIN_12</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a7931b879385ded12de6ea796eb32414d">   63</a></span><span class="preprocessor">#define LTDC_B2_GPIO_PORT GPIOD</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#adbf5c6ba2076d1787fa9aeb7f811ac0b">   64</a></span><span class="preprocessor">#define LTDC_B2_GPIO_Pin GPIO_PIN_6</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ab8340085b4d04d5868318c3ae24cbb96">   66</a></span><span class="preprocessor">#define LTDC_B3_GPIO_PORT GPIOG</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a1bd5cea61b627c803b128c6bc88c501e">   67</a></span><span class="preprocessor">#define LTDC_B3_GPIO_Pin GPIO_PIN_11</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ae655ddc3a773e72a6a6a81dbdd457fcb">   69</a></span><span class="preprocessor">#define LTDC_B4_GPIO_PORT GPIOI</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a09ee11b7ce669792d575979ac54b2e06">   70</a></span><span class="preprocessor">#define LTDC_B4_GPIO_Pin GPIO_PIN_4</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a05558dbe3e369d9fc845221dbed9e084">   72</a></span><span class="preprocessor">#define LTDC_B5_GPIO_PORT GPIOA</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4a15df777784b4ec61c775cbd62a3e1f">   73</a></span><span class="preprocessor">#define LTDC_B5_GPIO_Pin GPIO_PIN_3</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a495e719e7ed55808392ffc88f50b7c91">   75</a></span><span class="preprocessor">#define LTDC_B6_GPIO_PORT GPIOB</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a51878a3c6218c8ff04baecfb5a089a99">   76</a></span><span class="preprocessor">#define LTDC_B6_GPIO_Pin GPIO_PIN_8</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a559ae5ccddb28d557670ef607ffc27d0">   78</a></span><span class="preprocessor">#define LTDC_B7_GPIO_PORT GPIOB</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aae48957e4b24e62174895bb58cb9359a">   79</a></span><span class="preprocessor">#define LTDC_B7_GPIO_Pin GPIO_PIN_9</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#acfff6f0aa0436b59872deca5e966e47b">   82</a></span><span class="preprocessor">#define LTDC_CLK_GPIO_PORT GPIOG</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a124475377b6506069ffb8f7a34f322a0">   83</a></span><span class="preprocessor">#define LTDC_CLK_GPIO_Pin GPIO_PIN_7</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aa1654d844a7482659e24bbd5eaf03837">   85</a></span><span class="preprocessor">#define LTDC_HSYNC_GPIO_PORT GPIOI</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a6b32afec29268a58a0a94da0f0a1b732">   86</a></span><span class="preprocessor">#define LTDC_HSYNC_GPIO_Pin GPIO_PIN_10</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a274d6e19dd2f7288d8ad9c36eee8600f">   88</a></span><span class="preprocessor">#define LTDC_VSYNC_GPIO_PORT GPIOI</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a9e2024e3aac78a79a2eaafb3ae63d2ce">   89</a></span><span class="preprocessor">#define LTDC_VSYNC_GPIO_Pin GPIO_PIN_9</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aa6ecbbfd496d5328002c35d7db859459">   92</a></span><span class="preprocessor">#define LTDC_DE_GPIO_PORT GPIOF</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ae3a3fbdb92fd57b813990f57a79bfb6a">   93</a></span><span class="preprocessor">#define LTDC_DE_GPIO_Pin GPIO_PIN_10</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ad67037bac69bbed3168851ee5d7d1e51">   95</a></span><span class="preprocessor">#define LTDC_DISP_GPIO_PORT GPIOD</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af2853d86716514d92fa96a71b56ec1ce">   96</a></span><span class="preprocessor">#define LTDC_DISP_GPIO_Pin GPIO_PIN_4</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af745db49c2539e75e6e07ef0831a3140">   98</a></span><span class="preprocessor">#define LTDC_BL_GPIO_PORT GPIOD</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4e7bf4c13bfab0bb50910201162560f7">   99</a></span><span class="preprocessor">#define LTDC_BL_GPIO_Pin GPIO_PIN_7</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="foldopen" id="foldopen00101" data-start="" data-end="">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#afda119803ff9a1e2ea2b121f622fd511">  101</a></span><span class="preprocessor">#define LTDC_GPIO_CLK_ENABLE()   {__GPIOA_CLK_ENABLE();__GPIOB_CLK_ENABLE();__GPIOC_CLK_ENABLE();__GPIOD_CLK_ENABLE();__GPIOE_CLK_ENABLE();\</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">                                 __GPIOF_CLK_ENABLE();__GPIOG_CLK_ENABLE();__GPIOH_CLK_ENABLE();} </span></div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a5647ec8a40b49d6662226601eb9eb452">  104</a></span><span class="preprocessor">#define LCD_COLOR_BLUE          ((uint32_t)0xFF0000FF)</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aaee512e5955e0ed1bf67c7a3bc76fc53">  105</a></span><span class="preprocessor">#define LCD_COLOR_GREEN         ((uint32_t)0xFF00FF00)</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af125d28a3cd79b94a81fc572990f300e">  106</a></span><span class="preprocessor">#define LCD_COLOR_RED           ((uint32_t)0xFFFF0000)</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a5a921cf0f9febd5de4fa3c40cda4dd7d">  107</a></span><span class="preprocessor">#define LCD_COLOR_CYAN          ((uint32_t)0xFF00FFFF)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ad65d67388318c734a32cdfb7a5935f59">  108</a></span><span class="preprocessor">#define LCD_COLOR_MAGENTA       ((uint32_t)0xFFFF00FF)</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a11062db6ba403700019e98a8b7c56f18">  109</a></span><span class="preprocessor">#define LCD_COLOR_YELLOW        ((uint32_t)0xFFFFFF00)</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a347a89173e8bfce09a85beea805ee202">  110</a></span><span class="preprocessor">#define LCD_COLOR_LIGHTBLUE     ((uint32_t)0xFF8080FF)</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a9d4e0fc799fada640cccf87cbf7d89ce">  111</a></span><span class="preprocessor">#define LCD_COLOR_LIGHTGREEN    ((uint32_t)0xFF80FF80)</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af03b9162384eeefe4381927c28e5ef1c">  112</a></span><span class="preprocessor">#define LCD_COLOR_LIGHTRED      ((uint32_t)0xFFFF8080)</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af33fd44a04804e04e93b0d341d89d813">  113</a></span><span class="preprocessor">#define LCD_COLOR_LIGHTCYAN     ((uint32_t)0xFF80FFFF)</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aa1f38c83f7a484fe440eb9ef0122f7f1">  114</a></span><span class="preprocessor">#define LCD_COLOR_LIGHTMAGENTA  ((uint32_t)0xFFFF80FF)</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aaaea2b5bd2d8b6fd01187f61e80e5820">  115</a></span><span class="preprocessor">#define LCD_COLOR_LIGHTYELLOW   ((uint32_t)0xFFFFFF80)</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a67921b0000a7f8890d660a8725edbc19">  116</a></span><span class="preprocessor">#define LCD_COLOR_DARKBLUE      ((uint32_t)0xFF000080)</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4d604eacac3f85176b721eb590689ee0">  117</a></span><span class="preprocessor">#define LCD_COLOR_DARKGREEN     ((uint32_t)0xFF008000)</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a12d859a7de90215057fee241f1b67eb6">  118</a></span><span class="preprocessor">#define LCD_COLOR_DARKRED       ((uint32_t)0xFF800000)</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af9e9a56d88620375c5826fb0a56381f8">  119</a></span><span class="preprocessor">#define LCD_COLOR_DARKCYAN      ((uint32_t)0xFF008080)</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a795752bdd0506d1a8cd1ad5e2c35f93e">  120</a></span><span class="preprocessor">#define LCD_COLOR_DARKMAGENTA   ((uint32_t)0xFF800080)</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a49fdaac69765cd63a68d30cc753b77fb">  121</a></span><span class="preprocessor">#define LCD_COLOR_DARKYELLOW    ((uint32_t)0xFF808000)</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#acc49fc5e78780bc38a49d2ce30f02da0">  122</a></span><span class="preprocessor">#define LCD_COLOR_WHITE         ((uint32_t)0xFFFFFFFF)</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a1fe85812ee1d9975211e1bd329664afc">  123</a></span><span class="preprocessor">#define LCD_COLOR_LIGHTGRAY     ((uint32_t)0xFFD3D3D3)</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a424fdb50026cdfc18a287b01965983f0">  124</a></span><span class="preprocessor">#define LCD_COLOR_GRAY          ((uint32_t)0xFF808080)</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aed58783a24f35617da7c12b1053bcbbf">  125</a></span><span class="preprocessor">#define LCD_COLOR_DARKGRAY      ((uint32_t)0xFF404040)</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a5a28392f0f4fc236e038a15fe468ce1b">  126</a></span><span class="preprocessor">#define LCD_COLOR_BLACK         ((uint32_t)0xFF000000)</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ab6ed75970fe02ebf907864cfe8e112ad">  127</a></span><span class="preprocessor">#define LCD_COLOR_BROWN         ((uint32_t)0xFFA52A2A)</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a5da26295a6c0a7af2095b2579ce7c0f9">  128</a></span><span class="preprocessor">#define LCD_COLOR_ORANGE        ((uint32_t)0xFFFFA500)</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4b140f901775e4563eea22ea0885e834">  129</a></span><span class="preprocessor">#define LCD_COLOR_TRANSPARENT   ((uint32_t)0xFF000000)</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">//LCD默认字体</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a95bc19f28c2c0fdca40f6070c09f7a71">  132</a></span><span class="preprocessor">#define LCD_DEFAULT_FONT Font24</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">//LCD物理像素大小(宽度和高度)</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a215a46e7477262a8280bcb27b63aaabd">  135</a></span><span class="preprocessor">#define LCD_PIXEL_WIDTH   (uint16_t)800</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#af796d6844b178c92f38b8cb4b9e41c78">  136</a></span><span class="preprocessor">#define LCD_PIXEL_HEIGHT  (uint16_t)480</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">//根据液晶数据手册的参数配置</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">//HSYNC后的无效像素</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aa9625d05e06981f0fef5e2463857aa06">  140</a></span><span class="preprocessor">#define HBP 46</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">//VSYNC后的无效行数</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#ac7be230cb2251f6c64469f4f6a5c8801">  142</a></span><span class="preprocessor">#define VBP 23</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">//HSYNC宽度</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a4c7bfeb24a7c59a5df72fb6dbb6b3a01">  144</a></span><span class="preprocessor">#define HSW 1</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">//VSYNC宽度</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aea3fdadabf655347d1e4da024ce049ad">  146</a></span><span class="preprocessor">#define VSW 1</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">//HSYNC前的无效像素</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a0f41581c8fb5199646fb7875bfeec108">  148</a></span><span class="preprocessor">#define HFP 22</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">//VSYNC前的无效行数</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a7216a9d43a70a221209fc3a7dd0b0163">  150</a></span><span class="preprocessor">#define VFP 22</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a03f08faebee92aa36fbcbf4cf77b5173">  152</a></span><span class="preprocessor">#define MAX_LAYER_NUMBER   (uint32_t)2</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a5fa41785a8748c49b61639f4ddd8610b">  153</a></span><span class="preprocessor">#define LTDC_ACTIVE_LAYER  (uint32_t)1</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#abce6a3e4f22835ff690f563ff366ffcf">  155</a></span><span class="preprocessor">#define LCD_FB_START_ADDRESS   (uint32_t)0xD0000000</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="foldopen" id="foldopen00157" data-start="{" data-end="};">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="struct_l_c_d___draw_prop_type_def.html">  157</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="struct_l_c_d___draw_prop_type_def.html#a077186d06037e2204e2e0caf4a30068f">  159</a></span>  uint32_t <a class="code hl_variable" href="struct_l_c_d___draw_prop_type_def.html#a077186d06037e2204e2e0caf4a30068f">TextColor</a>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="struct_l_c_d___draw_prop_type_def.html#a8de9dd9da4dec950161005d49afc523a">  160</a></span>  uint32_t <a class="code hl_variable" href="struct_l_c_d___draw_prop_type_def.html#a8de9dd9da4dec950161005d49afc523a">BackColor</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="struct_l_c_d___draw_prop_type_def.html#a06c38812ab107862588951a0d13a01e9">  161</a></span>  sFONT *<a class="code hl_variable" href="struct_l_c_d___draw_prop_type_def.html#a06c38812ab107862588951a0d13a01e9">pFont</a>;   <span class="comment">//注意这里是一个指针，使用这个成员内的成员(sFONT也是结构体)的时候应该用-&gt;，如AAA.pFont-&gt;Width</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}<a class="code hl_struct" href="struct_l_c_d___draw_prop_type_def.html">LCD_DrawPropTypeDef</a>;</div>
+</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#aed5bd5f3f7340dbdb2e7f50f94163789">LCD_DisplayOn</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#ae06ea1bb5f28922b6017676d1aaa61e4">LCD_DisplayOff</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a05a9b470a504b444eb29d34bea640652">LTDC_GPIO_Config</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a6750a89764ac496272315a241ff377f5">LCD_CLK_Config</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a6657ebb2be9c7538015074a022af9d3c">LTDC_Config</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>uint32_t <a class="code hl_function" href="bsp__lcd_8h.html#a6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>uint32_t <a class="code hl_function" href="bsp__lcd_8h.html#aadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a8e3dca6342e3dd739edbec8a23488e56">LCD_SetXSize</a>(uint32_t imageWidthPixels);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a320415ea9b549dd0a4fa2452bde4565c">LCD_SetYSize</a>(uint32_t imageHeightPixels);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a1fb167c16cf7ec34f8170915d2302b7a">LCD_LayerInit</a>(uint16_t LayerIndex, uint32_t FB_Address, uint32_t PixelFormat);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a06ea822c4061bfb2e466b851411c0aa9">LCD_Config</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#af1420ea7b39dd570d4d6edbf789f7640">LCD_SelectLayer</a>(uint32_t LayerIndex);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a4b7c3b9a5af160da3faedc9baa0bf459">LCD_SetLayerVisible</a>(uint32_t LayerIndex, FunctionalState State);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a0568836139e5177b6ce37e470e255c77">LCD_SetTransparency</a>(uint32_t LayerIndex, uint8_t Transparency);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#affaff29c7f76c5bb37da2501f9799aaf">LCD_SetLayerAddress</a>(uint32_t LayerIndex, uint32_t Address);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a846fbcfe435b2eb20d412c1793350a03">  181</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a846fbcfe435b2eb20d412c1793350a03">LL_FillBuffer</a>(uint32_t LayerIndex, <span class="keywordtype">void</span> *pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a10cbb1fbca34e835f98e1172c2756990">LCD_DrawPixel</a>(uint16_t Xpos, uint16_t Ypos, uint32_t RGB_Code);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a268429ba50ca073c233224309fac9f46">LCD_DrawHLine</a>(uint16_t Xpos, uint16_t Ypos, uint16_t Length);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a370ea7eacea2dd8fcc352ce8dcbaa151">LCD_DrawVLine</a>(uint16_t Xpos, uint16_t Ypos, uint16_t Length);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a398e124cc5572547086d78fc9b7fc1f4">LCD_DrawAnyLine</a>(uint16_t X1pos, uint16_t Y1pos, uint16_t X2pos, uint16_t Y2pos);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#adfc663e63fa8138ef0c4f4a1b31c7807">LCD_FillRect</a>(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#aed5bd5f3f7340dbdb2e7f50f94163789">LCD_DisplayOn</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#ae06ea1bb5f28922b6017676d1aaa61e4">LCD_DisplayOff</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#ae57144a5b4342ddd500fb50018123dc6">LCD_Clear</a>(uint32_t Color);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a83e11eb72448bdf1c3e729aea39e921c">LCD_ClearLine</a>(uint32_t Line);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>uint32_t <a class="code hl_function" href="bsp__lcd_8h.html#ac0735470c4c9bc0130dd03ae6cb2b056">LCD_ReadPixel</a>(uint16_t Xpos, uint16_t Ypos);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a31a4bb3bde55452bbb8370f5d935e41d">LCD_SetTextColor</a>(uint32_t Color);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#aeca000116f289bc36b8892a6c64164dd">LCD_SetBackColor</a>(uint32_t Color);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#ab06250d18ef0123a92381333a7e464e0">LCD_SetColors</a>(uint32_t TextColor, uint32_t BackColor);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a6c26f6fcddd0bf89f71d71131c7a206a">LCD_SetFont</a>(sFONT *fonts);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>sFONT *<a class="code hl_function" href="bsp__lcd_8h.html#a7b2f00b73ed9209df1077ec5a975cc37">LCD_GetFont</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#aa97156afb28b2fb2877ae97efa92f3ee">LCD_SetLayerWindow</a>(uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#aaf28c2494c1a232d68d8b63af20ea3ec">  201</a></span><span class="keyword">static</span> uint32_t <a class="code hl_function" href="bsp__lcd_8h.html#aaf28c2494c1a232d68d8b63af20ea3ec">LCD_GetStartAddress</a>(uint16_t Xpos, uint16_t Ypos);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="bsp__lcd_8h.html#a2cfdb76c5b920f5a8fcaed02cf318c45">  202</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a2cfdb76c5b920f5a8fcaed02cf318c45">LCD_DrawChar</a>(uint16_t Xpos, uint16_t Ypos, <span class="keyword">const</span> uint8_t *c);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#aa500186c114aaea3dd6cdc11d306617e">LCD_DisplayChar</a>(uint16_t Xpos, uint16_t Ypos, uint8_t Ascii);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a7fe6db0bfd3cabc4e99d5ce8b7343c6b">LCD_DisplayStringAt</a>(uint16_t Xpos, uint16_t Ypos, uint8_t * Text);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#acced1d191675f150cb4cccd377a7c11c">LCD_DisplayStringLine</a>(uint8_t Line, uint8_t * Text);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keywordtype">int</span> <a class="code hl_function" href="bsp__lcd_8h.html#a0bb03a44ef3f80528979b5cd8091dd84">GetGB2312Code_from_EXFlash</a>(uint8_t * pBuffer, uint16_t c);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a413cecd8e18e5715925c0831a5946d29">LCD_DisplayChar_CH</a>(uint16_t Xpos, uint16_t Ypos, uint16_t char_CH);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp__lcd_8h.html#a01fbccb17e918648c31a30525f0eda6a">LCD_DisplayStringLine_EN_CH</a>(uint16_t Line, uint8_t *Text);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="ttc" id="absp__lcd_8h_html_a01fbccb17e918648c31a30525f0eda6a"><div class="ttname"><a href="bsp__lcd_8h.html#a01fbccb17e918648c31a30525f0eda6a">LCD_DisplayStringLine_EN_CH</a></div><div class="ttdeci">void LCD_DisplayStringLine_EN_CH(uint16_t Line, uint8_t *Text)</div><div class="ttdoc">显示一句可以包含中英文的句子</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:936</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a0568836139e5177b6ce37e470e255c77"><div class="ttname"><a href="bsp__lcd_8h.html#a0568836139e5177b6ce37e470e255c77">LCD_SetTransparency</a></div><div class="ttdeci">void LCD_SetTransparency(uint32_t LayerIndex, uint8_t Transparency)</div><div class="ttdoc">设置LCD的透明度常量，即Alpha</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:318</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a05a9b470a504b444eb29d34bea640652"><div class="ttname"><a href="bsp__lcd_8h.html#a05a9b470a504b444eb29d34bea640652">LTDC_GPIO_Config</a></div><div class="ttdeci">void LTDC_GPIO_Config(void)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:18</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a06ea822c4061bfb2e466b851411c0aa9"><div class="ttname"><a href="bsp__lcd_8h.html#a06ea822c4061bfb2e466b851411c0aa9">LCD_Config</a></div><div class="ttdeci">void LCD_Config(void)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:271</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a0bb03a44ef3f80528979b5cd8091dd84"><div class="ttname"><a href="bsp__lcd_8h.html#a0bb03a44ef3f80528979b5cd8091dd84">GetGB2312Code_from_EXFlash</a></div><div class="ttdeci">int GetGB2312Code_from_EXFlash(uint8_t *pBuffer, uint16_t c)</div><div class="ttdoc">获取一个中文GB2312编码字符的字模数据</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:971</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a10cbb1fbca34e835f98e1172c2756990"><div class="ttname"><a href="bsp__lcd_8h.html#a10cbb1fbca34e835f98e1172c2756990">LCD_DrawPixel</a></div><div class="ttdeci">void LCD_DrawPixel(uint16_t Xpos, uint16_t Ypos, uint32_t RGB_Code)</div><div class="ttdoc">绘制一个点</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:567</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a1fb167c16cf7ec34f8170915d2302b7a"><div class="ttname"><a href="bsp__lcd_8h.html#a1fb167c16cf7ec34f8170915d2302b7a">LCD_LayerInit</a></div><div class="ttdeci">void LCD_LayerInit(uint16_t LayerIndex, uint32_t FB_Address, uint32_t PixelFormat)</div><div class="ttdoc">层级初始化</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:230</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a268429ba50ca073c233224309fac9f46"><div class="ttname"><a href="bsp__lcd_8h.html#a268429ba50ca073c233224309fac9f46">LCD_DrawHLine</a></div><div class="ttdeci">void LCD_DrawHLine(uint16_t Xpos, uint16_t Ypos, uint16_t Length)</div><div class="ttdoc">绘制一条水平直线</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:597</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a2cfdb76c5b920f5a8fcaed02cf318c45"><div class="ttname"><a href="bsp__lcd_8h.html#a2cfdb76c5b920f5a8fcaed02cf318c45">LCD_DrawChar</a></div><div class="ttdeci">static void LCD_DrawChar(uint16_t Xpos, uint16_t Ypos, const uint8_t *c)</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a31a4bb3bde55452bbb8370f5d935e41d"><div class="ttname"><a href="bsp__lcd_8h.html#a31a4bb3bde55452bbb8370f5d935e41d">LCD_SetTextColor</a></div><div class="ttdeci">void LCD_SetTextColor(uint32_t Color)</div><div class="ttdoc">设置LCD当前层的文字颜色</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:355</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a320415ea9b549dd0a4fa2452bde4565c"><div class="ttname"><a href="bsp__lcd_8h.html#a320415ea9b549dd0a4fa2452bde4565c">LCD_SetYSize</a></div><div class="ttdeci">void LCD_SetYSize(uint32_t imageHeightPixels)</div><div class="ttdoc">设置LCD当前层Y轴的大小</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:217</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a370ea7eacea2dd8fcc352ce8dcbaa151"><div class="ttname"><a href="bsp__lcd_8h.html#a370ea7eacea2dd8fcc352ce8dcbaa151">LCD_DrawVLine</a></div><div class="ttdeci">void LCD_DrawVLine(uint16_t Xpos, uint16_t Ypos, uint16_t Length)</div><div class="ttdoc">绘制一条垂直直线</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:624</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a398e124cc5572547086d78fc9b7fc1f4"><div class="ttname"><a href="bsp__lcd_8h.html#a398e124cc5572547086d78fc9b7fc1f4">LCD_DrawAnyLine</a></div><div class="ttdeci">void LCD_DrawAnyLine(uint16_t X1pos, uint16_t Y1pos, uint16_t X2pos, uint16_t Y2pos)</div><div class="ttdoc">绘制任意两点之间的一条直线</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:653</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a413cecd8e18e5715925c0831a5946d29"><div class="ttname"><a href="bsp__lcd_8h.html#a413cecd8e18e5715925c0831a5946d29">LCD_DisplayChar_CH</a></div><div class="ttdeci">void LCD_DisplayChar_CH(uint16_t Xpos, uint16_t Ypos, uint16_t char_CH)</div><div class="ttdoc">绘制一个中文字符</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:891</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a4b7c3b9a5af160da3faedc9baa0bf459"><div class="ttname"><a href="bsp__lcd_8h.html#a4b7c3b9a5af160da3faedc9baa0bf459">LCD_SetLayerVisible</a></div><div class="ttdeci">void LCD_SetLayerVisible(uint32_t LayerIndex, FunctionalState State)</div><div class="ttdoc">设置LCD层的可视化(即禁止或使能某一层)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:298</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a6657ebb2be9c7538015074a022af9d3c"><div class="ttname"><a href="bsp__lcd_8h.html#a6657ebb2be9c7538015074a022af9d3c">LTDC_Config</a></div><div class="ttdeci">void LTDC_Config(void)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:146</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a6750a89764ac496272315a241ff377f5"><div class="ttname"><a href="bsp__lcd_8h.html#a6750a89764ac496272315a241ff377f5">LCD_CLK_Config</a></div><div class="ttdeci">void LCD_CLK_Config(void)</div><div class="ttdoc">STM32与液晶屏通讯的时钟配置 时钟配置为9.6MHz</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:134</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a6a405abda5e830f0f33dacfd21ec1e51"><div class="ttname"><a href="bsp__lcd_8h.html#a6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a></div><div class="ttdeci">uint32_t LCD_GetXSize(void)</div><div class="ttdoc">获取LCD当前层X轴的大小</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:187</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a6c26f6fcddd0bf89f71d71131c7a206a"><div class="ttname"><a href="bsp__lcd_8h.html#a6c26f6fcddd0bf89f71d71131c7a206a">LCD_SetFont</a></div><div class="ttdeci">void LCD_SetFont(sFONT *fonts)</div><div class="ttdoc">设置LCD当前层显示的字体</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:407</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a7b2f00b73ed9209df1077ec5a975cc37"><div class="ttname"><a href="bsp__lcd_8h.html#a7b2f00b73ed9209df1077ec5a975cc37">LCD_GetFont</a></div><div class="ttdeci">sFONT * LCD_GetFont(void)</div><div class="ttdoc">获取LCD当前层显示的字体</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:417</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a7fe6db0bfd3cabc4e99d5ce8b7343c6b"><div class="ttname"><a href="bsp__lcd_8h.html#a7fe6db0bfd3cabc4e99d5ce8b7343c6b">LCD_DisplayStringAt</a></div><div class="ttdeci">void LCD_DisplayStringAt(uint16_t Xpos, uint16_t Ypos, uint8_t *Text)</div><div class="ttdoc">在指定位置显示一个字符串(英文)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:852</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a83e11eb72448bdf1c3e729aea39e921c"><div class="ttname"><a href="bsp__lcd_8h.html#a83e11eb72448bdf1c3e729aea39e921c">LCD_ClearLine</a></div><div class="ttdeci">void LCD_ClearLine(uint32_t Line)</div><div class="ttdoc">清除一行</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:471</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a846fbcfe435b2eb20d412c1793350a03"><div class="ttname"><a href="bsp__lcd_8h.html#a846fbcfe435b2eb20d412c1793350a03">LL_FillBuffer</a></div><div class="ttdeci">static void LL_FillBuffer(uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex)</div></div>
+<div class="ttc" id="absp__lcd_8h_html_a8e3dca6342e3dd739edbec8a23488e56"><div class="ttname"><a href="bsp__lcd_8h.html#a8e3dca6342e3dd739edbec8a23488e56">LCD_SetXSize</a></div><div class="ttdeci">void LCD_SetXSize(uint32_t imageWidthPixels)</div><div class="ttdoc">设置LCD当前层X轴的大小</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:207</div></div>
+<div class="ttc" id="absp__lcd_8h_html_aa500186c114aaea3dd6cdc11d306617e"><div class="ttname"><a href="bsp__lcd_8h.html#aa500186c114aaea3dd6cdc11d306617e">LCD_DisplayChar</a></div><div class="ttdeci">void LCD_DisplayChar(uint16_t Xpos, uint16_t Ypos, uint8_t Ascii)</div><div class="ttdoc">在指定位置显示一个字符(英文)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:826</div></div>
+<div class="ttc" id="absp__lcd_8h_html_aa97156afb28b2fb2877ae97efa92f3ee"><div class="ttname"><a href="bsp__lcd_8h.html#aa97156afb28b2fb2877ae97efa92f3ee">LCD_SetLayerWindow</a></div><div class="ttdeci">void LCD_SetLayerWindow(uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)</div><div class="ttdoc">设置显示窗口</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:343</div></div>
+<div class="ttc" id="absp__lcd_8h_html_aadafb98eeb93c99b8468d36e406ac90e"><div class="ttname"><a href="bsp__lcd_8h.html#aadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a></div><div class="ttdeci">uint32_t LCD_GetYSize(void)</div><div class="ttdoc">获取LCD当前层Y轴的大小</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:197</div></div>
+<div class="ttc" id="absp__lcd_8h_html_aaf28c2494c1a232d68d8b63af20ea3ec"><div class="ttname"><a href="bsp__lcd_8h.html#aaf28c2494c1a232d68d8b63af20ea3ec">LCD_GetStartAddress</a></div><div class="ttdeci">static uint32_t LCD_GetStartAddress(uint16_t Xpos, uint16_t Ypos)</div></div>
+<div class="ttc" id="absp__lcd_8h_html_ab06250d18ef0123a92381333a7e464e0"><div class="ttname"><a href="bsp__lcd_8h.html#ab06250d18ef0123a92381333a7e464e0">LCD_SetColors</a></div><div class="ttdeci">void LCD_SetColors(uint32_t TextColor, uint32_t BackColor)</div><div class="ttdoc">设置LCD当前层的文字颜色和文字背景颜色</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:396</div></div>
+<div class="ttc" id="absp__lcd_8h_html_ac0735470c4c9bc0130dd03ae6cb2b056"><div class="ttname"><a href="bsp__lcd_8h.html#ac0735470c4c9bc0130dd03ae6cb2b056">LCD_ReadPixel</a></div><div class="ttdeci">uint32_t LCD_ReadPixel(uint16_t Xpos, uint16_t Ypos)</div><div class="ttdoc">读取LCD的像素值</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:429</div></div>
+<div class="ttc" id="absp__lcd_8h_html_acced1d191675f150cb4cccd377a7c11c"><div class="ttname"><a href="bsp__lcd_8h.html#acced1d191675f150cb4cccd377a7c11c">LCD_DisplayStringLine</a></div><div class="ttdeci">void LCD_DisplayStringLine(uint8_t Line, uint8_t *Text)</div><div class="ttdoc">在指定行显示一个字符串(英文)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:879</div></div>
+<div class="ttc" id="absp__lcd_8h_html_adfc663e63fa8138ef0c4f4a1b31c7807"><div class="ttname"><a href="bsp__lcd_8h.html#adfc663e63fa8138ef0c4f4a1b31c7807">LCD_FillRect</a></div><div class="ttdeci">void LCD_FillRect(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)</div><div class="ttdoc">填充一个实心矩形</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:497</div></div>
+<div class="ttc" id="absp__lcd_8h_html_ae06ea1bb5f28922b6017676d1aaa61e4"><div class="ttname"><a href="bsp__lcd_8h.html#ae06ea1bb5f28922b6017676d1aaa61e4">LCD_DisplayOff</a></div><div class="ttdeci">void LCD_DisplayOff(void)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:753</div></div>
+<div class="ttc" id="absp__lcd_8h_html_ae57144a5b4342ddd500fb50018123dc6"><div class="ttname"><a href="bsp__lcd_8h.html#ae57144a5b4342ddd500fb50018123dc6">LCD_Clear</a></div><div class="ttdeci">void LCD_Clear(uint32_t Color)</div><div class="ttdoc">LCD当前层清屏</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:461</div></div>
+<div class="ttc" id="absp__lcd_8h_html_aeca000116f289bc36b8892a6c64164dd"><div class="ttname"><a href="bsp__lcd_8h.html#aeca000116f289bc36b8892a6c64164dd">LCD_SetBackColor</a></div><div class="ttdeci">void LCD_SetBackColor(uint32_t Color)</div><div class="ttdoc">设置LCD当前层的文字背景颜色</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:375</div></div>
+<div class="ttc" id="absp__lcd_8h_html_aed5bd5f3f7340dbdb2e7f50f94163789"><div class="ttname"><a href="bsp__lcd_8h.html#aed5bd5f3f7340dbdb2e7f50f94163789">LCD_DisplayOn</a></div><div class="ttdeci">void LCD_DisplayOn(void)</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:746</div></div>
+<div class="ttc" id="absp__lcd_8h_html_af1420ea7b39dd570d4d6edbf789f7640"><div class="ttname"><a href="bsp__lcd_8h.html#af1420ea7b39dd570d4d6edbf789f7640">LCD_SelectLayer</a></div><div class="ttdeci">void LCD_SelectLayer(uint32_t LayerIndex)</div><div class="ttdoc">选择LCD的当前层</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:287</div></div>
+<div class="ttc" id="absp__lcd_8h_html_affaff29c7f76c5bb37da2501f9799aaf"><div class="ttname"><a href="bsp__lcd_8h.html#affaff29c7f76c5bb37da2501f9799aaf">LCD_SetLayerAddress</a></div><div class="ttdeci">void LCD_SetLayerAddress(uint32_t LayerIndex, uint32_t Address)</div><div class="ttdoc">设置LCD缓冲帧的首地址</div><div class="ttdef"><b>Definition</b> bsp_lcd.c:329</div></div>
+<div class="ttc" id="astruct_l_c_d___draw_prop_type_def_html"><div class="ttname"><a href="struct_l_c_d___draw_prop_type_def.html">LCD_DrawPropTypeDef</a></div><div class="ttdef"><b>Definition</b> bsp_lcd.h:158</div></div>
+<div class="ttc" id="astruct_l_c_d___draw_prop_type_def_html_a06c38812ab107862588951a0d13a01e9"><div class="ttname"><a href="struct_l_c_d___draw_prop_type_def.html#a06c38812ab107862588951a0d13a01e9">LCD_DrawPropTypeDef::pFont</a></div><div class="ttdeci">sFONT * pFont</div><div class="ttdef"><b>Definition</b> bsp_lcd.h:161</div></div>
+<div class="ttc" id="astruct_l_c_d___draw_prop_type_def_html_a077186d06037e2204e2e0caf4a30068f"><div class="ttname"><a href="struct_l_c_d___draw_prop_type_def.html#a077186d06037e2204e2e0caf4a30068f">LCD_DrawPropTypeDef::TextColor</a></div><div class="ttdeci">uint32_t TextColor</div><div class="ttdef"><b>Definition</b> bsp_lcd.h:159</div></div>
+<div class="ttc" id="astruct_l_c_d___draw_prop_type_def_html_a8de9dd9da4dec950161005d49afc523a"><div class="ttname"><a href="struct_l_c_d___draw_prop_type_def.html#a8de9dd9da4dec950161005d49afc523a">LCD_DrawPropTypeDef::BackColor</a></div><div class="ttdeci">uint32_t BackColor</div><div class="ttdef"><b>Definition</b> bsp_lcd.h:160</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

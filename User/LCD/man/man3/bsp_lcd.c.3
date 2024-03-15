@@ -1,0 +1,683 @@
+.TH "E:/STM32文件/练习/LTDC_DMA2D_2023_12_5/HAL_F429/User/LCD/bsp_lcd.c" 3 "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+E:/STM32文件/练习/LTDC_DMA2D_2023_12_5/HAL_F429/User/LCD/bsp_lcd.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'bsp_lcd\&.h'\fP
+.br
+\fC#include 'sdram\&.h'\fP
+.br
+\fC#include 'string\&.h'\fP
+.br
+\fC#include 'SPI_Flash\&.h'\fP
+.br
+\fC#include 'font24\&.c'\fP
+.br
+\fC#include 'font20\&.c'\fP
+.br
+\fC#include 'font16\&.c'\fP
+.br
+\fC#include 'font12\&.c'\fP
+.br
+\fC#include 'font8\&.c'\fP
+.br
+
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBLTDC_GPIO_Config\fP (void)"
+.br
+.ti -1c
+.RI "void \fBLCD_CLK_Config\fP (void)"
+.br
+.RI "STM32与液晶屏通讯的时钟配置 时钟配置为9\&.6MHz "
+.ti -1c
+.RI "void \fBLTDC_Config\fP (void)"
+.br
+.ti -1c
+.RI "uint32_t \fBLCD_GetXSize\fP (void)"
+.br
+.RI "获取LCD当前层X轴的大小 "
+.ti -1c
+.RI "uint32_t \fBLCD_GetYSize\fP (void)"
+.br
+.RI "获取LCD当前层Y轴的大小 "
+.ti -1c
+.RI "void \fBLCD_SetXSize\fP (uint32_t imageWidthPixels)"
+.br
+.RI "设置LCD当前层X轴的大小 "
+.ti -1c
+.RI "void \fBLCD_SetYSize\fP (uint32_t imageHeightPixels)"
+.br
+.RI "设置LCD当前层Y轴的大小 "
+.ti -1c
+.RI "void \fBLCD_LayerInit\fP (uint16_t LayerIndex, uint32_t FB_Address, uint32_t PixelFormat)"
+.br
+.RI "层级初始化 "
+.ti -1c
+.RI "void \fBLCD_Config\fP (void)"
+.br
+.ti -1c
+.RI "void \fBLCD_SelectLayer\fP (uint32_t LayerIndex)"
+.br
+.RI "选择LCD的当前层 "
+.ti -1c
+.RI "void \fBLCD_SetLayerVisible\fP (uint32_t LayerIndex, FunctionalState State)"
+.br
+.RI "设置LCD层的可视化(即禁止或使能某一层) "
+.ti -1c
+.RI "void \fBLCD_SetTransparency\fP (uint32_t LayerIndex, uint8_t Transparency)"
+.br
+.RI "设置LCD的透明度常量，即Alpha "
+.ti -1c
+.RI "void \fBLCD_SetLayerAddress\fP (uint32_t LayerIndex, uint32_t Address)"
+.br
+.RI "设置LCD缓冲帧的首地址 "
+.ti -1c
+.RI "void \fBLCD_SetLayerWindow\fP (uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)"
+.br
+.RI "设置显示窗口 "
+.ti -1c
+.RI "void \fBLCD_SetTextColor\fP (uint32_t Color)"
+.br
+.RI "设置LCD当前层的文字颜色 "
+.ti -1c
+.RI "uint32_t \fBLCD_GetTextColor\fP (void)"
+.br
+.RI "获取LCD当前层的文字颜色 "
+.ti -1c
+.RI "void \fBLCD_SetBackColor\fP (uint32_t Color)"
+.br
+.RI "设置LCD当前层的文字背景颜色 "
+.ti -1c
+.RI "uint32_t \fBLCD_GetBackColor\fP (void)"
+.br
+.RI "获取LCD当前层的文字背景颜色 "
+.ti -1c
+.RI "void \fBLCD_SetColors\fP (uint32_t TextColor, uint32_t BackColor)"
+.br
+.RI "设置LCD当前层的文字颜色和文字背景颜色 "
+.ti -1c
+.RI "void \fBLCD_SetFont\fP (sFONT *fonts)"
+.br
+.RI "设置LCD当前层显示的字体 "
+.ti -1c
+.RI "sFONT * \fBLCD_GetFont\fP (void)"
+.br
+.RI "获取LCD当前层显示的字体 "
+.ti -1c
+.RI "uint32_t \fBLCD_ReadPixel\fP (uint16_t Xpos, uint16_t Ypos)"
+.br
+.RI "读取LCD的像素值 "
+.ti -1c
+.RI "void \fBLCD_Clear\fP (uint32_t Color)"
+.br
+.RI "LCD当前层清屏 "
+.ti -1c
+.RI "void \fBLCD_ClearLine\fP (uint32_t Line)"
+.br
+.RI "清除一行 "
+.ti -1c
+.RI "void \fBLCD_FillRect\fP (uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)"
+.br
+.RI "填充一个实心矩形 "
+.ti -1c
+.RI "static void \fBLL_FillBuffer\fP (uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex)"
+.br
+.RI "填充一个缓冲区 "
+.ti -1c
+.RI "void \fBLCD_DrawPixel\fP (uint16_t Xpos, uint16_t Ypos, uint32_t RGB_Code)"
+.br
+.RI "绘制一个点 "
+.ti -1c
+.RI "void \fBLCD_DrawHLine\fP (uint16_t Xpos, uint16_t Ypos, uint16_t Length)"
+.br
+.RI "绘制一条水平直线 "
+.ti -1c
+.RI "void \fBLCD_DrawVLine\fP (uint16_t Xpos, uint16_t Ypos, uint16_t Length)"
+.br
+.RI "绘制一条垂直直线 "
+.ti -1c
+.RI "void \fBLCD_DrawAnyLine\fP (uint16_t X1pos, uint16_t Y1pos, uint16_t X2pos, uint16_t Y2pos)"
+.br
+.RI "绘制任意两点之间的一条直线 "
+.ti -1c
+.RI "void \fBLCD_DisplayOn\fP (void)"
+.br
+.ti -1c
+.RI "void \fBLCD_DisplayOff\fP (void)"
+.br
+.ti -1c
+.RI "static uint32_t \fBLCD_GetStartAddress\fP (uint16_t Xpos, uint16_t Ypos)"
+.br
+.ti -1c
+.RI "static void \fBLCD_DrawChar\fP (uint16_t Xpos, uint16_t Ypos, const uint8_t *c)"
+.br
+.RI "绘制一个字符 "
+.ti -1c
+.RI "void \fBLCD_DisplayChar\fP (uint16_t Xpos, uint16_t Ypos, uint8_t Ascii)"
+.br
+.RI "在指定位置显示一个字符(英文) "
+.ti -1c
+.RI "void \fBLCD_DisplayStringAt\fP (uint16_t Xpos, uint16_t Ypos, uint8_t *Text)"
+.br
+.RI "在指定位置显示一个字符串(英文) "
+.ti -1c
+.RI "void \fBLCD_DisplayStringLine\fP (uint8_t Line, uint8_t *Text)"
+.br
+.RI "在指定行显示一个字符串(英文) "
+.ti -1c
+.RI "void \fBLCD_DisplayChar_CH\fP (uint16_t Xpos, uint16_t Ypos, uint16_t char_CH)"
+.br
+.RI "绘制一个中文字符 "
+.ti -1c
+.RI "void \fBLCD_DisplayStringLine_EN_CH\fP (uint16_t Line, uint8_t *Text)"
+.br
+.RI "显示一句可以包含中英文的句子 "
+.ti -1c
+.RI "int \fBGetGB2312Code_from_EXFlash\fP (uint8_t *pBuffer, uint16_t c)"
+.br
+.RI "获取一个中文GB2312编码字符的字模数据 "
+.in -1c
+.SS "变量"
+
+.in +1c
+.ti -1c
+.RI "static LTDC_HandleTypeDef \fBLTDC_Handle\fP"
+.br
+.ti -1c
+.RI "static DMA2D_HandleTypeDef \fBDMA2D_Handle\fP"
+.br
+.ti -1c
+.RI "static uint32_t \fBActiveLayer\fP = 0"
+.br
+.ti -1c
+.RI "static \fBLCD_DrawPropTypeDef\fP \fBDrawProp\fP [\fBMAX_LAYER_NUMBER\fP]"
+.br
+.in -1c
+.SH "函数说明"
+.PP 
+.SS "int GetGB2312Code_from_EXFlash (uint8_t * pBuffer, uint16_t c)"
+
+.PP
+获取一个中文GB2312编码字符的字模数据 
+.PP
+\fB参数\fP
+.RS 4
+\fIpBuffer\fP 用于存放字模数据的缓冲区 
+.br
+\fIc\fP GB2312编码字符 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+int 无意义 
+.RE
+.PP
+
+.SS "void LCD_Clear (uint32_t Color)"
+
+.PP
+LCD当前层清屏 
+.PP
+\fB参数\fP
+.RS 4
+\fIColor\fP 用于填充的背景颜色 
+.RE
+.PP
+
+.SS "void LCD_ClearLine (uint32_t Line)"
+
+.PP
+清除一行 
+.PP
+\fB参数\fP
+.RS 4
+\fILine\fP 要清除的行 
+.RE
+.PP
+
+.SS "void LCD_CLK_Config (void)"
+
+.PP
+STM32与液晶屏通讯的时钟配置 时钟配置为9\&.6MHz 
+.SS "void LCD_Config (void)"
+
+.SS "void LCD_DisplayChar (uint16_t Xpos, uint16_t Ypos, uint8_t Ascii)"
+
+.PP
+在指定位置显示一个字符(英文) 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP 显示的X坐标 
+.br
+\fIYpos\fP 显示的Y坐标 
+.br
+\fIAscii\fP 需要显示的字符 
+.RE
+.PP
+
+.SS "void LCD_DisplayChar_CH (uint16_t Xpos, uint16_t Ypos, uint16_t char_CH)"
+
+.PP
+绘制一个中文字符 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP 绘制字符的X坐标 
+.br
+\fIYpos\fP 绘制字符的Y坐标 
+.br
+\fIchar_CH\fP 中文字符 
+.RE
+.PP
+
+.SS "void LCD_DisplayOff (void)"
+
+.SS "void LCD_DisplayOn (void)"
+
+.SS "void LCD_DisplayStringAt (uint16_t Xpos, uint16_t Ypos, uint8_t * Text)"
+
+.PP
+在指定位置显示一个字符串(英文) 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP 显示的起始位置X坐标 
+.br
+\fIYpos\fP 显示的起始位置Y坐标 
+.br
+\fIText\fP 指向字符串的指针 
+.RE
+.PP
+
+.SS "void LCD_DisplayStringLine (uint8_t Line, uint8_t * Text)"
+
+.PP
+在指定行显示一个字符串(英文) 
+.PP
+\fB参数\fP
+.RS 4
+\fILine\fP 显示的起始行(超出行宽会自动换行) 
+.br
+\fIText\fP 指向字符串的指针 
+.RE
+.PP
+
+.SS "void LCD_DisplayStringLine_EN_CH (uint16_t Line, uint8_t * Text)"
+
+.PP
+显示一句可以包含中英文的句子 
+.PP
+\fB参数\fP
+.RS 4
+\fILine\fP 显示的起始行(超出行宽会自动换行) 
+.br
+\fIText\fP 指向需要显示的句子的指针 
+.RE
+.PP
+
+.SS "void LCD_DrawAnyLine (uint16_t X1pos, uint16_t Y1pos, uint16_t X2pos, uint16_t Y2pos)"
+
+.PP
+绘制任意两点之间的一条直线 
+.PP
+\fB参数\fP
+.RS 4
+\fIX1pos\fP 点1的X坐标 
+.br
+\fIY1pos\fP 点1的Y坐标 
+.br
+\fIX2pos\fP 点2的X坐标 
+.br
+\fIY2pos\fP 点2的Y坐标 
+.RE
+.PP
+
+.SS "static void LCD_DrawChar (uint16_t Xpos, uint16_t Ypos, const uint8_t * c)\fC [static]\fP"
+
+.PP
+绘制一个字符 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP X坐标 
+.br
+\fIYpos\fP Y坐标 
+.br
+\fIc\fP 字符 
+.RE
+.PP
+
+.SS "void LCD_DrawHLine (uint16_t Xpos, uint16_t Ypos, uint16_t Length)"
+
+.PP
+绘制一条水平直线 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP X轴起始坐标 
+.br
+\fIYpos\fP Y轴起始坐标 
+.br
+\fILength\fP 线的长度 
+.RE
+.PP
+
+.SS "void LCD_DrawPixel (uint16_t Xpos, uint16_t Ypos, uint32_t RGB_Code)"
+
+.PP
+绘制一个点 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP X轴坐标 
+.br
+\fIYpos\fP Y轴坐标 
+.br
+\fIRGB_Code\fP 像素颜色值 
+.RE
+.PP
+
+.SS "void LCD_DrawVLine (uint16_t Xpos, uint16_t Ypos, uint16_t Length)"
+
+.PP
+绘制一条垂直直线 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP X轴起始坐标 
+.br
+\fIYpos\fP Y轴起始坐标 
+.br
+\fILength\fP 线的长度 
+.RE
+.PP
+
+.SS "void LCD_FillRect (uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)"
+
+.PP
+填充一个实心矩形 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP 矩形起始位置的X坐标 
+.br
+\fIYpos\fP 矩形起始位置的Y坐标 
+.br
+\fIWidth\fP 矩形宽度 
+.br
+\fIHeight\fP 矩形高度 
+.RE
+.PP
+
+.SS "uint32_t LCD_GetBackColor (void)"
+
+.PP
+获取LCD当前层的文字背景颜色 
+.PP
+\fB返回\fP
+.RS 4
+uint32_t 文字背景颜色 
+.RE
+.PP
+
+.SS "sFONT * LCD_GetFont (void)"
+
+.PP
+获取LCD当前层显示的字体 
+.PP
+\fB返回\fP
+.RS 4
+sFONT* LCD当前层的字体类型 
+.RE
+.PP
+
+.SS "static uint32_t LCD_GetStartAddress (uint16_t Xpos, uint16_t Ypos)\fC [static]\fP"
+
+.SS "uint32_t LCD_GetTextColor (void)"
+
+.PP
+获取LCD当前层的文字颜色 
+.PP
+\fB返回\fP
+.RS 4
+uint32_t 文字颜色 
+.RE
+.PP
+
+.SS "uint32_t LCD_GetXSize (void)"
+
+.PP
+获取LCD当前层X轴的大小 
+.PP
+\fB返回\fP
+.RS 4
+uint32_t X轴的大小 
+.RE
+.PP
+
+.SS "uint32_t LCD_GetYSize (void)"
+
+.PP
+获取LCD当前层Y轴的大小 
+.PP
+\fB返回\fP
+.RS 4
+uint32_t Y轴的大小 
+.RE
+.PP
+
+.SS "void LCD_LayerInit (uint16_t LayerIndex, uint32_t FB_Address, uint32_t PixelFormat)"
+
+.PP
+层级初始化 
+.PP
+\fB参数\fP
+.RS 4
+\fILayerIndex\fP 要设置的层 
+.br
+\fIFB_Address\fP 该层的显存首地址 
+.br
+\fIPixelFormat\fP 该层的像素格式 
+.RE
+.PP
+
+.SS "uint32_t LCD_ReadPixel (uint16_t Xpos, uint16_t Ypos)"
+
+.PP
+读取LCD的像素值 
+.PP
+\fB参数\fP
+.RS 4
+\fIXpos\fP 需要读取的像素点的X坐标 
+.br
+\fIYpos\fP 需要读取的像素点的Y坐标 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+uint32_t 指定像素点的像素值 
+.RE
+.PP
+
+.SS "void LCD_SelectLayer (uint32_t LayerIndex)"
+
+.PP
+选择LCD的当前层 
+.PP
+\fB参数\fP
+.RS 4
+\fILayerIndex\fP 1：前景层 0：背景层 
+.RE
+.PP
+
+.SS "void LCD_SetBackColor (uint32_t Color)"
+
+.PP
+设置LCD当前层的文字背景颜色 
+.PP
+\fB参数\fP
+.RS 4
+\fIColor\fP 文字背景颜色 
+.RE
+.PP
+
+.SS "void LCD_SetColors (uint32_t TextColor, uint32_t BackColor)"
+
+.PP
+设置LCD当前层的文字颜色和文字背景颜色 
+.PP
+\fB参数\fP
+.RS 4
+\fITextColor\fP 文字颜色 
+.br
+\fIBackColor\fP 文字背景颜色 
+.RE
+.PP
+
+.SS "void LCD_SetFont (sFONT * fonts)"
+
+.PP
+设置LCD当前层显示的字体 
+.PP
+\fB参数\fP
+.RS 4
+\fIfonts\fP 字体类型 
+.RE
+.PP
+
+.SS "void LCD_SetLayerAddress (uint32_t LayerIndex, uint32_t Address)"
+
+.PP
+设置LCD缓冲帧的首地址 
+.PP
+\fB参数\fP
+.RS 4
+\fILayerIndex\fP 1：前景层 0：背景层 
+.br
+\fIAddress\fP LCD缓冲帧的首地址 
+.RE
+.PP
+
+.SS "void LCD_SetLayerVisible (uint32_t LayerIndex, FunctionalState State)"
+
+.PP
+设置LCD层的可视化(即禁止或使能某一层) 
+.PP
+\fB参数\fP
+.RS 4
+\fILayerIndex\fP 1：前景层 0：背景层 
+.br
+\fIState\fP 禁止或使能 
+.RE
+.PP
+
+.SS "void LCD_SetLayerWindow (uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)"
+
+.PP
+设置显示窗口 
+.PP
+\fB参数\fP
+.RS 4
+\fILayerIndex\fP 
+.br
+\fIXpos\fP 窗口起始位置X坐标 
+.br
+\fIYpos\fP 窗口起始位置Y坐标 
+.br
+\fIWidth\fP 窗口宽度 
+.br
+\fIHeight\fP 窗口高度 
+.RE
+.PP
+
+.SS "void LCD_SetTextColor (uint32_t Color)"
+
+.PP
+设置LCD当前层的文字颜色 
+.PP
+\fB参数\fP
+.RS 4
+\fIColor\fP 文字颜色 
+.RE
+.PP
+
+.SS "void LCD_SetTransparency (uint32_t LayerIndex, uint8_t Transparency)"
+
+.PP
+设置LCD的透明度常量，即Alpha 
+.PP
+\fB参数\fP
+.RS 4
+\fILayerIndex\fP 1：前景层 0：背景层 
+.br
+\fITransparency\fP 透明度，范围(0-255)，0为完全透明 
+.RE
+.PP
+
+.SS "void LCD_SetXSize (uint32_t imageWidthPixels)"
+
+.PP
+设置LCD当前层X轴的大小 
+.PP
+\fB参数\fP
+.RS 4
+\fIimageHeightPixels\fP 图像宽度像素个数 
+.RE
+.PP
+
+.SS "void LCD_SetYSize (uint32_t imageHeightPixels)"
+
+.PP
+设置LCD当前层Y轴的大小 
+.PP
+\fB参数\fP
+.RS 4
+\fIimageHeightPixels\fP 图像高度像素个数 
+.RE
+.PP
+
+.SS "static void LL_FillBuffer (uint32_t LayerIndex, void * pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex)\fC [static]\fP"
+
+.PP
+填充一个缓冲区 
+.PP
+\fB参数\fP
+.RS 4
+\fILayerIndex\fP 1：前景层 0：背景层 
+.br
+\fIpDst\fP 指向目标缓冲区的指针 
+.br
+\fIxSize\fP 缓冲区宽度 
+.br
+\fIySize\fP 缓冲区高度 
+.br
+\fIOffLine\fP 偏移量 
+.br
+\fIColorIndex\fP 填充颜色 
+.RE
+.PP
+
+.SS "void LTDC_Config (void)"
+
+.SS "void LTDC_GPIO_Config (void)"
+
+.SH "变量说明"
+.PP 
+.SS "uint32_t ActiveLayer = 0\fC [static]\fP"
+
+.SS "DMA2D_HandleTypeDef DMA2D_Handle\fC [static]\fP"
+
+.SS "\fBLCD_DrawPropTypeDef\fP DrawProp[\fBMAX_LAYER_NUMBER\fP]\fC [static]\fP"
+
+.SS "LTDC_HandleTypeDef LTDC_Handle\fC [static]\fP"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 My Project 的 源代码自动生成\&.

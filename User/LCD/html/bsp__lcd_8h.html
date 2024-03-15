@@ -1,0 +1,3087 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: E:/STM32文件/练习/LTDC_DMA2D_2023_12_5/HAL_F429/User/LCD/bsp_lcd.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0afb7792c915fb345a807f62382969eb.html">STM32文件</a></li><li class="navelem"><a class="el" href="dir_0d9437dc2651859363976f9a69b1e272.html">练习</a></li><li class="navelem"><a class="el" href="dir_8d7489c74f9593fbba64e510c9223109.html">LTDC_DMA2D_2023_12_5</a></li><li class="navelem"><a class="el" href="dir_87a7cdec703cf680837d0f305c34528e.html">HAL_F429</a></li><li class="navelem"><a class="el" href="dir_65b47df50fb6a2f025f338e2d63ce7b1.html">User</a></li><li class="navelem"><a class="el" href="dir_8506b64e121e3d702184f16785b2061e.html">LCD</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">bsp_lcd.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stm32f4xx.h&quot;</code><br />
+<code>#include &quot;fonts.h&quot;</code><br />
+</div>
+<p><a href="bsp__lcd_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_l_c_d___draw_prop_type_def.html">LCD_DrawPropTypeDef</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a1c5ab4b6c3330335a1b0fdf796f89224" id="r_a1c5ab4b6c3330335a1b0fdf796f89224"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a1c5ab4b6c3330335a1b0fdf796f89224">LTDC_R0_GPIO_PORT</a>&#160;&#160;&#160;GPIOH</td></tr>
+<tr class="separator:a1c5ab4b6c3330335a1b0fdf796f89224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac20ad72b94a27b353aefbd997234c8b6" id="r_ac20ad72b94a27b353aefbd997234c8b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ac20ad72b94a27b353aefbd997234c8b6">LTDC_R0_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_2</td></tr>
+<tr class="separator:ac20ad72b94a27b353aefbd997234c8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4826f4f1ea9ea19eb05cb53b6a542b42" id="r_a4826f4f1ea9ea19eb05cb53b6a542b42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4826f4f1ea9ea19eb05cb53b6a542b42">LTDC_R1_GPIO_PORT</a>&#160;&#160;&#160;GPIOH</td></tr>
+<tr class="separator:a4826f4f1ea9ea19eb05cb53b6a542b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cfb5ff9357b8b8be9337f4a891c739" id="r_a81cfb5ff9357b8b8be9337f4a891c739"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a81cfb5ff9357b8b8be9337f4a891c739">LTDC_R1_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_3</td></tr>
+<tr class="separator:a81cfb5ff9357b8b8be9337f4a891c739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d140bb3a765bd70ab379fcce0304a8" id="r_ab2d140bb3a765bd70ab379fcce0304a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ab2d140bb3a765bd70ab379fcce0304a8">LTDC_R2_GPIO_PORT</a>&#160;&#160;&#160;GPIOH</td></tr>
+<tr class="separator:ab2d140bb3a765bd70ab379fcce0304a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064e324111a5f60bb1de7a048eefe5af" id="r_a064e324111a5f60bb1de7a048eefe5af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a064e324111a5f60bb1de7a048eefe5af">LTDC_R2_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_8</td></tr>
+<tr class="separator:a064e324111a5f60bb1de7a048eefe5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92cc820208ffa8cbec1d8c114bd0681e" id="r_a92cc820208ffa8cbec1d8c114bd0681e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a92cc820208ffa8cbec1d8c114bd0681e">LTDC_R3_GPIO_PORT</a>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="separator:a92cc820208ffa8cbec1d8c114bd0681e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93617bc0bad5d732a3a094490911208e" id="r_a93617bc0bad5d732a3a094490911208e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a93617bc0bad5d732a3a094490911208e">LTDC_R3_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_0</td></tr>
+<tr class="separator:a93617bc0bad5d732a3a094490911208e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429a729e8ff1613cfc659cabd6055db5" id="r_a429a729e8ff1613cfc659cabd6055db5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a429a729e8ff1613cfc659cabd6055db5">LTDC_R4_GPIO_PORT</a>&#160;&#160;&#160;GPIOA</td></tr>
+<tr class="separator:a429a729e8ff1613cfc659cabd6055db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad386f2922635ea084179e56edec9ba4e" id="r_ad386f2922635ea084179e56edec9ba4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ad386f2922635ea084179e56edec9ba4e">LTDC_R4_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_11</td></tr>
+<tr class="separator:ad386f2922635ea084179e56edec9ba4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2454422543e60a86aff1f1e647d97cf" id="r_ae2454422543e60a86aff1f1e647d97cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ae2454422543e60a86aff1f1e647d97cf">LTDC_R5_GPIO_PORT</a>&#160;&#160;&#160;GPIOA</td></tr>
+<tr class="separator:ae2454422543e60a86aff1f1e647d97cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0e34ff92c7e1b27f262ccabc23daa0" id="r_acd0e34ff92c7e1b27f262ccabc23daa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#acd0e34ff92c7e1b27f262ccabc23daa0">LTDC_R5_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_12</td></tr>
+<tr class="separator:acd0e34ff92c7e1b27f262ccabc23daa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf18d5cebc0d5e39785da7c49103c53" id="r_adcf18d5cebc0d5e39785da7c49103c53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#adcf18d5cebc0d5e39785da7c49103c53">LTDC_R6_GPIO_PORT</a>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="separator:adcf18d5cebc0d5e39785da7c49103c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67fe9fcdcca7993984c27f9ef2aff1fa" id="r_a67fe9fcdcca7993984c27f9ef2aff1fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a67fe9fcdcca7993984c27f9ef2aff1fa">LTDC_R6_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_1</td></tr>
+<tr class="separator:a67fe9fcdcca7993984c27f9ef2aff1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ea33a32476074177df5a65c11447b1" id="r_a22ea33a32476074177df5a65c11447b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a22ea33a32476074177df5a65c11447b1">LTDC_R7_GPIO_PORT</a>&#160;&#160;&#160;GPIOG</td></tr>
+<tr class="separator:a22ea33a32476074177df5a65c11447b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af122d2d8f6e8cc2c7fb85bbc5fc80667" id="r_af122d2d8f6e8cc2c7fb85bbc5fc80667"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af122d2d8f6e8cc2c7fb85bbc5fc80667">LTDC_R7_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
+<tr class="separator:af122d2d8f6e8cc2c7fb85bbc5fc80667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77b3a29d9cb8f49c6530700fdcd3863" id="r_af77b3a29d9cb8f49c6530700fdcd3863"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af77b3a29d9cb8f49c6530700fdcd3863">LTDC_G0_GPIO_PORT</a>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="separator:af77b3a29d9cb8f49c6530700fdcd3863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af910df0275c9362c33eb2d630e62ac09" id="r_af910df0275c9362c33eb2d630e62ac09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af910df0275c9362c33eb2d630e62ac09">LTDC_G0_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
+<tr class="separator:af910df0275c9362c33eb2d630e62ac09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbf33af27757720f9734758f99b32f4" id="r_a4fbf33af27757720f9734758f99b32f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4fbf33af27757720f9734758f99b32f4">LTDC_G1_GPIO_PORT</a>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="separator:a4fbf33af27757720f9734758f99b32f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79d03f4c770a6619f58b9d3964aeb3c" id="r_af79d03f4c770a6619f58b9d3964aeb3c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af79d03f4c770a6619f58b9d3964aeb3c">LTDC_G1_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
+<tr class="separator:af79d03f4c770a6619f58b9d3964aeb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a91f61d15d7f6080b6309fda1f09bf2" id="r_a4a91f61d15d7f6080b6309fda1f09bf2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4a91f61d15d7f6080b6309fda1f09bf2">LTDC_G2_GPIO_PORT</a>&#160;&#160;&#160;GPIOH</td></tr>
+<tr class="separator:a4a91f61d15d7f6080b6309fda1f09bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87687e5b23115bd8738a80d4366335eb" id="r_a87687e5b23115bd8738a80d4366335eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a87687e5b23115bd8738a80d4366335eb">LTDC_G2_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_13</td></tr>
+<tr class="separator:a87687e5b23115bd8738a80d4366335eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe6d6da3668f28c7bdaefa0d055b569" id="r_aafe6d6da3668f28c7bdaefa0d055b569"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aafe6d6da3668f28c7bdaefa0d055b569">LTDC_G3_GPIO_PORT</a>&#160;&#160;&#160;GPIOG</td></tr>
+<tr class="separator:aafe6d6da3668f28c7bdaefa0d055b569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932de36d8b6e7c32ac4f89d378bd7c78" id="r_a932de36d8b6e7c32ac4f89d378bd7c78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a932de36d8b6e7c32ac4f89d378bd7c78">LTDC_G3_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_10</td></tr>
+<tr class="separator:a932de36d8b6e7c32ac4f89d378bd7c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179c8c3724d1af69ae42b6c32ddfd7aa" id="r_a179c8c3724d1af69ae42b6c32ddfd7aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a179c8c3724d1af69ae42b6c32ddfd7aa">LTDC_G4_GPIO_PORT</a>&#160;&#160;&#160;GPIOH</td></tr>
+<tr class="separator:a179c8c3724d1af69ae42b6c32ddfd7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4449aca86afe3c857397b7e1c07bc27f" id="r_a4449aca86afe3c857397b7e1c07bc27f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4449aca86afe3c857397b7e1c07bc27f">LTDC_G4_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_15</td></tr>
+<tr class="separator:a4449aca86afe3c857397b7e1c07bc27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0a061ebb8c9dcab543a4b7b5a8c903" id="r_a5c0a061ebb8c9dcab543a4b7b5a8c903"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a5c0a061ebb8c9dcab543a4b7b5a8c903">LTDC_G5_GPIO_PORT</a>&#160;&#160;&#160;GPIOI</td></tr>
+<tr class="separator:a5c0a061ebb8c9dcab543a4b7b5a8c903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7b47eaaab744a7470fb71113e103a4" id="r_a9a7b47eaaab744a7470fb71113e103a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a9a7b47eaaab744a7470fb71113e103a4">LTDC_G5_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_0</td></tr>
+<tr class="separator:a9a7b47eaaab744a7470fb71113e103a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa34caebaae2f42d3a3d0240f102992d" id="r_aaa34caebaae2f42d3a3d0240f102992d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aaa34caebaae2f42d3a3d0240f102992d">LTDC_G6_GPIO_PORT</a>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="separator:aaa34caebaae2f42d3a3d0240f102992d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6232635ec9969ad988f676a63f0cdc2" id="r_af6232635ec9969ad988f676a63f0cdc2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af6232635ec9969ad988f676a63f0cdc2">LTDC_G6_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
+<tr class="separator:af6232635ec9969ad988f676a63f0cdc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a2ac89db4e17053d86ff660151bbf3" id="r_a10a2ac89db4e17053d86ff660151bbf3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a10a2ac89db4e17053d86ff660151bbf3">LTDC_G7_GPIO_PORT</a>&#160;&#160;&#160;GPIOI</td></tr>
+<tr class="separator:a10a2ac89db4e17053d86ff660151bbf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c5d19f4267d31690f664846fe26fb7" id="r_a90c5d19f4267d31690f664846fe26fb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a90c5d19f4267d31690f664846fe26fb7">LTDC_G7_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_2</td></tr>
+<tr class="separator:a90c5d19f4267d31690f664846fe26fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79af58b7660fdb743048b3be90ee46c9" id="r_a79af58b7660fdb743048b3be90ee46c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a79af58b7660fdb743048b3be90ee46c9">LTDC_B0_GPIO_PORT</a>&#160;&#160;&#160;GPIOE</td></tr>
+<tr class="separator:a79af58b7660fdb743048b3be90ee46c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32965c9ea71523cc985d39b74f548c44" id="r_a32965c9ea71523cc985d39b74f548c44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a32965c9ea71523cc985d39b74f548c44">LTDC_B0_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
+<tr class="separator:a32965c9ea71523cc985d39b74f548c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad328d6cdf6ed1d83605d953fdd059262" id="r_ad328d6cdf6ed1d83605d953fdd059262"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ad328d6cdf6ed1d83605d953fdd059262">LTDC_B1_GPIO_PORT</a>&#160;&#160;&#160;GPIOG</td></tr>
+<tr class="separator:ad328d6cdf6ed1d83605d953fdd059262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3937bb8a5304967c8b15adfa2234dc1" id="r_ad3937bb8a5304967c8b15adfa2234dc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ad3937bb8a5304967c8b15adfa2234dc1">LTDC_B1_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_12</td></tr>
+<tr class="separator:ad3937bb8a5304967c8b15adfa2234dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7931b879385ded12de6ea796eb32414d" id="r_a7931b879385ded12de6ea796eb32414d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a7931b879385ded12de6ea796eb32414d">LTDC_B2_GPIO_PORT</a>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="separator:a7931b879385ded12de6ea796eb32414d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf5c6ba2076d1787fa9aeb7f811ac0b" id="r_adbf5c6ba2076d1787fa9aeb7f811ac0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#adbf5c6ba2076d1787fa9aeb7f811ac0b">LTDC_B2_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
+<tr class="separator:adbf5c6ba2076d1787fa9aeb7f811ac0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8340085b4d04d5868318c3ae24cbb96" id="r_ab8340085b4d04d5868318c3ae24cbb96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ab8340085b4d04d5868318c3ae24cbb96">LTDC_B3_GPIO_PORT</a>&#160;&#160;&#160;GPIOG</td></tr>
+<tr class="separator:ab8340085b4d04d5868318c3ae24cbb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd5cea61b627c803b128c6bc88c501e" id="r_a1bd5cea61b627c803b128c6bc88c501e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a1bd5cea61b627c803b128c6bc88c501e">LTDC_B3_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_11</td></tr>
+<tr class="separator:a1bd5cea61b627c803b128c6bc88c501e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae655ddc3a773e72a6a6a81dbdd457fcb" id="r_ae655ddc3a773e72a6a6a81dbdd457fcb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ae655ddc3a773e72a6a6a81dbdd457fcb">LTDC_B4_GPIO_PORT</a>&#160;&#160;&#160;GPIOI</td></tr>
+<tr class="separator:ae655ddc3a773e72a6a6a81dbdd457fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ee11b7ce669792d575979ac54b2e06" id="r_a09ee11b7ce669792d575979ac54b2e06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a09ee11b7ce669792d575979ac54b2e06">LTDC_B4_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
+<tr class="separator:a09ee11b7ce669792d575979ac54b2e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05558dbe3e369d9fc845221dbed9e084" id="r_a05558dbe3e369d9fc845221dbed9e084"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a05558dbe3e369d9fc845221dbed9e084">LTDC_B5_GPIO_PORT</a>&#160;&#160;&#160;GPIOA</td></tr>
+<tr class="separator:a05558dbe3e369d9fc845221dbed9e084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a15df777784b4ec61c775cbd62a3e1f" id="r_a4a15df777784b4ec61c775cbd62a3e1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4a15df777784b4ec61c775cbd62a3e1f">LTDC_B5_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_3</td></tr>
+<tr class="separator:a4a15df777784b4ec61c775cbd62a3e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495e719e7ed55808392ffc88f50b7c91" id="r_a495e719e7ed55808392ffc88f50b7c91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a495e719e7ed55808392ffc88f50b7c91">LTDC_B6_GPIO_PORT</a>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="separator:a495e719e7ed55808392ffc88f50b7c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51878a3c6218c8ff04baecfb5a089a99" id="r_a51878a3c6218c8ff04baecfb5a089a99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a51878a3c6218c8ff04baecfb5a089a99">LTDC_B6_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_8</td></tr>
+<tr class="separator:a51878a3c6218c8ff04baecfb5a089a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559ae5ccddb28d557670ef607ffc27d0" id="r_a559ae5ccddb28d557670ef607ffc27d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a559ae5ccddb28d557670ef607ffc27d0">LTDC_B7_GPIO_PORT</a>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="separator:a559ae5ccddb28d557670ef607ffc27d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae48957e4b24e62174895bb58cb9359a" id="r_aae48957e4b24e62174895bb58cb9359a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aae48957e4b24e62174895bb58cb9359a">LTDC_B7_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
+<tr class="separator:aae48957e4b24e62174895bb58cb9359a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfff6f0aa0436b59872deca5e966e47b" id="r_acfff6f0aa0436b59872deca5e966e47b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#acfff6f0aa0436b59872deca5e966e47b">LTDC_CLK_GPIO_PORT</a>&#160;&#160;&#160;GPIOG</td></tr>
+<tr class="separator:acfff6f0aa0436b59872deca5e966e47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a124475377b6506069ffb8f7a34f322a0" id="r_a124475377b6506069ffb8f7a34f322a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a124475377b6506069ffb8f7a34f322a0">LTDC_CLK_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
+<tr class="separator:a124475377b6506069ffb8f7a34f322a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1654d844a7482659e24bbd5eaf03837" id="r_aa1654d844a7482659e24bbd5eaf03837"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aa1654d844a7482659e24bbd5eaf03837">LTDC_HSYNC_GPIO_PORT</a>&#160;&#160;&#160;GPIOI</td></tr>
+<tr class="separator:aa1654d844a7482659e24bbd5eaf03837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b32afec29268a58a0a94da0f0a1b732" id="r_a6b32afec29268a58a0a94da0f0a1b732"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a6b32afec29268a58a0a94da0f0a1b732">LTDC_HSYNC_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_10</td></tr>
+<tr class="separator:a6b32afec29268a58a0a94da0f0a1b732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274d6e19dd2f7288d8ad9c36eee8600f" id="r_a274d6e19dd2f7288d8ad9c36eee8600f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a274d6e19dd2f7288d8ad9c36eee8600f">LTDC_VSYNC_GPIO_PORT</a>&#160;&#160;&#160;GPIOI</td></tr>
+<tr class="separator:a274d6e19dd2f7288d8ad9c36eee8600f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e2024e3aac78a79a2eaafb3ae63d2ce" id="r_a9e2024e3aac78a79a2eaafb3ae63d2ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a9e2024e3aac78a79a2eaafb3ae63d2ce">LTDC_VSYNC_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_9</td></tr>
+<tr class="separator:a9e2024e3aac78a79a2eaafb3ae63d2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ecbbfd496d5328002c35d7db859459" id="r_aa6ecbbfd496d5328002c35d7db859459"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aa6ecbbfd496d5328002c35d7db859459">LTDC_DE_GPIO_PORT</a>&#160;&#160;&#160;GPIOF</td></tr>
+<tr class="separator:aa6ecbbfd496d5328002c35d7db859459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a3fbdb92fd57b813990f57a79bfb6a" id="r_ae3a3fbdb92fd57b813990f57a79bfb6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ae3a3fbdb92fd57b813990f57a79bfb6a">LTDC_DE_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_10</td></tr>
+<tr class="separator:ae3a3fbdb92fd57b813990f57a79bfb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67037bac69bbed3168851ee5d7d1e51" id="r_ad67037bac69bbed3168851ee5d7d1e51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ad67037bac69bbed3168851ee5d7d1e51">LTDC_DISP_GPIO_PORT</a>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="separator:ad67037bac69bbed3168851ee5d7d1e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2853d86716514d92fa96a71b56ec1ce" id="r_af2853d86716514d92fa96a71b56ec1ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af2853d86716514d92fa96a71b56ec1ce">LTDC_DISP_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_4</td></tr>
+<tr class="separator:af2853d86716514d92fa96a71b56ec1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af745db49c2539e75e6e07ef0831a3140" id="r_af745db49c2539e75e6e07ef0831a3140"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af745db49c2539e75e6e07ef0831a3140">LTDC_BL_GPIO_PORT</a>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="separator:af745db49c2539e75e6e07ef0831a3140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e7bf4c13bfab0bb50910201162560f7" id="r_a4e7bf4c13bfab0bb50910201162560f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4e7bf4c13bfab0bb50910201162560f7">LTDC_BL_GPIO_Pin</a>&#160;&#160;&#160;GPIO_PIN_7</td></tr>
+<tr class="separator:a4e7bf4c13bfab0bb50910201162560f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda119803ff9a1e2ea2b121f622fd511" id="r_afda119803ff9a1e2ea2b121f622fd511"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#afda119803ff9a1e2ea2b121f622fd511">LTDC_GPIO_CLK_ENABLE</a>()</td></tr>
+<tr class="separator:afda119803ff9a1e2ea2b121f622fd511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5647ec8a40b49d6662226601eb9eb452" id="r_a5647ec8a40b49d6662226601eb9eb452"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a5647ec8a40b49d6662226601eb9eb452">LCD_COLOR_BLUE</a>&#160;&#160;&#160;((uint32_t)0xFF0000FF)</td></tr>
+<tr class="separator:a5647ec8a40b49d6662226601eb9eb452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee512e5955e0ed1bf67c7a3bc76fc53" id="r_aaee512e5955e0ed1bf67c7a3bc76fc53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aaee512e5955e0ed1bf67c7a3bc76fc53">LCD_COLOR_GREEN</a>&#160;&#160;&#160;((uint32_t)0xFF00FF00)</td></tr>
+<tr class="separator:aaee512e5955e0ed1bf67c7a3bc76fc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af125d28a3cd79b94a81fc572990f300e" id="r_af125d28a3cd79b94a81fc572990f300e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af125d28a3cd79b94a81fc572990f300e">LCD_COLOR_RED</a>&#160;&#160;&#160;((uint32_t)0xFFFF0000)</td></tr>
+<tr class="separator:af125d28a3cd79b94a81fc572990f300e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a921cf0f9febd5de4fa3c40cda4dd7d" id="r_a5a921cf0f9febd5de4fa3c40cda4dd7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a5a921cf0f9febd5de4fa3c40cda4dd7d">LCD_COLOR_CYAN</a>&#160;&#160;&#160;((uint32_t)0xFF00FFFF)</td></tr>
+<tr class="separator:a5a921cf0f9febd5de4fa3c40cda4dd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad65d67388318c734a32cdfb7a5935f59" id="r_ad65d67388318c734a32cdfb7a5935f59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ad65d67388318c734a32cdfb7a5935f59">LCD_COLOR_MAGENTA</a>&#160;&#160;&#160;((uint32_t)0xFFFF00FF)</td></tr>
+<tr class="separator:ad65d67388318c734a32cdfb7a5935f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11062db6ba403700019e98a8b7c56f18" id="r_a11062db6ba403700019e98a8b7c56f18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a11062db6ba403700019e98a8b7c56f18">LCD_COLOR_YELLOW</a>&#160;&#160;&#160;((uint32_t)0xFFFFFF00)</td></tr>
+<tr class="separator:a11062db6ba403700019e98a8b7c56f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347a89173e8bfce09a85beea805ee202" id="r_a347a89173e8bfce09a85beea805ee202"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a347a89173e8bfce09a85beea805ee202">LCD_COLOR_LIGHTBLUE</a>&#160;&#160;&#160;((uint32_t)0xFF8080FF)</td></tr>
+<tr class="separator:a347a89173e8bfce09a85beea805ee202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4e0fc799fada640cccf87cbf7d89ce" id="r_a9d4e0fc799fada640cccf87cbf7d89ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a9d4e0fc799fada640cccf87cbf7d89ce">LCD_COLOR_LIGHTGREEN</a>&#160;&#160;&#160;((uint32_t)0xFF80FF80)</td></tr>
+<tr class="separator:a9d4e0fc799fada640cccf87cbf7d89ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03b9162384eeefe4381927c28e5ef1c" id="r_af03b9162384eeefe4381927c28e5ef1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af03b9162384eeefe4381927c28e5ef1c">LCD_COLOR_LIGHTRED</a>&#160;&#160;&#160;((uint32_t)0xFFFF8080)</td></tr>
+<tr class="separator:af03b9162384eeefe4381927c28e5ef1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33fd44a04804e04e93b0d341d89d813" id="r_af33fd44a04804e04e93b0d341d89d813"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af33fd44a04804e04e93b0d341d89d813">LCD_COLOR_LIGHTCYAN</a>&#160;&#160;&#160;((uint32_t)0xFF80FFFF)</td></tr>
+<tr class="separator:af33fd44a04804e04e93b0d341d89d813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f38c83f7a484fe440eb9ef0122f7f1" id="r_aa1f38c83f7a484fe440eb9ef0122f7f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aa1f38c83f7a484fe440eb9ef0122f7f1">LCD_COLOR_LIGHTMAGENTA</a>&#160;&#160;&#160;((uint32_t)0xFFFF80FF)</td></tr>
+<tr class="separator:aa1f38c83f7a484fe440eb9ef0122f7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaea2b5bd2d8b6fd01187f61e80e5820" id="r_aaaea2b5bd2d8b6fd01187f61e80e5820"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aaaea2b5bd2d8b6fd01187f61e80e5820">LCD_COLOR_LIGHTYELLOW</a>&#160;&#160;&#160;((uint32_t)0xFFFFFF80)</td></tr>
+<tr class="separator:aaaea2b5bd2d8b6fd01187f61e80e5820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67921b0000a7f8890d660a8725edbc19" id="r_a67921b0000a7f8890d660a8725edbc19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a67921b0000a7f8890d660a8725edbc19">LCD_COLOR_DARKBLUE</a>&#160;&#160;&#160;((uint32_t)0xFF000080)</td></tr>
+<tr class="separator:a67921b0000a7f8890d660a8725edbc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d604eacac3f85176b721eb590689ee0" id="r_a4d604eacac3f85176b721eb590689ee0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4d604eacac3f85176b721eb590689ee0">LCD_COLOR_DARKGREEN</a>&#160;&#160;&#160;((uint32_t)0xFF008000)</td></tr>
+<tr class="separator:a4d604eacac3f85176b721eb590689ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d859a7de90215057fee241f1b67eb6" id="r_a12d859a7de90215057fee241f1b67eb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a12d859a7de90215057fee241f1b67eb6">LCD_COLOR_DARKRED</a>&#160;&#160;&#160;((uint32_t)0xFF800000)</td></tr>
+<tr class="separator:a12d859a7de90215057fee241f1b67eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e9a56d88620375c5826fb0a56381f8" id="r_af9e9a56d88620375c5826fb0a56381f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af9e9a56d88620375c5826fb0a56381f8">LCD_COLOR_DARKCYAN</a>&#160;&#160;&#160;((uint32_t)0xFF008080)</td></tr>
+<tr class="separator:af9e9a56d88620375c5826fb0a56381f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a795752bdd0506d1a8cd1ad5e2c35f93e" id="r_a795752bdd0506d1a8cd1ad5e2c35f93e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a795752bdd0506d1a8cd1ad5e2c35f93e">LCD_COLOR_DARKMAGENTA</a>&#160;&#160;&#160;((uint32_t)0xFF800080)</td></tr>
+<tr class="separator:a795752bdd0506d1a8cd1ad5e2c35f93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fdaac69765cd63a68d30cc753b77fb" id="r_a49fdaac69765cd63a68d30cc753b77fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a49fdaac69765cd63a68d30cc753b77fb">LCD_COLOR_DARKYELLOW</a>&#160;&#160;&#160;((uint32_t)0xFF808000)</td></tr>
+<tr class="separator:a49fdaac69765cd63a68d30cc753b77fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc49fc5e78780bc38a49d2ce30f02da0" id="r_acc49fc5e78780bc38a49d2ce30f02da0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#acc49fc5e78780bc38a49d2ce30f02da0">LCD_COLOR_WHITE</a>&#160;&#160;&#160;((uint32_t)0xFFFFFFFF)</td></tr>
+<tr class="separator:acc49fc5e78780bc38a49d2ce30f02da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe85812ee1d9975211e1bd329664afc" id="r_a1fe85812ee1d9975211e1bd329664afc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a1fe85812ee1d9975211e1bd329664afc">LCD_COLOR_LIGHTGRAY</a>&#160;&#160;&#160;((uint32_t)0xFFD3D3D3)</td></tr>
+<tr class="separator:a1fe85812ee1d9975211e1bd329664afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424fdb50026cdfc18a287b01965983f0" id="r_a424fdb50026cdfc18a287b01965983f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a424fdb50026cdfc18a287b01965983f0">LCD_COLOR_GRAY</a>&#160;&#160;&#160;((uint32_t)0xFF808080)</td></tr>
+<tr class="separator:a424fdb50026cdfc18a287b01965983f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed58783a24f35617da7c12b1053bcbbf" id="r_aed58783a24f35617da7c12b1053bcbbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aed58783a24f35617da7c12b1053bcbbf">LCD_COLOR_DARKGRAY</a>&#160;&#160;&#160;((uint32_t)0xFF404040)</td></tr>
+<tr class="separator:aed58783a24f35617da7c12b1053bcbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a28392f0f4fc236e038a15fe468ce1b" id="r_a5a28392f0f4fc236e038a15fe468ce1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a5a28392f0f4fc236e038a15fe468ce1b">LCD_COLOR_BLACK</a>&#160;&#160;&#160;((uint32_t)0xFF000000)</td></tr>
+<tr class="separator:a5a28392f0f4fc236e038a15fe468ce1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ed75970fe02ebf907864cfe8e112ad" id="r_ab6ed75970fe02ebf907864cfe8e112ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ab6ed75970fe02ebf907864cfe8e112ad">LCD_COLOR_BROWN</a>&#160;&#160;&#160;((uint32_t)0xFFA52A2A)</td></tr>
+<tr class="separator:ab6ed75970fe02ebf907864cfe8e112ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da26295a6c0a7af2095b2579ce7c0f9" id="r_a5da26295a6c0a7af2095b2579ce7c0f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a5da26295a6c0a7af2095b2579ce7c0f9">LCD_COLOR_ORANGE</a>&#160;&#160;&#160;((uint32_t)0xFFFFA500)</td></tr>
+<tr class="separator:a5da26295a6c0a7af2095b2579ce7c0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b140f901775e4563eea22ea0885e834" id="r_a4b140f901775e4563eea22ea0885e834"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4b140f901775e4563eea22ea0885e834">LCD_COLOR_TRANSPARENT</a>&#160;&#160;&#160;((uint32_t)0xFF000000)</td></tr>
+<tr class="separator:a4b140f901775e4563eea22ea0885e834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95bc19f28c2c0fdca40f6070c09f7a71" id="r_a95bc19f28c2c0fdca40f6070c09f7a71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a95bc19f28c2c0fdca40f6070c09f7a71">LCD_DEFAULT_FONT</a>&#160;&#160;&#160;Font24</td></tr>
+<tr class="separator:a95bc19f28c2c0fdca40f6070c09f7a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a215a46e7477262a8280bcb27b63aaabd" id="r_a215a46e7477262a8280bcb27b63aaabd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a215a46e7477262a8280bcb27b63aaabd">LCD_PIXEL_WIDTH</a>&#160;&#160;&#160;(uint16_t)800</td></tr>
+<tr class="separator:a215a46e7477262a8280bcb27b63aaabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af796d6844b178c92f38b8cb4b9e41c78" id="r_af796d6844b178c92f38b8cb4b9e41c78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af796d6844b178c92f38b8cb4b9e41c78">LCD_PIXEL_HEIGHT</a>&#160;&#160;&#160;(uint16_t)480</td></tr>
+<tr class="separator:af796d6844b178c92f38b8cb4b9e41c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9625d05e06981f0fef5e2463857aa06" id="r_aa9625d05e06981f0fef5e2463857aa06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aa9625d05e06981f0fef5e2463857aa06">HBP</a>&#160;&#160;&#160;46</td></tr>
+<tr class="separator:aa9625d05e06981f0fef5e2463857aa06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7be230cb2251f6c64469f4f6a5c8801" id="r_ac7be230cb2251f6c64469f4f6a5c8801"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ac7be230cb2251f6c64469f4f6a5c8801">VBP</a>&#160;&#160;&#160;23</td></tr>
+<tr class="separator:ac7be230cb2251f6c64469f4f6a5c8801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7bfeb24a7c59a5df72fb6dbb6b3a01" id="r_a4c7bfeb24a7c59a5df72fb6dbb6b3a01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4c7bfeb24a7c59a5df72fb6dbb6b3a01">HSW</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a4c7bfeb24a7c59a5df72fb6dbb6b3a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3fdadabf655347d1e4da024ce049ad" id="r_aea3fdadabf655347d1e4da024ce049ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aea3fdadabf655347d1e4da024ce049ad">VSW</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aea3fdadabf655347d1e4da024ce049ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f41581c8fb5199646fb7875bfeec108" id="r_a0f41581c8fb5199646fb7875bfeec108"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a0f41581c8fb5199646fb7875bfeec108">HFP</a>&#160;&#160;&#160;22</td></tr>
+<tr class="separator:a0f41581c8fb5199646fb7875bfeec108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7216a9d43a70a221209fc3a7dd0b0163" id="r_a7216a9d43a70a221209fc3a7dd0b0163"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a7216a9d43a70a221209fc3a7dd0b0163">VFP</a>&#160;&#160;&#160;22</td></tr>
+<tr class="separator:a7216a9d43a70a221209fc3a7dd0b0163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f08faebee92aa36fbcbf4cf77b5173" id="r_a03f08faebee92aa36fbcbf4cf77b5173"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a03f08faebee92aa36fbcbf4cf77b5173">MAX_LAYER_NUMBER</a>&#160;&#160;&#160;(uint32_t)2</td></tr>
+<tr class="separator:a03f08faebee92aa36fbcbf4cf77b5173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa41785a8748c49b61639f4ddd8610b" id="r_a5fa41785a8748c49b61639f4ddd8610b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a5fa41785a8748c49b61639f4ddd8610b">LTDC_ACTIVE_LAYER</a>&#160;&#160;&#160;(uint32_t)1</td></tr>
+<tr class="separator:a5fa41785a8748c49b61639f4ddd8610b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce6a3e4f22835ff690f563ff366ffcf" id="r_abce6a3e4f22835ff690f563ff366ffcf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#abce6a3e4f22835ff690f563ff366ffcf">LCD_FB_START_ADDRESS</a>&#160;&#160;&#160;(uint32_t)0xD0000000</td></tr>
+<tr class="separator:abce6a3e4f22835ff690f563ff366ffcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aed5bd5f3f7340dbdb2e7f50f94163789" id="r_aed5bd5f3f7340dbdb2e7f50f94163789"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aed5bd5f3f7340dbdb2e7f50f94163789">LCD_DisplayOn</a> (void)</td></tr>
+<tr class="separator:aed5bd5f3f7340dbdb2e7f50f94163789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06ea1bb5f28922b6017676d1aaa61e4" id="r_ae06ea1bb5f28922b6017676d1aaa61e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ae06ea1bb5f28922b6017676d1aaa61e4">LCD_DisplayOff</a> (void)</td></tr>
+<tr class="separator:ae06ea1bb5f28922b6017676d1aaa61e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a9b470a504b444eb29d34bea640652" id="r_a05a9b470a504b444eb29d34bea640652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a05a9b470a504b444eb29d34bea640652">LTDC_GPIO_Config</a> (void)</td></tr>
+<tr class="separator:a05a9b470a504b444eb29d34bea640652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6750a89764ac496272315a241ff377f5" id="r_a6750a89764ac496272315a241ff377f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a6750a89764ac496272315a241ff377f5">LCD_CLK_Config</a> (void)</td></tr>
+<tr class="memdesc:a6750a89764ac496272315a241ff377f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">STM32与液晶屏通讯的时钟配置 时钟配置为9.6MHz  <br /></td></tr>
+<tr class="separator:a6750a89764ac496272315a241ff377f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6657ebb2be9c7538015074a022af9d3c" id="r_a6657ebb2be9c7538015074a022af9d3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a6657ebb2be9c7538015074a022af9d3c">LTDC_Config</a> (void)</td></tr>
+<tr class="separator:a6657ebb2be9c7538015074a022af9d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a405abda5e830f0f33dacfd21ec1e51" id="r_a6a405abda5e830f0f33dacfd21ec1e51"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a> (void)</td></tr>
+<tr class="memdesc:a6a405abda5e830f0f33dacfd21ec1e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取LCD当前层X轴的大小  <br /></td></tr>
+<tr class="separator:a6a405abda5e830f0f33dacfd21ec1e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadafb98eeb93c99b8468d36e406ac90e" id="r_aadafb98eeb93c99b8468d36e406ac90e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a> (void)</td></tr>
+<tr class="memdesc:aadafb98eeb93c99b8468d36e406ac90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取LCD当前层Y轴的大小  <br /></td></tr>
+<tr class="separator:aadafb98eeb93c99b8468d36e406ac90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3dca6342e3dd739edbec8a23488e56" id="r_a8e3dca6342e3dd739edbec8a23488e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a8e3dca6342e3dd739edbec8a23488e56">LCD_SetXSize</a> (uint32_t imageWidthPixels)</td></tr>
+<tr class="memdesc:a8e3dca6342e3dd739edbec8a23488e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层X轴的大小  <br /></td></tr>
+<tr class="separator:a8e3dca6342e3dd739edbec8a23488e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320415ea9b549dd0a4fa2452bde4565c" id="r_a320415ea9b549dd0a4fa2452bde4565c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a320415ea9b549dd0a4fa2452bde4565c">LCD_SetYSize</a> (uint32_t imageHeightPixels)</td></tr>
+<tr class="memdesc:a320415ea9b549dd0a4fa2452bde4565c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层Y轴的大小  <br /></td></tr>
+<tr class="separator:a320415ea9b549dd0a4fa2452bde4565c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb167c16cf7ec34f8170915d2302b7a" id="r_a1fb167c16cf7ec34f8170915d2302b7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a1fb167c16cf7ec34f8170915d2302b7a">LCD_LayerInit</a> (uint16_t LayerIndex, uint32_t FB_Address, uint32_t PixelFormat)</td></tr>
+<tr class="memdesc:a1fb167c16cf7ec34f8170915d2302b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">层级初始化  <br /></td></tr>
+<tr class="separator:a1fb167c16cf7ec34f8170915d2302b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ea822c4061bfb2e466b851411c0aa9" id="r_a06ea822c4061bfb2e466b851411c0aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a06ea822c4061bfb2e466b851411c0aa9">LCD_Config</a> (void)</td></tr>
+<tr class="separator:a06ea822c4061bfb2e466b851411c0aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1420ea7b39dd570d4d6edbf789f7640" id="r_af1420ea7b39dd570d4d6edbf789f7640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#af1420ea7b39dd570d4d6edbf789f7640">LCD_SelectLayer</a> (uint32_t LayerIndex)</td></tr>
+<tr class="memdesc:af1420ea7b39dd570d4d6edbf789f7640"><td class="mdescLeft">&#160;</td><td class="mdescRight">选择LCD的当前层  <br /></td></tr>
+<tr class="separator:af1420ea7b39dd570d4d6edbf789f7640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7c3b9a5af160da3faedc9baa0bf459" id="r_a4b7c3b9a5af160da3faedc9baa0bf459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a4b7c3b9a5af160da3faedc9baa0bf459">LCD_SetLayerVisible</a> (uint32_t LayerIndex, FunctionalState State)</td></tr>
+<tr class="memdesc:a4b7c3b9a5af160da3faedc9baa0bf459"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD层的可视化(即禁止或使能某一层)  <br /></td></tr>
+<tr class="separator:a4b7c3b9a5af160da3faedc9baa0bf459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0568836139e5177b6ce37e470e255c77" id="r_a0568836139e5177b6ce37e470e255c77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a0568836139e5177b6ce37e470e255c77">LCD_SetTransparency</a> (uint32_t LayerIndex, uint8_t Transparency)</td></tr>
+<tr class="memdesc:a0568836139e5177b6ce37e470e255c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD的透明度常量，即Alpha  <br /></td></tr>
+<tr class="separator:a0568836139e5177b6ce37e470e255c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affaff29c7f76c5bb37da2501f9799aaf" id="r_affaff29c7f76c5bb37da2501f9799aaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#affaff29c7f76c5bb37da2501f9799aaf">LCD_SetLayerAddress</a> (uint32_t LayerIndex, uint32_t Address)</td></tr>
+<tr class="memdesc:affaff29c7f76c5bb37da2501f9799aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD缓冲帧的首地址  <br /></td></tr>
+<tr class="separator:affaff29c7f76c5bb37da2501f9799aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846fbcfe435b2eb20d412c1793350a03" id="r_a846fbcfe435b2eb20d412c1793350a03"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a846fbcfe435b2eb20d412c1793350a03">LL_FillBuffer</a> (uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex)</td></tr>
+<tr class="separator:a846fbcfe435b2eb20d412c1793350a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10cbb1fbca34e835f98e1172c2756990" id="r_a10cbb1fbca34e835f98e1172c2756990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a10cbb1fbca34e835f98e1172c2756990">LCD_DrawPixel</a> (uint16_t Xpos, uint16_t Ypos, uint32_t RGB_Code)</td></tr>
+<tr class="memdesc:a10cbb1fbca34e835f98e1172c2756990"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一个点  <br /></td></tr>
+<tr class="separator:a10cbb1fbca34e835f98e1172c2756990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268429ba50ca073c233224309fac9f46" id="r_a268429ba50ca073c233224309fac9f46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a268429ba50ca073c233224309fac9f46">LCD_DrawHLine</a> (uint16_t Xpos, uint16_t Ypos, uint16_t Length)</td></tr>
+<tr class="memdesc:a268429ba50ca073c233224309fac9f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一条水平直线  <br /></td></tr>
+<tr class="separator:a268429ba50ca073c233224309fac9f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370ea7eacea2dd8fcc352ce8dcbaa151" id="r_a370ea7eacea2dd8fcc352ce8dcbaa151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a370ea7eacea2dd8fcc352ce8dcbaa151">LCD_DrawVLine</a> (uint16_t Xpos, uint16_t Ypos, uint16_t Length)</td></tr>
+<tr class="memdesc:a370ea7eacea2dd8fcc352ce8dcbaa151"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一条垂直直线  <br /></td></tr>
+<tr class="separator:a370ea7eacea2dd8fcc352ce8dcbaa151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398e124cc5572547086d78fc9b7fc1f4" id="r_a398e124cc5572547086d78fc9b7fc1f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a398e124cc5572547086d78fc9b7fc1f4">LCD_DrawAnyLine</a> (uint16_t X1pos, uint16_t Y1pos, uint16_t X2pos, uint16_t Y2pos)</td></tr>
+<tr class="memdesc:a398e124cc5572547086d78fc9b7fc1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制任意两点之间的一条直线  <br /></td></tr>
+<tr class="separator:a398e124cc5572547086d78fc9b7fc1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc663e63fa8138ef0c4f4a1b31c7807" id="r_adfc663e63fa8138ef0c4f4a1b31c7807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#adfc663e63fa8138ef0c4f4a1b31c7807">LCD_FillRect</a> (uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)</td></tr>
+<tr class="memdesc:adfc663e63fa8138ef0c4f4a1b31c7807"><td class="mdescLeft">&#160;</td><td class="mdescRight">填充一个实心矩形  <br /></td></tr>
+<tr class="separator:adfc663e63fa8138ef0c4f4a1b31c7807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57144a5b4342ddd500fb50018123dc6" id="r_ae57144a5b4342ddd500fb50018123dc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ae57144a5b4342ddd500fb50018123dc6">LCD_Clear</a> (uint32_t Color)</td></tr>
+<tr class="memdesc:ae57144a5b4342ddd500fb50018123dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD当前层清屏  <br /></td></tr>
+<tr class="separator:ae57144a5b4342ddd500fb50018123dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e11eb72448bdf1c3e729aea39e921c" id="r_a83e11eb72448bdf1c3e729aea39e921c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a83e11eb72448bdf1c3e729aea39e921c">LCD_ClearLine</a> (uint32_t Line)</td></tr>
+<tr class="memdesc:a83e11eb72448bdf1c3e729aea39e921c"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除一行  <br /></td></tr>
+<tr class="separator:a83e11eb72448bdf1c3e729aea39e921c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0735470c4c9bc0130dd03ae6cb2b056" id="r_ac0735470c4c9bc0130dd03ae6cb2b056"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ac0735470c4c9bc0130dd03ae6cb2b056">LCD_ReadPixel</a> (uint16_t Xpos, uint16_t Ypos)</td></tr>
+<tr class="memdesc:ac0735470c4c9bc0130dd03ae6cb2b056"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取LCD的像素值  <br /></td></tr>
+<tr class="separator:ac0735470c4c9bc0130dd03ae6cb2b056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a4bb3bde55452bbb8370f5d935e41d" id="r_a31a4bb3bde55452bbb8370f5d935e41d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a31a4bb3bde55452bbb8370f5d935e41d">LCD_SetTextColor</a> (uint32_t Color)</td></tr>
+<tr class="memdesc:a31a4bb3bde55452bbb8370f5d935e41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层的文字颜色  <br /></td></tr>
+<tr class="separator:a31a4bb3bde55452bbb8370f5d935e41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca000116f289bc36b8892a6c64164dd" id="r_aeca000116f289bc36b8892a6c64164dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aeca000116f289bc36b8892a6c64164dd">LCD_SetBackColor</a> (uint32_t Color)</td></tr>
+<tr class="memdesc:aeca000116f289bc36b8892a6c64164dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层的文字背景颜色  <br /></td></tr>
+<tr class="separator:aeca000116f289bc36b8892a6c64164dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab06250d18ef0123a92381333a7e464e0" id="r_ab06250d18ef0123a92381333a7e464e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#ab06250d18ef0123a92381333a7e464e0">LCD_SetColors</a> (uint32_t TextColor, uint32_t BackColor)</td></tr>
+<tr class="memdesc:ab06250d18ef0123a92381333a7e464e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层的文字颜色和文字背景颜色  <br /></td></tr>
+<tr class="separator:ab06250d18ef0123a92381333a7e464e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c26f6fcddd0bf89f71d71131c7a206a" id="r_a6c26f6fcddd0bf89f71d71131c7a206a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a6c26f6fcddd0bf89f71d71131c7a206a">LCD_SetFont</a> (sFONT *fonts)</td></tr>
+<tr class="memdesc:a6c26f6fcddd0bf89f71d71131c7a206a"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层显示的字体  <br /></td></tr>
+<tr class="separator:a6c26f6fcddd0bf89f71d71131c7a206a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2f00b73ed9209df1077ec5a975cc37" id="r_a7b2f00b73ed9209df1077ec5a975cc37"><td class="memItemLeft" align="right" valign="top">sFONT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a7b2f00b73ed9209df1077ec5a975cc37">LCD_GetFont</a> (void)</td></tr>
+<tr class="memdesc:a7b2f00b73ed9209df1077ec5a975cc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取LCD当前层显示的字体  <br /></td></tr>
+<tr class="separator:a7b2f00b73ed9209df1077ec5a975cc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97156afb28b2fb2877ae97efa92f3ee" id="r_aa97156afb28b2fb2877ae97efa92f3ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aa97156afb28b2fb2877ae97efa92f3ee">LCD_SetLayerWindow</a> (uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)</td></tr>
+<tr class="memdesc:aa97156afb28b2fb2877ae97efa92f3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置显示窗口  <br /></td></tr>
+<tr class="separator:aa97156afb28b2fb2877ae97efa92f3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf28c2494c1a232d68d8b63af20ea3ec" id="r_aaf28c2494c1a232d68d8b63af20ea3ec"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aaf28c2494c1a232d68d8b63af20ea3ec">LCD_GetStartAddress</a> (uint16_t Xpos, uint16_t Ypos)</td></tr>
+<tr class="separator:aaf28c2494c1a232d68d8b63af20ea3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfdb76c5b920f5a8fcaed02cf318c45" id="r_a2cfdb76c5b920f5a8fcaed02cf318c45"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a2cfdb76c5b920f5a8fcaed02cf318c45">LCD_DrawChar</a> (uint16_t Xpos, uint16_t Ypos, const uint8_t *c)</td></tr>
+<tr class="separator:a2cfdb76c5b920f5a8fcaed02cf318c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa500186c114aaea3dd6cdc11d306617e" id="r_aa500186c114aaea3dd6cdc11d306617e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#aa500186c114aaea3dd6cdc11d306617e">LCD_DisplayChar</a> (uint16_t Xpos, uint16_t Ypos, uint8_t Ascii)</td></tr>
+<tr class="memdesc:aa500186c114aaea3dd6cdc11d306617e"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定位置显示一个字符(英文)  <br /></td></tr>
+<tr class="separator:aa500186c114aaea3dd6cdc11d306617e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe6db0bfd3cabc4e99d5ce8b7343c6b" id="r_a7fe6db0bfd3cabc4e99d5ce8b7343c6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a7fe6db0bfd3cabc4e99d5ce8b7343c6b">LCD_DisplayStringAt</a> (uint16_t Xpos, uint16_t Ypos, uint8_t *Text)</td></tr>
+<tr class="memdesc:a7fe6db0bfd3cabc4e99d5ce8b7343c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定位置显示一个字符串(英文)  <br /></td></tr>
+<tr class="separator:a7fe6db0bfd3cabc4e99d5ce8b7343c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acced1d191675f150cb4cccd377a7c11c" id="r_acced1d191675f150cb4cccd377a7c11c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#acced1d191675f150cb4cccd377a7c11c">LCD_DisplayStringLine</a> (uint8_t Line, uint8_t *Text)</td></tr>
+<tr class="memdesc:acced1d191675f150cb4cccd377a7c11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定行显示一个字符串(英文)  <br /></td></tr>
+<tr class="separator:acced1d191675f150cb4cccd377a7c11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb03a44ef3f80528979b5cd8091dd84" id="r_a0bb03a44ef3f80528979b5cd8091dd84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a0bb03a44ef3f80528979b5cd8091dd84">GetGB2312Code_from_EXFlash</a> (uint8_t *pBuffer, uint16_t c)</td></tr>
+<tr class="memdesc:a0bb03a44ef3f80528979b5cd8091dd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一个中文GB2312编码字符的字模数据  <br /></td></tr>
+<tr class="separator:a0bb03a44ef3f80528979b5cd8091dd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413cecd8e18e5715925c0831a5946d29" id="r_a413cecd8e18e5715925c0831a5946d29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a413cecd8e18e5715925c0831a5946d29">LCD_DisplayChar_CH</a> (uint16_t Xpos, uint16_t Ypos, uint16_t char_CH)</td></tr>
+<tr class="memdesc:a413cecd8e18e5715925c0831a5946d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一个中文字符  <br /></td></tr>
+<tr class="separator:a413cecd8e18e5715925c0831a5946d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01fbccb17e918648c31a30525f0eda6a" id="r_a01fbccb17e918648c31a30525f0eda6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8h.html#a01fbccb17e918648c31a30525f0eda6a">LCD_DisplayStringLine_EN_CH</a> (uint16_t Line, uint8_t *Text)</td></tr>
+<tr class="memdesc:a01fbccb17e918648c31a30525f0eda6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示一句可以包含中英文的句子  <br /></td></tr>
+<tr class="separator:a01fbccb17e918648c31a30525f0eda6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="aa9625d05e06981f0fef5e2463857aa06" name="aa9625d05e06981f0fef5e2463857aa06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9625d05e06981f0fef5e2463857aa06">&#9670;&#160;</a></span>HBP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HBP&#160;&#160;&#160;46</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f41581c8fb5199646fb7875bfeec108" name="a0f41581c8fb5199646fb7875bfeec108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f41581c8fb5199646fb7875bfeec108">&#9670;&#160;</a></span>HFP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HFP&#160;&#160;&#160;22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c7bfeb24a7c59a5df72fb6dbb6b3a01" name="a4c7bfeb24a7c59a5df72fb6dbb6b3a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7bfeb24a7c59a5df72fb6dbb6b3a01">&#9670;&#160;</a></span>HSW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HSW&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a28392f0f4fc236e038a15fe468ce1b" name="a5a28392f0f4fc236e038a15fe468ce1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a28392f0f4fc236e038a15fe468ce1b">&#9670;&#160;</a></span>LCD_COLOR_BLACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_BLACK&#160;&#160;&#160;((uint32_t)0xFF000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5647ec8a40b49d6662226601eb9eb452" name="a5647ec8a40b49d6662226601eb9eb452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5647ec8a40b49d6662226601eb9eb452">&#9670;&#160;</a></span>LCD_COLOR_BLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_BLUE&#160;&#160;&#160;((uint32_t)0xFF0000FF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6ed75970fe02ebf907864cfe8e112ad" name="ab6ed75970fe02ebf907864cfe8e112ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ed75970fe02ebf907864cfe8e112ad">&#9670;&#160;</a></span>LCD_COLOR_BROWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_BROWN&#160;&#160;&#160;((uint32_t)0xFFA52A2A)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a921cf0f9febd5de4fa3c40cda4dd7d" name="a5a921cf0f9febd5de4fa3c40cda4dd7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a921cf0f9febd5de4fa3c40cda4dd7d">&#9670;&#160;</a></span>LCD_COLOR_CYAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_CYAN&#160;&#160;&#160;((uint32_t)0xFF00FFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67921b0000a7f8890d660a8725edbc19" name="a67921b0000a7f8890d660a8725edbc19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67921b0000a7f8890d660a8725edbc19">&#9670;&#160;</a></span>LCD_COLOR_DARKBLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_DARKBLUE&#160;&#160;&#160;((uint32_t)0xFF000080)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9e9a56d88620375c5826fb0a56381f8" name="af9e9a56d88620375c5826fb0a56381f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e9a56d88620375c5826fb0a56381f8">&#9670;&#160;</a></span>LCD_COLOR_DARKCYAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_DARKCYAN&#160;&#160;&#160;((uint32_t)0xFF008080)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed58783a24f35617da7c12b1053bcbbf" name="aed58783a24f35617da7c12b1053bcbbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed58783a24f35617da7c12b1053bcbbf">&#9670;&#160;</a></span>LCD_COLOR_DARKGRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_DARKGRAY&#160;&#160;&#160;((uint32_t)0xFF404040)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d604eacac3f85176b721eb590689ee0" name="a4d604eacac3f85176b721eb590689ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d604eacac3f85176b721eb590689ee0">&#9670;&#160;</a></span>LCD_COLOR_DARKGREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_DARKGREEN&#160;&#160;&#160;((uint32_t)0xFF008000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a795752bdd0506d1a8cd1ad5e2c35f93e" name="a795752bdd0506d1a8cd1ad5e2c35f93e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795752bdd0506d1a8cd1ad5e2c35f93e">&#9670;&#160;</a></span>LCD_COLOR_DARKMAGENTA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_DARKMAGENTA&#160;&#160;&#160;((uint32_t)0xFF800080)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12d859a7de90215057fee241f1b67eb6" name="a12d859a7de90215057fee241f1b67eb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d859a7de90215057fee241f1b67eb6">&#9670;&#160;</a></span>LCD_COLOR_DARKRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_DARKRED&#160;&#160;&#160;((uint32_t)0xFF800000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49fdaac69765cd63a68d30cc753b77fb" name="a49fdaac69765cd63a68d30cc753b77fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49fdaac69765cd63a68d30cc753b77fb">&#9670;&#160;</a></span>LCD_COLOR_DARKYELLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_DARKYELLOW&#160;&#160;&#160;((uint32_t)0xFF808000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a424fdb50026cdfc18a287b01965983f0" name="a424fdb50026cdfc18a287b01965983f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424fdb50026cdfc18a287b01965983f0">&#9670;&#160;</a></span>LCD_COLOR_GRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_GRAY&#160;&#160;&#160;((uint32_t)0xFF808080)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaee512e5955e0ed1bf67c7a3bc76fc53" name="aaee512e5955e0ed1bf67c7a3bc76fc53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaee512e5955e0ed1bf67c7a3bc76fc53">&#9670;&#160;</a></span>LCD_COLOR_GREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_GREEN&#160;&#160;&#160;((uint32_t)0xFF00FF00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a347a89173e8bfce09a85beea805ee202" name="a347a89173e8bfce09a85beea805ee202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347a89173e8bfce09a85beea805ee202">&#9670;&#160;</a></span>LCD_COLOR_LIGHTBLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_LIGHTBLUE&#160;&#160;&#160;((uint32_t)0xFF8080FF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af33fd44a04804e04e93b0d341d89d813" name="af33fd44a04804e04e93b0d341d89d813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33fd44a04804e04e93b0d341d89d813">&#9670;&#160;</a></span>LCD_COLOR_LIGHTCYAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_LIGHTCYAN&#160;&#160;&#160;((uint32_t)0xFF80FFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fe85812ee1d9975211e1bd329664afc" name="a1fe85812ee1d9975211e1bd329664afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe85812ee1d9975211e1bd329664afc">&#9670;&#160;</a></span>LCD_COLOR_LIGHTGRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_LIGHTGRAY&#160;&#160;&#160;((uint32_t)0xFFD3D3D3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d4e0fc799fada640cccf87cbf7d89ce" name="a9d4e0fc799fada640cccf87cbf7d89ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4e0fc799fada640cccf87cbf7d89ce">&#9670;&#160;</a></span>LCD_COLOR_LIGHTGREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_LIGHTGREEN&#160;&#160;&#160;((uint32_t)0xFF80FF80)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1f38c83f7a484fe440eb9ef0122f7f1" name="aa1f38c83f7a484fe440eb9ef0122f7f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f38c83f7a484fe440eb9ef0122f7f1">&#9670;&#160;</a></span>LCD_COLOR_LIGHTMAGENTA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_LIGHTMAGENTA&#160;&#160;&#160;((uint32_t)0xFFFF80FF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af03b9162384eeefe4381927c28e5ef1c" name="af03b9162384eeefe4381927c28e5ef1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03b9162384eeefe4381927c28e5ef1c">&#9670;&#160;</a></span>LCD_COLOR_LIGHTRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_LIGHTRED&#160;&#160;&#160;((uint32_t)0xFFFF8080)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaea2b5bd2d8b6fd01187f61e80e5820" name="aaaea2b5bd2d8b6fd01187f61e80e5820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaea2b5bd2d8b6fd01187f61e80e5820">&#9670;&#160;</a></span>LCD_COLOR_LIGHTYELLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_LIGHTYELLOW&#160;&#160;&#160;((uint32_t)0xFFFFFF80)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad65d67388318c734a32cdfb7a5935f59" name="ad65d67388318c734a32cdfb7a5935f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65d67388318c734a32cdfb7a5935f59">&#9670;&#160;</a></span>LCD_COLOR_MAGENTA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_MAGENTA&#160;&#160;&#160;((uint32_t)0xFFFF00FF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5da26295a6c0a7af2095b2579ce7c0f9" name="a5da26295a6c0a7af2095b2579ce7c0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da26295a6c0a7af2095b2579ce7c0f9">&#9670;&#160;</a></span>LCD_COLOR_ORANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_ORANGE&#160;&#160;&#160;((uint32_t)0xFFFFA500)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af125d28a3cd79b94a81fc572990f300e" name="af125d28a3cd79b94a81fc572990f300e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af125d28a3cd79b94a81fc572990f300e">&#9670;&#160;</a></span>LCD_COLOR_RED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_RED&#160;&#160;&#160;((uint32_t)0xFFFF0000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b140f901775e4563eea22ea0885e834" name="a4b140f901775e4563eea22ea0885e834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b140f901775e4563eea22ea0885e834">&#9670;&#160;</a></span>LCD_COLOR_TRANSPARENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_TRANSPARENT&#160;&#160;&#160;((uint32_t)0xFF000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc49fc5e78780bc38a49d2ce30f02da0" name="acc49fc5e78780bc38a49d2ce30f02da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc49fc5e78780bc38a49d2ce30f02da0">&#9670;&#160;</a></span>LCD_COLOR_WHITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_WHITE&#160;&#160;&#160;((uint32_t)0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11062db6ba403700019e98a8b7c56f18" name="a11062db6ba403700019e98a8b7c56f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11062db6ba403700019e98a8b7c56f18">&#9670;&#160;</a></span>LCD_COLOR_YELLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_COLOR_YELLOW&#160;&#160;&#160;((uint32_t)0xFFFFFF00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95bc19f28c2c0fdca40f6070c09f7a71" name="a95bc19f28c2c0fdca40f6070c09f7a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95bc19f28c2c0fdca40f6070c09f7a71">&#9670;&#160;</a></span>LCD_DEFAULT_FONT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_DEFAULT_FONT&#160;&#160;&#160;Font24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abce6a3e4f22835ff690f563ff366ffcf" name="abce6a3e4f22835ff690f563ff366ffcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce6a3e4f22835ff690f563ff366ffcf">&#9670;&#160;</a></span>LCD_FB_START_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_FB_START_ADDRESS&#160;&#160;&#160;(uint32_t)0xD0000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af796d6844b178c92f38b8cb4b9e41c78" name="af796d6844b178c92f38b8cb4b9e41c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af796d6844b178c92f38b8cb4b9e41c78">&#9670;&#160;</a></span>LCD_PIXEL_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_PIXEL_HEIGHT&#160;&#160;&#160;(uint16_t)480</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a215a46e7477262a8280bcb27b63aaabd" name="a215a46e7477262a8280bcb27b63aaabd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215a46e7477262a8280bcb27b63aaabd">&#9670;&#160;</a></span>LCD_PIXEL_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_PIXEL_WIDTH&#160;&#160;&#160;(uint16_t)800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fa41785a8748c49b61639f4ddd8610b" name="a5fa41785a8748c49b61639f4ddd8610b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa41785a8748c49b61639f4ddd8610b">&#9670;&#160;</a></span>LTDC_ACTIVE_LAYER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_ACTIVE_LAYER&#160;&#160;&#160;(uint32_t)1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32965c9ea71523cc985d39b74f548c44" name="a32965c9ea71523cc985d39b74f548c44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32965c9ea71523cc985d39b74f548c44">&#9670;&#160;</a></span>LTDC_B0_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B0_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79af58b7660fdb743048b3be90ee46c9" name="a79af58b7660fdb743048b3be90ee46c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79af58b7660fdb743048b3be90ee46c9">&#9670;&#160;</a></span>LTDC_B0_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B0_GPIO_PORT&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3937bb8a5304967c8b15adfa2234dc1" name="ad3937bb8a5304967c8b15adfa2234dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3937bb8a5304967c8b15adfa2234dc1">&#9670;&#160;</a></span>LTDC_B1_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B1_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad328d6cdf6ed1d83605d953fdd059262" name="ad328d6cdf6ed1d83605d953fdd059262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad328d6cdf6ed1d83605d953fdd059262">&#9670;&#160;</a></span>LTDC_B1_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B1_GPIO_PORT&#160;&#160;&#160;GPIOG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbf5c6ba2076d1787fa9aeb7f811ac0b" name="adbf5c6ba2076d1787fa9aeb7f811ac0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf5c6ba2076d1787fa9aeb7f811ac0b">&#9670;&#160;</a></span>LTDC_B2_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B2_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7931b879385ded12de6ea796eb32414d" name="a7931b879385ded12de6ea796eb32414d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7931b879385ded12de6ea796eb32414d">&#9670;&#160;</a></span>LTDC_B2_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B2_GPIO_PORT&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bd5cea61b627c803b128c6bc88c501e" name="a1bd5cea61b627c803b128c6bc88c501e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd5cea61b627c803b128c6bc88c501e">&#9670;&#160;</a></span>LTDC_B3_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B3_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8340085b4d04d5868318c3ae24cbb96" name="ab8340085b4d04d5868318c3ae24cbb96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8340085b4d04d5868318c3ae24cbb96">&#9670;&#160;</a></span>LTDC_B3_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B3_GPIO_PORT&#160;&#160;&#160;GPIOG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09ee11b7ce669792d575979ac54b2e06" name="a09ee11b7ce669792d575979ac54b2e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ee11b7ce669792d575979ac54b2e06">&#9670;&#160;</a></span>LTDC_B4_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B4_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae655ddc3a773e72a6a6a81dbdd457fcb" name="ae655ddc3a773e72a6a6a81dbdd457fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae655ddc3a773e72a6a6a81dbdd457fcb">&#9670;&#160;</a></span>LTDC_B4_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B4_GPIO_PORT&#160;&#160;&#160;GPIOI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a15df777784b4ec61c775cbd62a3e1f" name="a4a15df777784b4ec61c775cbd62a3e1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a15df777784b4ec61c775cbd62a3e1f">&#9670;&#160;</a></span>LTDC_B5_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B5_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05558dbe3e369d9fc845221dbed9e084" name="a05558dbe3e369d9fc845221dbed9e084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05558dbe3e369d9fc845221dbed9e084">&#9670;&#160;</a></span>LTDC_B5_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B5_GPIO_PORT&#160;&#160;&#160;GPIOA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51878a3c6218c8ff04baecfb5a089a99" name="a51878a3c6218c8ff04baecfb5a089a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51878a3c6218c8ff04baecfb5a089a99">&#9670;&#160;</a></span>LTDC_B6_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B6_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a495e719e7ed55808392ffc88f50b7c91" name="a495e719e7ed55808392ffc88f50b7c91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495e719e7ed55808392ffc88f50b7c91">&#9670;&#160;</a></span>LTDC_B6_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B6_GPIO_PORT&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae48957e4b24e62174895bb58cb9359a" name="aae48957e4b24e62174895bb58cb9359a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae48957e4b24e62174895bb58cb9359a">&#9670;&#160;</a></span>LTDC_B7_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B7_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a559ae5ccddb28d557670ef607ffc27d0" name="a559ae5ccddb28d557670ef607ffc27d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a559ae5ccddb28d557670ef607ffc27d0">&#9670;&#160;</a></span>LTDC_B7_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_B7_GPIO_PORT&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e7bf4c13bfab0bb50910201162560f7" name="a4e7bf4c13bfab0bb50910201162560f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e7bf4c13bfab0bb50910201162560f7">&#9670;&#160;</a></span>LTDC_BL_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_BL_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af745db49c2539e75e6e07ef0831a3140" name="af745db49c2539e75e6e07ef0831a3140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af745db49c2539e75e6e07ef0831a3140">&#9670;&#160;</a></span>LTDC_BL_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_BL_GPIO_PORT&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a124475377b6506069ffb8f7a34f322a0" name="a124475377b6506069ffb8f7a34f322a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a124475377b6506069ffb8f7a34f322a0">&#9670;&#160;</a></span>LTDC_CLK_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_CLK_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfff6f0aa0436b59872deca5e966e47b" name="acfff6f0aa0436b59872deca5e966e47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfff6f0aa0436b59872deca5e966e47b">&#9670;&#160;</a></span>LTDC_CLK_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_CLK_GPIO_PORT&#160;&#160;&#160;GPIOG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3a3fbdb92fd57b813990f57a79bfb6a" name="ae3a3fbdb92fd57b813990f57a79bfb6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a3fbdb92fd57b813990f57a79bfb6a">&#9670;&#160;</a></span>LTDC_DE_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_DE_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6ecbbfd496d5328002c35d7db859459" name="aa6ecbbfd496d5328002c35d7db859459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ecbbfd496d5328002c35d7db859459">&#9670;&#160;</a></span>LTDC_DE_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_DE_GPIO_PORT&#160;&#160;&#160;GPIOF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2853d86716514d92fa96a71b56ec1ce" name="af2853d86716514d92fa96a71b56ec1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2853d86716514d92fa96a71b56ec1ce">&#9670;&#160;</a></span>LTDC_DISP_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_DISP_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad67037bac69bbed3168851ee5d7d1e51" name="ad67037bac69bbed3168851ee5d7d1e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67037bac69bbed3168851ee5d7d1e51">&#9670;&#160;</a></span>LTDC_DISP_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_DISP_GPIO_PORT&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af910df0275c9362c33eb2d630e62ac09" name="af910df0275c9362c33eb2d630e62ac09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af910df0275c9362c33eb2d630e62ac09">&#9670;&#160;</a></span>LTDC_G0_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G0_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af77b3a29d9cb8f49c6530700fdcd3863" name="af77b3a29d9cb8f49c6530700fdcd3863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77b3a29d9cb8f49c6530700fdcd3863">&#9670;&#160;</a></span>LTDC_G0_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G0_GPIO_PORT&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af79d03f4c770a6619f58b9d3964aeb3c" name="af79d03f4c770a6619f58b9d3964aeb3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79d03f4c770a6619f58b9d3964aeb3c">&#9670;&#160;</a></span>LTDC_G1_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G1_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fbf33af27757720f9734758f99b32f4" name="a4fbf33af27757720f9734758f99b32f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fbf33af27757720f9734758f99b32f4">&#9670;&#160;</a></span>LTDC_G1_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G1_GPIO_PORT&#160;&#160;&#160;GPIOE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87687e5b23115bd8738a80d4366335eb" name="a87687e5b23115bd8738a80d4366335eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87687e5b23115bd8738a80d4366335eb">&#9670;&#160;</a></span>LTDC_G2_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G2_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a91f61d15d7f6080b6309fda1f09bf2" name="a4a91f61d15d7f6080b6309fda1f09bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a91f61d15d7f6080b6309fda1f09bf2">&#9670;&#160;</a></span>LTDC_G2_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G2_GPIO_PORT&#160;&#160;&#160;GPIOH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a932de36d8b6e7c32ac4f89d378bd7c78" name="a932de36d8b6e7c32ac4f89d378bd7c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932de36d8b6e7c32ac4f89d378bd7c78">&#9670;&#160;</a></span>LTDC_G3_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G3_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafe6d6da3668f28c7bdaefa0d055b569" name="aafe6d6da3668f28c7bdaefa0d055b569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe6d6da3668f28c7bdaefa0d055b569">&#9670;&#160;</a></span>LTDC_G3_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G3_GPIO_PORT&#160;&#160;&#160;GPIOG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4449aca86afe3c857397b7e1c07bc27f" name="a4449aca86afe3c857397b7e1c07bc27f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4449aca86afe3c857397b7e1c07bc27f">&#9670;&#160;</a></span>LTDC_G4_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G4_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a179c8c3724d1af69ae42b6c32ddfd7aa" name="a179c8c3724d1af69ae42b6c32ddfd7aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a179c8c3724d1af69ae42b6c32ddfd7aa">&#9670;&#160;</a></span>LTDC_G4_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G4_GPIO_PORT&#160;&#160;&#160;GPIOH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a7b47eaaab744a7470fb71113e103a4" name="a9a7b47eaaab744a7470fb71113e103a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7b47eaaab744a7470fb71113e103a4">&#9670;&#160;</a></span>LTDC_G5_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G5_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c0a061ebb8c9dcab543a4b7b5a8c903" name="a5c0a061ebb8c9dcab543a4b7b5a8c903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0a061ebb8c9dcab543a4b7b5a8c903">&#9670;&#160;</a></span>LTDC_G5_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G5_GPIO_PORT&#160;&#160;&#160;GPIOI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6232635ec9969ad988f676a63f0cdc2" name="af6232635ec9969ad988f676a63f0cdc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6232635ec9969ad988f676a63f0cdc2">&#9670;&#160;</a></span>LTDC_G6_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G6_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa34caebaae2f42d3a3d0240f102992d" name="aaa34caebaae2f42d3a3d0240f102992d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa34caebaae2f42d3a3d0240f102992d">&#9670;&#160;</a></span>LTDC_G6_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G6_GPIO_PORT&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90c5d19f4267d31690f664846fe26fb7" name="a90c5d19f4267d31690f664846fe26fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c5d19f4267d31690f664846fe26fb7">&#9670;&#160;</a></span>LTDC_G7_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G7_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10a2ac89db4e17053d86ff660151bbf3" name="a10a2ac89db4e17053d86ff660151bbf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10a2ac89db4e17053d86ff660151bbf3">&#9670;&#160;</a></span>LTDC_G7_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_G7_GPIO_PORT&#160;&#160;&#160;GPIOI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afda119803ff9a1e2ea2b121f622fd511" name="afda119803ff9a1e2ea2b121f622fd511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afda119803ff9a1e2ea2b121f622fd511">&#9670;&#160;</a></span>LTDC_GPIO_CLK_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_GPIO_CLK_ENABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">                                 {__GPIOA_CLK_ENABLE();__GPIOB_CLK_ENABLE();__GPIOC_CLK_ENABLE();__GPIOD_CLK_ENABLE();__GPIOE_CLK_ENABLE();\</div>
+<div class="line">                                 __GPIOF_CLK_ENABLE();__GPIOG_CLK_ENABLE();__GPIOH_CLK_ENABLE();}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6b32afec29268a58a0a94da0f0a1b732" name="a6b32afec29268a58a0a94da0f0a1b732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b32afec29268a58a0a94da0f0a1b732">&#9670;&#160;</a></span>LTDC_HSYNC_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_HSYNC_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1654d844a7482659e24bbd5eaf03837" name="aa1654d844a7482659e24bbd5eaf03837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1654d844a7482659e24bbd5eaf03837">&#9670;&#160;</a></span>LTDC_HSYNC_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_HSYNC_GPIO_PORT&#160;&#160;&#160;GPIOI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac20ad72b94a27b353aefbd997234c8b6" name="ac20ad72b94a27b353aefbd997234c8b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac20ad72b94a27b353aefbd997234c8b6">&#9670;&#160;</a></span>LTDC_R0_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R0_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c5ab4b6c3330335a1b0fdf796f89224" name="a1c5ab4b6c3330335a1b0fdf796f89224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c5ab4b6c3330335a1b0fdf796f89224">&#9670;&#160;</a></span>LTDC_R0_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R0_GPIO_PORT&#160;&#160;&#160;GPIOH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81cfb5ff9357b8b8be9337f4a891c739" name="a81cfb5ff9357b8b8be9337f4a891c739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81cfb5ff9357b8b8be9337f4a891c739">&#9670;&#160;</a></span>LTDC_R1_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R1_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4826f4f1ea9ea19eb05cb53b6a542b42" name="a4826f4f1ea9ea19eb05cb53b6a542b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4826f4f1ea9ea19eb05cb53b6a542b42">&#9670;&#160;</a></span>LTDC_R1_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R1_GPIO_PORT&#160;&#160;&#160;GPIOH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a064e324111a5f60bb1de7a048eefe5af" name="a064e324111a5f60bb1de7a048eefe5af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064e324111a5f60bb1de7a048eefe5af">&#9670;&#160;</a></span>LTDC_R2_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R2_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2d140bb3a765bd70ab379fcce0304a8" name="ab2d140bb3a765bd70ab379fcce0304a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d140bb3a765bd70ab379fcce0304a8">&#9670;&#160;</a></span>LTDC_R2_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R2_GPIO_PORT&#160;&#160;&#160;GPIOH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93617bc0bad5d732a3a094490911208e" name="a93617bc0bad5d732a3a094490911208e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93617bc0bad5d732a3a094490911208e">&#9670;&#160;</a></span>LTDC_R3_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R3_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92cc820208ffa8cbec1d8c114bd0681e" name="a92cc820208ffa8cbec1d8c114bd0681e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92cc820208ffa8cbec1d8c114bd0681e">&#9670;&#160;</a></span>LTDC_R3_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R3_GPIO_PORT&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad386f2922635ea084179e56edec9ba4e" name="ad386f2922635ea084179e56edec9ba4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad386f2922635ea084179e56edec9ba4e">&#9670;&#160;</a></span>LTDC_R4_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R4_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a429a729e8ff1613cfc659cabd6055db5" name="a429a729e8ff1613cfc659cabd6055db5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429a729e8ff1613cfc659cabd6055db5">&#9670;&#160;</a></span>LTDC_R4_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R4_GPIO_PORT&#160;&#160;&#160;GPIOA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd0e34ff92c7e1b27f262ccabc23daa0" name="acd0e34ff92c7e1b27f262ccabc23daa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0e34ff92c7e1b27f262ccabc23daa0">&#9670;&#160;</a></span>LTDC_R5_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R5_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2454422543e60a86aff1f1e647d97cf" name="ae2454422543e60a86aff1f1e647d97cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2454422543e60a86aff1f1e647d97cf">&#9670;&#160;</a></span>LTDC_R5_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R5_GPIO_PORT&#160;&#160;&#160;GPIOA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67fe9fcdcca7993984c27f9ef2aff1fa" name="a67fe9fcdcca7993984c27f9ef2aff1fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67fe9fcdcca7993984c27f9ef2aff1fa">&#9670;&#160;</a></span>LTDC_R6_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R6_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcf18d5cebc0d5e39785da7c49103c53" name="adcf18d5cebc0d5e39785da7c49103c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf18d5cebc0d5e39785da7c49103c53">&#9670;&#160;</a></span>LTDC_R6_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R6_GPIO_PORT&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af122d2d8f6e8cc2c7fb85bbc5fc80667" name="af122d2d8f6e8cc2c7fb85bbc5fc80667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af122d2d8f6e8cc2c7fb85bbc5fc80667">&#9670;&#160;</a></span>LTDC_R7_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R7_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22ea33a32476074177df5a65c11447b1" name="a22ea33a32476074177df5a65c11447b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ea33a32476074177df5a65c11447b1">&#9670;&#160;</a></span>LTDC_R7_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_R7_GPIO_PORT&#160;&#160;&#160;GPIOG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e2024e3aac78a79a2eaafb3ae63d2ce" name="a9e2024e3aac78a79a2eaafb3ae63d2ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2024e3aac78a79a2eaafb3ae63d2ce">&#9670;&#160;</a></span>LTDC_VSYNC_GPIO_Pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_VSYNC_GPIO_Pin&#160;&#160;&#160;GPIO_PIN_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a274d6e19dd2f7288d8ad9c36eee8600f" name="a274d6e19dd2f7288d8ad9c36eee8600f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a274d6e19dd2f7288d8ad9c36eee8600f">&#9670;&#160;</a></span>LTDC_VSYNC_GPIO_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LTDC_VSYNC_GPIO_PORT&#160;&#160;&#160;GPIOI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03f08faebee92aa36fbcbf4cf77b5173" name="a03f08faebee92aa36fbcbf4cf77b5173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f08faebee92aa36fbcbf4cf77b5173">&#9670;&#160;</a></span>MAX_LAYER_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_LAYER_NUMBER&#160;&#160;&#160;(uint32_t)2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7be230cb2251f6c64469f4f6a5c8801" name="ac7be230cb2251f6c64469f4f6a5c8801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7be230cb2251f6c64469f4f6a5c8801">&#9670;&#160;</a></span>VBP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VBP&#160;&#160;&#160;23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7216a9d43a70a221209fc3a7dd0b0163" name="a7216a9d43a70a221209fc3a7dd0b0163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7216a9d43a70a221209fc3a7dd0b0163">&#9670;&#160;</a></span>VFP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VFP&#160;&#160;&#160;22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea3fdadabf655347d1e4da024ce049ad" name="aea3fdadabf655347d1e4da024ce049ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea3fdadabf655347d1e4da024ce049ad">&#9670;&#160;</a></span>VSW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VSW&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a0bb03a44ef3f80528979b5cd8091dd84" name="a0bb03a44ef3f80528979b5cd8091dd84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb03a44ef3f80528979b5cd8091dd84">&#9670;&#160;</a></span>GetGB2312Code_from_EXFlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetGB2312Code_from_EXFlash </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取一个中文GB2312编码字符的字模数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pBuffer</td><td>用于存放字模数据的缓冲区 </td></tr>
+    <tr><td class="paramname">c</td><td>GB2312编码字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 无意义 </dd></dl>
+
+</div>
+</div>
+<a id="ae57144a5b4342ddd500fb50018123dc6" name="ae57144a5b4342ddd500fb50018123dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57144a5b4342ddd500fb50018123dc6">&#9670;&#160;</a></span>LCD_Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_Clear </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD当前层清屏 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Color</td><td>用于填充的背景颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a83e11eb72448bdf1c3e729aea39e921c" name="a83e11eb72448bdf1c3e729aea39e921c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e11eb72448bdf1c3e729aea39e921c">&#9670;&#160;</a></span>LCD_ClearLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ClearLine </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除一行 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Line</td><td>要清除的行 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6750a89764ac496272315a241ff377f5" name="a6750a89764ac496272315a241ff377f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6750a89764ac496272315a241ff377f5">&#9670;&#160;</a></span>LCD_CLK_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_CLK_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>STM32与液晶屏通讯的时钟配置 时钟配置为9.6MHz </p>
+
+</div>
+</div>
+<a id="a06ea822c4061bfb2e466b851411c0aa9" name="a06ea822c4061bfb2e466b851411c0aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ea822c4061bfb2e466b851411c0aa9">&#9670;&#160;</a></span>LCD_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa500186c114aaea3dd6cdc11d306617e" name="aa500186c114aaea3dd6cdc11d306617e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa500186c114aaea3dd6cdc11d306617e">&#9670;&#160;</a></span>LCD_DisplayChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayChar </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Ascii</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定位置显示一个字符(英文) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>显示的X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>显示的Y坐标 </td></tr>
+    <tr><td class="paramname">Ascii</td><td>需要显示的字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a413cecd8e18e5715925c0831a5946d29" name="a413cecd8e18e5715925c0831a5946d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413cecd8e18e5715925c0831a5946d29">&#9670;&#160;</a></span>LCD_DisplayChar_CH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayChar_CH </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>char_CH</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制一个中文字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>绘制字符的X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>绘制字符的Y坐标 </td></tr>
+    <tr><td class="paramname">char_CH</td><td>中文字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae06ea1bb5f28922b6017676d1aaa61e4" name="ae06ea1bb5f28922b6017676d1aaa61e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06ea1bb5f28922b6017676d1aaa61e4">&#9670;&#160;</a></span>LCD_DisplayOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayOff </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed5bd5f3f7340dbdb2e7f50f94163789" name="aed5bd5f3f7340dbdb2e7f50f94163789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed5bd5f3f7340dbdb2e7f50f94163789">&#9670;&#160;</a></span>LCD_DisplayOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fe6db0bfd3cabc4e99d5ce8b7343c6b" name="a7fe6db0bfd3cabc4e99d5ce8b7343c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe6db0bfd3cabc4e99d5ce8b7343c6b">&#9670;&#160;</a></span>LCD_DisplayStringAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayStringAt </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>Text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定位置显示一个字符串(英文) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>显示的起始位置X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>显示的起始位置Y坐标 </td></tr>
+    <tr><td class="paramname">Text</td><td>指向字符串的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acced1d191675f150cb4cccd377a7c11c" name="acced1d191675f150cb4cccd377a7c11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acced1d191675f150cb4cccd377a7c11c">&#9670;&#160;</a></span>LCD_DisplayStringLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayStringLine </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>Text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定行显示一个字符串(英文) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Line</td><td>显示的起始行(超出行宽会自动换行) </td></tr>
+    <tr><td class="paramname">Text</td><td>指向字符串的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a01fbccb17e918648c31a30525f0eda6a" name="a01fbccb17e918648c31a30525f0eda6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01fbccb17e918648c31a30525f0eda6a">&#9670;&#160;</a></span>LCD_DisplayStringLine_EN_CH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayStringLine_EN_CH </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>Text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>显示一句可以包含中英文的句子 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Line</td><td>显示的起始行(超出行宽会自动换行) </td></tr>
+    <tr><td class="paramname">Text</td><td>指向需要显示的句子的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a398e124cc5572547086d78fc9b7fc1f4" name="a398e124cc5572547086d78fc9b7fc1f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398e124cc5572547086d78fc9b7fc1f4">&#9670;&#160;</a></span>LCD_DrawAnyLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawAnyLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>X1pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Y1pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>X2pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Y2pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制任意两点之间的一条直线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X1pos</td><td>点1的X坐标 </td></tr>
+    <tr><td class="paramname">Y1pos</td><td>点1的Y坐标 </td></tr>
+    <tr><td class="paramname">X2pos</td><td>点2的X坐标 </td></tr>
+    <tr><td class="paramname">Y2pos</td><td>点2的Y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2cfdb76c5b920f5a8fcaed02cf318c45" name="a2cfdb76c5b920f5a8fcaed02cf318c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfdb76c5b920f5a8fcaed02cf318c45">&#9670;&#160;</a></span>LCD_DrawChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LCD_DrawChar </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a268429ba50ca073c233224309fac9f46" name="a268429ba50ca073c233224309fac9f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268429ba50ca073c233224309fac9f46">&#9670;&#160;</a></span>LCD_DrawHLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawHLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制一条水平直线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>X轴起始坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>Y轴起始坐标 </td></tr>
+    <tr><td class="paramname">Length</td><td>线的长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10cbb1fbca34e835f98e1172c2756990" name="a10cbb1fbca34e835f98e1172c2756990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10cbb1fbca34e835f98e1172c2756990">&#9670;&#160;</a></span>LCD_DrawPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawPixel </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>RGB_Code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制一个点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>X轴坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>Y轴坐标 </td></tr>
+    <tr><td class="paramname">RGB_Code</td><td>像素颜色值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a370ea7eacea2dd8fcc352ce8dcbaa151" name="a370ea7eacea2dd8fcc352ce8dcbaa151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370ea7eacea2dd8fcc352ce8dcbaa151">&#9670;&#160;</a></span>LCD_DrawVLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawVLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制一条垂直直线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>X轴起始坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>Y轴起始坐标 </td></tr>
+    <tr><td class="paramname">Length</td><td>线的长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adfc663e63fa8138ef0c4f4a1b31c7807" name="adfc663e63fa8138ef0c4f4a1b31c7807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc663e63fa8138ef0c4f4a1b31c7807">&#9670;&#160;</a></span>LCD_FillRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_FillRect </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>填充一个实心矩形 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>矩形起始位置的X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>矩形起始位置的Y坐标 </td></tr>
+    <tr><td class="paramname">Width</td><td>矩形宽度 </td></tr>
+    <tr><td class="paramname">Height</td><td>矩形高度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b2f00b73ed9209df1077ec5a975cc37" name="a7b2f00b73ed9209df1077ec5a975cc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2f00b73ed9209df1077ec5a975cc37">&#9670;&#160;</a></span>LCD_GetFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sFONT * LCD_GetFont </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取LCD当前层显示的字体 </p>
+<dl class="section return"><dt>返回</dt><dd>sFONT* LCD当前层的字体类型 </dd></dl>
+
+</div>
+</div>
+<a id="aaf28c2494c1a232d68d8b63af20ea3ec" name="aaf28c2494c1a232d68d8b63af20ea3ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf28c2494c1a232d68d8b63af20ea3ec">&#9670;&#160;</a></span>LCD_GetStartAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t LCD_GetStartAddress </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a405abda5e830f0f33dacfd21ec1e51" name="a6a405abda5e830f0f33dacfd21ec1e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a405abda5e830f0f33dacfd21ec1e51">&#9670;&#160;</a></span>LCD_GetXSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LCD_GetXSize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取LCD当前层X轴的大小 </p>
+<dl class="section return"><dt>返回</dt><dd>uint32_t X轴的大小 </dd></dl>
+
+</div>
+</div>
+<a id="aadafb98eeb93c99b8468d36e406ac90e" name="aadafb98eeb93c99b8468d36e406ac90e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadafb98eeb93c99b8468d36e406ac90e">&#9670;&#160;</a></span>LCD_GetYSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LCD_GetYSize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取LCD当前层Y轴的大小 </p>
+<dl class="section return"><dt>返回</dt><dd>uint32_t Y轴的大小 </dd></dl>
+
+</div>
+</div>
+<a id="a1fb167c16cf7ec34f8170915d2302b7a" name="a1fb167c16cf7ec34f8170915d2302b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb167c16cf7ec34f8170915d2302b7a">&#9670;&#160;</a></span>LCD_LayerInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_LayerInit </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>FB_Address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>PixelFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>层级初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>要设置的层 </td></tr>
+    <tr><td class="paramname">FB_Address</td><td>该层的显存首地址 </td></tr>
+    <tr><td class="paramname">PixelFormat</td><td>该层的像素格式 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0735470c4c9bc0130dd03ae6cb2b056" name="ac0735470c4c9bc0130dd03ae6cb2b056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0735470c4c9bc0130dd03ae6cb2b056">&#9670;&#160;</a></span>LCD_ReadPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LCD_ReadPixel </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取LCD的像素值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>需要读取的像素点的X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>需要读取的像素点的Y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint32_t 指定像素点的像素值 </dd></dl>
+
+</div>
+</div>
+<a id="af1420ea7b39dd570d4d6edbf789f7640" name="af1420ea7b39dd570d4d6edbf789f7640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1420ea7b39dd570d4d6edbf789f7640">&#9670;&#160;</a></span>LCD_SelectLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SelectLayer </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>选择LCD的当前层 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeca000116f289bc36b8892a6c64164dd" name="aeca000116f289bc36b8892a6c64164dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca000116f289bc36b8892a6c64164dd">&#9670;&#160;</a></span>LCD_SetBackColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetBackColor </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层的文字背景颜色 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Color</td><td>文字背景颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab06250d18ef0123a92381333a7e464e0" name="ab06250d18ef0123a92381333a7e464e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06250d18ef0123a92381333a7e464e0">&#9670;&#160;</a></span>LCD_SetColors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetColors </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>TextColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>BackColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层的文字颜色和文字背景颜色 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TextColor</td><td>文字颜色 </td></tr>
+    <tr><td class="paramname">BackColor</td><td>文字背景颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c26f6fcddd0bf89f71d71131c7a206a" name="a6c26f6fcddd0bf89f71d71131c7a206a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c26f6fcddd0bf89f71d71131c7a206a">&#9670;&#160;</a></span>LCD_SetFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetFont </td>
+          <td>(</td>
+          <td class="paramtype">sFONT *&#160;</td>
+          <td class="paramname"><em>fonts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层显示的字体 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonts</td><td>字体类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="affaff29c7f76c5bb37da2501f9799aaf" name="affaff29c7f76c5bb37da2501f9799aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affaff29c7f76c5bb37da2501f9799aaf">&#9670;&#160;</a></span>LCD_SetLayerAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetLayerAddress </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD缓冲帧的首地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+    <tr><td class="paramname">Address</td><td>LCD缓冲帧的首地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b7c3b9a5af160da3faedc9baa0bf459" name="a4b7c3b9a5af160da3faedc9baa0bf459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7c3b9a5af160da3faedc9baa0bf459">&#9670;&#160;</a></span>LCD_SetLayerVisible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetLayerVisible </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FunctionalState&#160;</td>
+          <td class="paramname"><em>State</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD层的可视化(即禁止或使能某一层) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+    <tr><td class="paramname">State</td><td>禁止或使能 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa97156afb28b2fb2877ae97efa92f3ee" name="aa97156afb28b2fb2877ae97efa92f3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97156afb28b2fb2877ae97efa92f3ee">&#9670;&#160;</a></span>LCD_SetLayerWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetLayerWindow </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置显示窗口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td></td></tr>
+    <tr><td class="paramname">Xpos</td><td>窗口起始位置X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>窗口起始位置Y坐标 </td></tr>
+    <tr><td class="paramname">Width</td><td>窗口宽度 </td></tr>
+    <tr><td class="paramname">Height</td><td>窗口高度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31a4bb3bde55452bbb8370f5d935e41d" name="a31a4bb3bde55452bbb8370f5d935e41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a4bb3bde55452bbb8370f5d935e41d">&#9670;&#160;</a></span>LCD_SetTextColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetTextColor </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层的文字颜色 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Color</td><td>文字颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0568836139e5177b6ce37e470e255c77" name="a0568836139e5177b6ce37e470e255c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0568836139e5177b6ce37e470e255c77">&#9670;&#160;</a></span>LCD_SetTransparency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetTransparency </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Transparency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD的透明度常量，即Alpha </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+    <tr><td class="paramname">Transparency</td><td>透明度，范围(0-255)，0为完全透明 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e3dca6342e3dd739edbec8a23488e56" name="a8e3dca6342e3dd739edbec8a23488e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3dca6342e3dd739edbec8a23488e56">&#9670;&#160;</a></span>LCD_SetXSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetXSize </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>imageWidthPixels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层X轴的大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageHeightPixels</td><td>图像宽度像素个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a320415ea9b549dd0a4fa2452bde4565c" name="a320415ea9b549dd0a4fa2452bde4565c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320415ea9b549dd0a4fa2452bde4565c">&#9670;&#160;</a></span>LCD_SetYSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetYSize </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>imageHeightPixels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层Y轴的大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageHeightPixels</td><td>图像高度像素个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a846fbcfe435b2eb20d412c1793350a03" name="a846fbcfe435b2eb20d412c1793350a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a846fbcfe435b2eb20d412c1793350a03">&#9670;&#160;</a></span>LL_FillBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LL_FillBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>xSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ySize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>OffLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ColorIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6657ebb2be9c7538015074a022af9d3c" name="a6657ebb2be9c7538015074a022af9d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6657ebb2be9c7538015074a022af9d3c">&#9670;&#160;</a></span>LTDC_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LTDC_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05a9b470a504b444eb29d34bea640652" name="a05a9b470a504b444eb29d34bea640652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a9b470a504b444eb29d34bea640652">&#9670;&#160;</a></span>LTDC_GPIO_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LTDC_GPIO_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

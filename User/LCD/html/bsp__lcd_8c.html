@@ -1,0 +1,1666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: E:/STM32文件/练习/LTDC_DMA2D_2023_12_5/HAL_F429/User/LCD/bsp_lcd.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0afb7792c915fb345a807f62382969eb.html">STM32文件</a></li><li class="navelem"><a class="el" href="dir_0d9437dc2651859363976f9a69b1e272.html">练习</a></li><li class="navelem"><a class="el" href="dir_8d7489c74f9593fbba64e510c9223109.html">LTDC_DMA2D_2023_12_5</a></li><li class="navelem"><a class="el" href="dir_87a7cdec703cf680837d0f305c34528e.html">HAL_F429</a></li><li class="navelem"><a class="el" href="dir_65b47df50fb6a2f025f338e2d63ce7b1.html">User</a></li><li class="navelem"><a class="el" href="dir_8506b64e121e3d702184f16785b2061e.html">LCD</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">bsp_lcd.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bsp__lcd_8h_source.html">bsp_lcd.h</a>&quot;</code><br />
+<code>#include &quot;sdram.h&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
+<code>#include &quot;SPI_Flash.h&quot;</code><br />
+<code>#include &quot;font24.c&quot;</code><br />
+<code>#include &quot;font20.c&quot;</code><br />
+<code>#include &quot;font16.c&quot;</code><br />
+<code>#include &quot;font12.c&quot;</code><br />
+<code>#include &quot;font8.c&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a05a9b470a504b444eb29d34bea640652" id="r_a05a9b470a504b444eb29d34bea640652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a05a9b470a504b444eb29d34bea640652">LTDC_GPIO_Config</a> (void)</td></tr>
+<tr class="separator:a05a9b470a504b444eb29d34bea640652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6750a89764ac496272315a241ff377f5" id="r_a6750a89764ac496272315a241ff377f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a6750a89764ac496272315a241ff377f5">LCD_CLK_Config</a> (void)</td></tr>
+<tr class="memdesc:a6750a89764ac496272315a241ff377f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">STM32与液晶屏通讯的时钟配置 时钟配置为9.6MHz  <br /></td></tr>
+<tr class="separator:a6750a89764ac496272315a241ff377f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6657ebb2be9c7538015074a022af9d3c" id="r_a6657ebb2be9c7538015074a022af9d3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a6657ebb2be9c7538015074a022af9d3c">LTDC_Config</a> (void)</td></tr>
+<tr class="separator:a6657ebb2be9c7538015074a022af9d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a405abda5e830f0f33dacfd21ec1e51" id="r_a6a405abda5e830f0f33dacfd21ec1e51"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a> (void)</td></tr>
+<tr class="memdesc:a6a405abda5e830f0f33dacfd21ec1e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取LCD当前层X轴的大小  <br /></td></tr>
+<tr class="separator:a6a405abda5e830f0f33dacfd21ec1e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadafb98eeb93c99b8468d36e406ac90e" id="r_aadafb98eeb93c99b8468d36e406ac90e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#aadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a> (void)</td></tr>
+<tr class="memdesc:aadafb98eeb93c99b8468d36e406ac90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取LCD当前层Y轴的大小  <br /></td></tr>
+<tr class="separator:aadafb98eeb93c99b8468d36e406ac90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3dca6342e3dd739edbec8a23488e56" id="r_a8e3dca6342e3dd739edbec8a23488e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a8e3dca6342e3dd739edbec8a23488e56">LCD_SetXSize</a> (uint32_t imageWidthPixels)</td></tr>
+<tr class="memdesc:a8e3dca6342e3dd739edbec8a23488e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层X轴的大小  <br /></td></tr>
+<tr class="separator:a8e3dca6342e3dd739edbec8a23488e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320415ea9b549dd0a4fa2452bde4565c" id="r_a320415ea9b549dd0a4fa2452bde4565c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a320415ea9b549dd0a4fa2452bde4565c">LCD_SetYSize</a> (uint32_t imageHeightPixels)</td></tr>
+<tr class="memdesc:a320415ea9b549dd0a4fa2452bde4565c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层Y轴的大小  <br /></td></tr>
+<tr class="separator:a320415ea9b549dd0a4fa2452bde4565c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb167c16cf7ec34f8170915d2302b7a" id="r_a1fb167c16cf7ec34f8170915d2302b7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a1fb167c16cf7ec34f8170915d2302b7a">LCD_LayerInit</a> (uint16_t LayerIndex, uint32_t FB_Address, uint32_t PixelFormat)</td></tr>
+<tr class="memdesc:a1fb167c16cf7ec34f8170915d2302b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">层级初始化  <br /></td></tr>
+<tr class="separator:a1fb167c16cf7ec34f8170915d2302b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ea822c4061bfb2e466b851411c0aa9" id="r_a06ea822c4061bfb2e466b851411c0aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a06ea822c4061bfb2e466b851411c0aa9">LCD_Config</a> (void)</td></tr>
+<tr class="separator:a06ea822c4061bfb2e466b851411c0aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1420ea7b39dd570d4d6edbf789f7640" id="r_af1420ea7b39dd570d4d6edbf789f7640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#af1420ea7b39dd570d4d6edbf789f7640">LCD_SelectLayer</a> (uint32_t LayerIndex)</td></tr>
+<tr class="memdesc:af1420ea7b39dd570d4d6edbf789f7640"><td class="mdescLeft">&#160;</td><td class="mdescRight">选择LCD的当前层  <br /></td></tr>
+<tr class="separator:af1420ea7b39dd570d4d6edbf789f7640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7c3b9a5af160da3faedc9baa0bf459" id="r_a4b7c3b9a5af160da3faedc9baa0bf459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a4b7c3b9a5af160da3faedc9baa0bf459">LCD_SetLayerVisible</a> (uint32_t LayerIndex, FunctionalState State)</td></tr>
+<tr class="memdesc:a4b7c3b9a5af160da3faedc9baa0bf459"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD层的可视化(即禁止或使能某一层)  <br /></td></tr>
+<tr class="separator:a4b7c3b9a5af160da3faedc9baa0bf459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0568836139e5177b6ce37e470e255c77" id="r_a0568836139e5177b6ce37e470e255c77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a0568836139e5177b6ce37e470e255c77">LCD_SetTransparency</a> (uint32_t LayerIndex, uint8_t Transparency)</td></tr>
+<tr class="memdesc:a0568836139e5177b6ce37e470e255c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD的透明度常量，即Alpha  <br /></td></tr>
+<tr class="separator:a0568836139e5177b6ce37e470e255c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affaff29c7f76c5bb37da2501f9799aaf" id="r_affaff29c7f76c5bb37da2501f9799aaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#affaff29c7f76c5bb37da2501f9799aaf">LCD_SetLayerAddress</a> (uint32_t LayerIndex, uint32_t Address)</td></tr>
+<tr class="memdesc:affaff29c7f76c5bb37da2501f9799aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD缓冲帧的首地址  <br /></td></tr>
+<tr class="separator:affaff29c7f76c5bb37da2501f9799aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97156afb28b2fb2877ae97efa92f3ee" id="r_aa97156afb28b2fb2877ae97efa92f3ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#aa97156afb28b2fb2877ae97efa92f3ee">LCD_SetLayerWindow</a> (uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)</td></tr>
+<tr class="memdesc:aa97156afb28b2fb2877ae97efa92f3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置显示窗口  <br /></td></tr>
+<tr class="separator:aa97156afb28b2fb2877ae97efa92f3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a4bb3bde55452bbb8370f5d935e41d" id="r_a31a4bb3bde55452bbb8370f5d935e41d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a31a4bb3bde55452bbb8370f5d935e41d">LCD_SetTextColor</a> (uint32_t Color)</td></tr>
+<tr class="memdesc:a31a4bb3bde55452bbb8370f5d935e41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层的文字颜色  <br /></td></tr>
+<tr class="separator:a31a4bb3bde55452bbb8370f5d935e41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab8858f03c8bce1aaef2ca960c9009f" id="r_aaab8858f03c8bce1aaef2ca960c9009f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#aaab8858f03c8bce1aaef2ca960c9009f">LCD_GetTextColor</a> (void)</td></tr>
+<tr class="memdesc:aaab8858f03c8bce1aaef2ca960c9009f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取LCD当前层的文字颜色  <br /></td></tr>
+<tr class="separator:aaab8858f03c8bce1aaef2ca960c9009f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca000116f289bc36b8892a6c64164dd" id="r_aeca000116f289bc36b8892a6c64164dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#aeca000116f289bc36b8892a6c64164dd">LCD_SetBackColor</a> (uint32_t Color)</td></tr>
+<tr class="memdesc:aeca000116f289bc36b8892a6c64164dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层的文字背景颜色  <br /></td></tr>
+<tr class="separator:aeca000116f289bc36b8892a6c64164dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8047c26258565d29a4cbd5d4d831a87e" id="r_a8047c26258565d29a4cbd5d4d831a87e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a8047c26258565d29a4cbd5d4d831a87e">LCD_GetBackColor</a> (void)</td></tr>
+<tr class="memdesc:a8047c26258565d29a4cbd5d4d831a87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取LCD当前层的文字背景颜色  <br /></td></tr>
+<tr class="separator:a8047c26258565d29a4cbd5d4d831a87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab06250d18ef0123a92381333a7e464e0" id="r_ab06250d18ef0123a92381333a7e464e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#ab06250d18ef0123a92381333a7e464e0">LCD_SetColors</a> (uint32_t TextColor, uint32_t BackColor)</td></tr>
+<tr class="memdesc:ab06250d18ef0123a92381333a7e464e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层的文字颜色和文字背景颜色  <br /></td></tr>
+<tr class="separator:ab06250d18ef0123a92381333a7e464e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c26f6fcddd0bf89f71d71131c7a206a" id="r_a6c26f6fcddd0bf89f71d71131c7a206a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a6c26f6fcddd0bf89f71d71131c7a206a">LCD_SetFont</a> (sFONT *fonts)</td></tr>
+<tr class="memdesc:a6c26f6fcddd0bf89f71d71131c7a206a"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置LCD当前层显示的字体  <br /></td></tr>
+<tr class="separator:a6c26f6fcddd0bf89f71d71131c7a206a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2f00b73ed9209df1077ec5a975cc37" id="r_a7b2f00b73ed9209df1077ec5a975cc37"><td class="memItemLeft" align="right" valign="top">sFONT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a7b2f00b73ed9209df1077ec5a975cc37">LCD_GetFont</a> (void)</td></tr>
+<tr class="memdesc:a7b2f00b73ed9209df1077ec5a975cc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取LCD当前层显示的字体  <br /></td></tr>
+<tr class="separator:a7b2f00b73ed9209df1077ec5a975cc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0735470c4c9bc0130dd03ae6cb2b056" id="r_ac0735470c4c9bc0130dd03ae6cb2b056"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#ac0735470c4c9bc0130dd03ae6cb2b056">LCD_ReadPixel</a> (uint16_t Xpos, uint16_t Ypos)</td></tr>
+<tr class="memdesc:ac0735470c4c9bc0130dd03ae6cb2b056"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取LCD的像素值  <br /></td></tr>
+<tr class="separator:ac0735470c4c9bc0130dd03ae6cb2b056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57144a5b4342ddd500fb50018123dc6" id="r_ae57144a5b4342ddd500fb50018123dc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#ae57144a5b4342ddd500fb50018123dc6">LCD_Clear</a> (uint32_t Color)</td></tr>
+<tr class="memdesc:ae57144a5b4342ddd500fb50018123dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD当前层清屏  <br /></td></tr>
+<tr class="separator:ae57144a5b4342ddd500fb50018123dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e11eb72448bdf1c3e729aea39e921c" id="r_a83e11eb72448bdf1c3e729aea39e921c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a83e11eb72448bdf1c3e729aea39e921c">LCD_ClearLine</a> (uint32_t Line)</td></tr>
+<tr class="memdesc:a83e11eb72448bdf1c3e729aea39e921c"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除一行  <br /></td></tr>
+<tr class="separator:a83e11eb72448bdf1c3e729aea39e921c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc663e63fa8138ef0c4f4a1b31c7807" id="r_adfc663e63fa8138ef0c4f4a1b31c7807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#adfc663e63fa8138ef0c4f4a1b31c7807">LCD_FillRect</a> (uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)</td></tr>
+<tr class="memdesc:adfc663e63fa8138ef0c4f4a1b31c7807"><td class="mdescLeft">&#160;</td><td class="mdescRight">填充一个实心矩形  <br /></td></tr>
+<tr class="separator:adfc663e63fa8138ef0c4f4a1b31c7807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846fbcfe435b2eb20d412c1793350a03" id="r_a846fbcfe435b2eb20d412c1793350a03"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a846fbcfe435b2eb20d412c1793350a03">LL_FillBuffer</a> (uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex)</td></tr>
+<tr class="memdesc:a846fbcfe435b2eb20d412c1793350a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">填充一个缓冲区  <br /></td></tr>
+<tr class="separator:a846fbcfe435b2eb20d412c1793350a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10cbb1fbca34e835f98e1172c2756990" id="r_a10cbb1fbca34e835f98e1172c2756990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a10cbb1fbca34e835f98e1172c2756990">LCD_DrawPixel</a> (uint16_t Xpos, uint16_t Ypos, uint32_t RGB_Code)</td></tr>
+<tr class="memdesc:a10cbb1fbca34e835f98e1172c2756990"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一个点  <br /></td></tr>
+<tr class="separator:a10cbb1fbca34e835f98e1172c2756990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268429ba50ca073c233224309fac9f46" id="r_a268429ba50ca073c233224309fac9f46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a268429ba50ca073c233224309fac9f46">LCD_DrawHLine</a> (uint16_t Xpos, uint16_t Ypos, uint16_t Length)</td></tr>
+<tr class="memdesc:a268429ba50ca073c233224309fac9f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一条水平直线  <br /></td></tr>
+<tr class="separator:a268429ba50ca073c233224309fac9f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370ea7eacea2dd8fcc352ce8dcbaa151" id="r_a370ea7eacea2dd8fcc352ce8dcbaa151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a370ea7eacea2dd8fcc352ce8dcbaa151">LCD_DrawVLine</a> (uint16_t Xpos, uint16_t Ypos, uint16_t Length)</td></tr>
+<tr class="memdesc:a370ea7eacea2dd8fcc352ce8dcbaa151"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一条垂直直线  <br /></td></tr>
+<tr class="separator:a370ea7eacea2dd8fcc352ce8dcbaa151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398e124cc5572547086d78fc9b7fc1f4" id="r_a398e124cc5572547086d78fc9b7fc1f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a398e124cc5572547086d78fc9b7fc1f4">LCD_DrawAnyLine</a> (uint16_t X1pos, uint16_t Y1pos, uint16_t X2pos, uint16_t Y2pos)</td></tr>
+<tr class="memdesc:a398e124cc5572547086d78fc9b7fc1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制任意两点之间的一条直线  <br /></td></tr>
+<tr class="separator:a398e124cc5572547086d78fc9b7fc1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed5bd5f3f7340dbdb2e7f50f94163789" id="r_aed5bd5f3f7340dbdb2e7f50f94163789"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#aed5bd5f3f7340dbdb2e7f50f94163789">LCD_DisplayOn</a> (void)</td></tr>
+<tr class="separator:aed5bd5f3f7340dbdb2e7f50f94163789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06ea1bb5f28922b6017676d1aaa61e4" id="r_ae06ea1bb5f28922b6017676d1aaa61e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#ae06ea1bb5f28922b6017676d1aaa61e4">LCD_DisplayOff</a> (void)</td></tr>
+<tr class="separator:ae06ea1bb5f28922b6017676d1aaa61e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf28c2494c1a232d68d8b63af20ea3ec" id="r_aaf28c2494c1a232d68d8b63af20ea3ec"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#aaf28c2494c1a232d68d8b63af20ea3ec">LCD_GetStartAddress</a> (uint16_t Xpos, uint16_t Ypos)</td></tr>
+<tr class="separator:aaf28c2494c1a232d68d8b63af20ea3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfdb76c5b920f5a8fcaed02cf318c45" id="r_a2cfdb76c5b920f5a8fcaed02cf318c45"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a2cfdb76c5b920f5a8fcaed02cf318c45">LCD_DrawChar</a> (uint16_t Xpos, uint16_t Ypos, const uint8_t *c)</td></tr>
+<tr class="memdesc:a2cfdb76c5b920f5a8fcaed02cf318c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一个字符  <br /></td></tr>
+<tr class="separator:a2cfdb76c5b920f5a8fcaed02cf318c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa500186c114aaea3dd6cdc11d306617e" id="r_aa500186c114aaea3dd6cdc11d306617e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#aa500186c114aaea3dd6cdc11d306617e">LCD_DisplayChar</a> (uint16_t Xpos, uint16_t Ypos, uint8_t Ascii)</td></tr>
+<tr class="memdesc:aa500186c114aaea3dd6cdc11d306617e"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定位置显示一个字符(英文)  <br /></td></tr>
+<tr class="separator:aa500186c114aaea3dd6cdc11d306617e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe6db0bfd3cabc4e99d5ce8b7343c6b" id="r_a7fe6db0bfd3cabc4e99d5ce8b7343c6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a7fe6db0bfd3cabc4e99d5ce8b7343c6b">LCD_DisplayStringAt</a> (uint16_t Xpos, uint16_t Ypos, uint8_t *Text)</td></tr>
+<tr class="memdesc:a7fe6db0bfd3cabc4e99d5ce8b7343c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定位置显示一个字符串(英文)  <br /></td></tr>
+<tr class="separator:a7fe6db0bfd3cabc4e99d5ce8b7343c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acced1d191675f150cb4cccd377a7c11c" id="r_acced1d191675f150cb4cccd377a7c11c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#acced1d191675f150cb4cccd377a7c11c">LCD_DisplayStringLine</a> (uint8_t Line, uint8_t *Text)</td></tr>
+<tr class="memdesc:acced1d191675f150cb4cccd377a7c11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定行显示一个字符串(英文)  <br /></td></tr>
+<tr class="separator:acced1d191675f150cb4cccd377a7c11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413cecd8e18e5715925c0831a5946d29" id="r_a413cecd8e18e5715925c0831a5946d29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a413cecd8e18e5715925c0831a5946d29">LCD_DisplayChar_CH</a> (uint16_t Xpos, uint16_t Ypos, uint16_t char_CH)</td></tr>
+<tr class="memdesc:a413cecd8e18e5715925c0831a5946d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制一个中文字符  <br /></td></tr>
+<tr class="separator:a413cecd8e18e5715925c0831a5946d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01fbccb17e918648c31a30525f0eda6a" id="r_a01fbccb17e918648c31a30525f0eda6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a01fbccb17e918648c31a30525f0eda6a">LCD_DisplayStringLine_EN_CH</a> (uint16_t Line, uint8_t *Text)</td></tr>
+<tr class="memdesc:a01fbccb17e918648c31a30525f0eda6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示一句可以包含中英文的句子  <br /></td></tr>
+<tr class="separator:a01fbccb17e918648c31a30525f0eda6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb03a44ef3f80528979b5cd8091dd84" id="r_a0bb03a44ef3f80528979b5cd8091dd84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a0bb03a44ef3f80528979b5cd8091dd84">GetGB2312Code_from_EXFlash</a> (uint8_t *pBuffer, uint16_t c)</td></tr>
+<tr class="memdesc:a0bb03a44ef3f80528979b5cd8091dd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一个中文GB2312编码字符的字模数据  <br /></td></tr>
+<tr class="separator:a0bb03a44ef3f80528979b5cd8091dd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a18f37c5ed8952025a1be088b131f0cb3" id="r_a18f37c5ed8952025a1be088b131f0cb3"><td class="memItemLeft" align="right" valign="top">static LTDC_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a18f37c5ed8952025a1be088b131f0cb3">LTDC_Handle</a></td></tr>
+<tr class="separator:a18f37c5ed8952025a1be088b131f0cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb77858345f8c20c4be148635925c01" id="r_a0eb77858345f8c20c4be148635925c01"><td class="memItemLeft" align="right" valign="top">static DMA2D_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#a0eb77858345f8c20c4be148635925c01">DMA2D_Handle</a></td></tr>
+<tr class="separator:a0eb77858345f8c20c4be148635925c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3770d26b39dab77fde9d1cbfd261f9" id="r_acd3770d26b39dab77fde9d1cbfd261f9"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a> = 0</td></tr>
+<tr class="separator:acd3770d26b39dab77fde9d1cbfd261f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad781f76dabee52f2a0f804e889874669" id="r_ad781f76dabee52f2a0f804e889874669"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_l_c_d___draw_prop_type_def.html">LCD_DrawPropTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a> [<a class="el" href="bsp__lcd_8h.html#a03f08faebee92aa36fbcbf4cf77b5173">MAX_LAYER_NUMBER</a>]</td></tr>
+<tr class="separator:ad781f76dabee52f2a0f804e889874669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a0bb03a44ef3f80528979b5cd8091dd84" name="a0bb03a44ef3f80528979b5cd8091dd84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb03a44ef3f80528979b5cd8091dd84">&#9670;&#160;</a></span>GetGB2312Code_from_EXFlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetGB2312Code_from_EXFlash </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取一个中文GB2312编码字符的字模数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pBuffer</td><td>用于存放字模数据的缓冲区 </td></tr>
+    <tr><td class="paramname">c</td><td>GB2312编码字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 无意义 </dd></dl>
+
+</div>
+</div>
+<a id="ae57144a5b4342ddd500fb50018123dc6" name="ae57144a5b4342ddd500fb50018123dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57144a5b4342ddd500fb50018123dc6">&#9670;&#160;</a></span>LCD_Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_Clear </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD当前层清屏 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Color</td><td>用于填充的背景颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a83e11eb72448bdf1c3e729aea39e921c" name="a83e11eb72448bdf1c3e729aea39e921c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e11eb72448bdf1c3e729aea39e921c">&#9670;&#160;</a></span>LCD_ClearLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ClearLine </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除一行 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Line</td><td>要清除的行 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6750a89764ac496272315a241ff377f5" name="a6750a89764ac496272315a241ff377f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6750a89764ac496272315a241ff377f5">&#9670;&#160;</a></span>LCD_CLK_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_CLK_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>STM32与液晶屏通讯的时钟配置 时钟配置为9.6MHz </p>
+
+</div>
+</div>
+<a id="a06ea822c4061bfb2e466b851411c0aa9" name="a06ea822c4061bfb2e466b851411c0aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ea822c4061bfb2e466b851411c0aa9">&#9670;&#160;</a></span>LCD_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa500186c114aaea3dd6cdc11d306617e" name="aa500186c114aaea3dd6cdc11d306617e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa500186c114aaea3dd6cdc11d306617e">&#9670;&#160;</a></span>LCD_DisplayChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayChar </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Ascii</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定位置显示一个字符(英文) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>显示的X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>显示的Y坐标 </td></tr>
+    <tr><td class="paramname">Ascii</td><td>需要显示的字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a413cecd8e18e5715925c0831a5946d29" name="a413cecd8e18e5715925c0831a5946d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413cecd8e18e5715925c0831a5946d29">&#9670;&#160;</a></span>LCD_DisplayChar_CH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayChar_CH </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>char_CH</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制一个中文字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>绘制字符的X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>绘制字符的Y坐标 </td></tr>
+    <tr><td class="paramname">char_CH</td><td>中文字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae06ea1bb5f28922b6017676d1aaa61e4" name="ae06ea1bb5f28922b6017676d1aaa61e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06ea1bb5f28922b6017676d1aaa61e4">&#9670;&#160;</a></span>LCD_DisplayOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayOff </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed5bd5f3f7340dbdb2e7f50f94163789" name="aed5bd5f3f7340dbdb2e7f50f94163789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed5bd5f3f7340dbdb2e7f50f94163789">&#9670;&#160;</a></span>LCD_DisplayOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fe6db0bfd3cabc4e99d5ce8b7343c6b" name="a7fe6db0bfd3cabc4e99d5ce8b7343c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe6db0bfd3cabc4e99d5ce8b7343c6b">&#9670;&#160;</a></span>LCD_DisplayStringAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayStringAt </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>Text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定位置显示一个字符串(英文) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>显示的起始位置X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>显示的起始位置Y坐标 </td></tr>
+    <tr><td class="paramname">Text</td><td>指向字符串的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acced1d191675f150cb4cccd377a7c11c" name="acced1d191675f150cb4cccd377a7c11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acced1d191675f150cb4cccd377a7c11c">&#9670;&#160;</a></span>LCD_DisplayStringLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayStringLine </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>Text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定行显示一个字符串(英文) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Line</td><td>显示的起始行(超出行宽会自动换行) </td></tr>
+    <tr><td class="paramname">Text</td><td>指向字符串的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a01fbccb17e918648c31a30525f0eda6a" name="a01fbccb17e918648c31a30525f0eda6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01fbccb17e918648c31a30525f0eda6a">&#9670;&#160;</a></span>LCD_DisplayStringLine_EN_CH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DisplayStringLine_EN_CH </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>Text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>显示一句可以包含中英文的句子 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Line</td><td>显示的起始行(超出行宽会自动换行) </td></tr>
+    <tr><td class="paramname">Text</td><td>指向需要显示的句子的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a398e124cc5572547086d78fc9b7fc1f4" name="a398e124cc5572547086d78fc9b7fc1f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398e124cc5572547086d78fc9b7fc1f4">&#9670;&#160;</a></span>LCD_DrawAnyLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawAnyLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>X1pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Y1pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>X2pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Y2pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制任意两点之间的一条直线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X1pos</td><td>点1的X坐标 </td></tr>
+    <tr><td class="paramname">Y1pos</td><td>点1的Y坐标 </td></tr>
+    <tr><td class="paramname">X2pos</td><td>点2的X坐标 </td></tr>
+    <tr><td class="paramname">Y2pos</td><td>点2的Y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2cfdb76c5b920f5a8fcaed02cf318c45" name="a2cfdb76c5b920f5a8fcaed02cf318c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfdb76c5b920f5a8fcaed02cf318c45">&#9670;&#160;</a></span>LCD_DrawChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LCD_DrawChar </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绘制一个字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>Y坐标 </td></tr>
+    <tr><td class="paramname">c</td><td>字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a268429ba50ca073c233224309fac9f46" name="a268429ba50ca073c233224309fac9f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268429ba50ca073c233224309fac9f46">&#9670;&#160;</a></span>LCD_DrawHLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawHLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制一条水平直线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>X轴起始坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>Y轴起始坐标 </td></tr>
+    <tr><td class="paramname">Length</td><td>线的长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10cbb1fbca34e835f98e1172c2756990" name="a10cbb1fbca34e835f98e1172c2756990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10cbb1fbca34e835f98e1172c2756990">&#9670;&#160;</a></span>LCD_DrawPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawPixel </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>RGB_Code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制一个点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>X轴坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>Y轴坐标 </td></tr>
+    <tr><td class="paramname">RGB_Code</td><td>像素颜色值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a370ea7eacea2dd8fcc352ce8dcbaa151" name="a370ea7eacea2dd8fcc352ce8dcbaa151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370ea7eacea2dd8fcc352ce8dcbaa151">&#9670;&#160;</a></span>LCD_DrawVLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawVLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制一条垂直直线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>X轴起始坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>Y轴起始坐标 </td></tr>
+    <tr><td class="paramname">Length</td><td>线的长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adfc663e63fa8138ef0c4f4a1b31c7807" name="adfc663e63fa8138ef0c4f4a1b31c7807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc663e63fa8138ef0c4f4a1b31c7807">&#9670;&#160;</a></span>LCD_FillRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_FillRect </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>填充一个实心矩形 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>矩形起始位置的X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>矩形起始位置的Y坐标 </td></tr>
+    <tr><td class="paramname">Width</td><td>矩形宽度 </td></tr>
+    <tr><td class="paramname">Height</td><td>矩形高度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8047c26258565d29a4cbd5d4d831a87e" name="a8047c26258565d29a4cbd5d4d831a87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8047c26258565d29a4cbd5d4d831a87e">&#9670;&#160;</a></span>LCD_GetBackColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LCD_GetBackColor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取LCD当前层的文字背景颜色 </p>
+<dl class="section return"><dt>返回</dt><dd>uint32_t 文字背景颜色 </dd></dl>
+
+</div>
+</div>
+<a id="a7b2f00b73ed9209df1077ec5a975cc37" name="a7b2f00b73ed9209df1077ec5a975cc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2f00b73ed9209df1077ec5a975cc37">&#9670;&#160;</a></span>LCD_GetFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sFONT * LCD_GetFont </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取LCD当前层显示的字体 </p>
+<dl class="section return"><dt>返回</dt><dd>sFONT* LCD当前层的字体类型 </dd></dl>
+
+</div>
+</div>
+<a id="aaf28c2494c1a232d68d8b63af20ea3ec" name="aaf28c2494c1a232d68d8b63af20ea3ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf28c2494c1a232d68d8b63af20ea3ec">&#9670;&#160;</a></span>LCD_GetStartAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t LCD_GetStartAddress </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaab8858f03c8bce1aaef2ca960c9009f" name="aaab8858f03c8bce1aaef2ca960c9009f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaab8858f03c8bce1aaef2ca960c9009f">&#9670;&#160;</a></span>LCD_GetTextColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LCD_GetTextColor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取LCD当前层的文字颜色 </p>
+<dl class="section return"><dt>返回</dt><dd>uint32_t 文字颜色 </dd></dl>
+
+</div>
+</div>
+<a id="a6a405abda5e830f0f33dacfd21ec1e51" name="a6a405abda5e830f0f33dacfd21ec1e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a405abda5e830f0f33dacfd21ec1e51">&#9670;&#160;</a></span>LCD_GetXSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LCD_GetXSize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取LCD当前层X轴的大小 </p>
+<dl class="section return"><dt>返回</dt><dd>uint32_t X轴的大小 </dd></dl>
+
+</div>
+</div>
+<a id="aadafb98eeb93c99b8468d36e406ac90e" name="aadafb98eeb93c99b8468d36e406ac90e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadafb98eeb93c99b8468d36e406ac90e">&#9670;&#160;</a></span>LCD_GetYSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LCD_GetYSize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取LCD当前层Y轴的大小 </p>
+<dl class="section return"><dt>返回</dt><dd>uint32_t Y轴的大小 </dd></dl>
+
+</div>
+</div>
+<a id="a1fb167c16cf7ec34f8170915d2302b7a" name="a1fb167c16cf7ec34f8170915d2302b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb167c16cf7ec34f8170915d2302b7a">&#9670;&#160;</a></span>LCD_LayerInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_LayerInit </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>FB_Address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>PixelFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>层级初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>要设置的层 </td></tr>
+    <tr><td class="paramname">FB_Address</td><td>该层的显存首地址 </td></tr>
+    <tr><td class="paramname">PixelFormat</td><td>该层的像素格式 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0735470c4c9bc0130dd03ae6cb2b056" name="ac0735470c4c9bc0130dd03ae6cb2b056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0735470c4c9bc0130dd03ae6cb2b056">&#9670;&#160;</a></span>LCD_ReadPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LCD_ReadPixel </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取LCD的像素值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Xpos</td><td>需要读取的像素点的X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>需要读取的像素点的Y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint32_t 指定像素点的像素值 </dd></dl>
+
+</div>
+</div>
+<a id="af1420ea7b39dd570d4d6edbf789f7640" name="af1420ea7b39dd570d4d6edbf789f7640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1420ea7b39dd570d4d6edbf789f7640">&#9670;&#160;</a></span>LCD_SelectLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SelectLayer </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>选择LCD的当前层 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeca000116f289bc36b8892a6c64164dd" name="aeca000116f289bc36b8892a6c64164dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca000116f289bc36b8892a6c64164dd">&#9670;&#160;</a></span>LCD_SetBackColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetBackColor </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层的文字背景颜色 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Color</td><td>文字背景颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab06250d18ef0123a92381333a7e464e0" name="ab06250d18ef0123a92381333a7e464e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06250d18ef0123a92381333a7e464e0">&#9670;&#160;</a></span>LCD_SetColors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetColors </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>TextColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>BackColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层的文字颜色和文字背景颜色 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TextColor</td><td>文字颜色 </td></tr>
+    <tr><td class="paramname">BackColor</td><td>文字背景颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c26f6fcddd0bf89f71d71131c7a206a" name="a6c26f6fcddd0bf89f71d71131c7a206a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c26f6fcddd0bf89f71d71131c7a206a">&#9670;&#160;</a></span>LCD_SetFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetFont </td>
+          <td>(</td>
+          <td class="paramtype">sFONT *&#160;</td>
+          <td class="paramname"><em>fonts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层显示的字体 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonts</td><td>字体类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="affaff29c7f76c5bb37da2501f9799aaf" name="affaff29c7f76c5bb37da2501f9799aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affaff29c7f76c5bb37da2501f9799aaf">&#9670;&#160;</a></span>LCD_SetLayerAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetLayerAddress </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD缓冲帧的首地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+    <tr><td class="paramname">Address</td><td>LCD缓冲帧的首地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b7c3b9a5af160da3faedc9baa0bf459" name="a4b7c3b9a5af160da3faedc9baa0bf459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7c3b9a5af160da3faedc9baa0bf459">&#9670;&#160;</a></span>LCD_SetLayerVisible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetLayerVisible </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FunctionalState&#160;</td>
+          <td class="paramname"><em>State</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD层的可视化(即禁止或使能某一层) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+    <tr><td class="paramname">State</td><td>禁止或使能 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa97156afb28b2fb2877ae97efa92f3ee" name="aa97156afb28b2fb2877ae97efa92f3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97156afb28b2fb2877ae97efa92f3ee">&#9670;&#160;</a></span>LCD_SetLayerWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetLayerWindow </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置显示窗口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td></td></tr>
+    <tr><td class="paramname">Xpos</td><td>窗口起始位置X坐标 </td></tr>
+    <tr><td class="paramname">Ypos</td><td>窗口起始位置Y坐标 </td></tr>
+    <tr><td class="paramname">Width</td><td>窗口宽度 </td></tr>
+    <tr><td class="paramname">Height</td><td>窗口高度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31a4bb3bde55452bbb8370f5d935e41d" name="a31a4bb3bde55452bbb8370f5d935e41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a4bb3bde55452bbb8370f5d935e41d">&#9670;&#160;</a></span>LCD_SetTextColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetTextColor </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层的文字颜色 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Color</td><td>文字颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0568836139e5177b6ce37e470e255c77" name="a0568836139e5177b6ce37e470e255c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0568836139e5177b6ce37e470e255c77">&#9670;&#160;</a></span>LCD_SetTransparency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetTransparency </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Transparency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD的透明度常量，即Alpha </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+    <tr><td class="paramname">Transparency</td><td>透明度，范围(0-255)，0为完全透明 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e3dca6342e3dd739edbec8a23488e56" name="a8e3dca6342e3dd739edbec8a23488e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3dca6342e3dd739edbec8a23488e56">&#9670;&#160;</a></span>LCD_SetXSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetXSize </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>imageWidthPixels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层X轴的大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageHeightPixels</td><td>图像宽度像素个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a320415ea9b549dd0a4fa2452bde4565c" name="a320415ea9b549dd0a4fa2452bde4565c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320415ea9b549dd0a4fa2452bde4565c">&#9670;&#160;</a></span>LCD_SetYSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetYSize </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>imageHeightPixels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置LCD当前层Y轴的大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageHeightPixels</td><td>图像高度像素个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a846fbcfe435b2eb20d412c1793350a03" name="a846fbcfe435b2eb20d412c1793350a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a846fbcfe435b2eb20d412c1793350a03">&#9670;&#160;</a></span>LL_FillBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LL_FillBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>LayerIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>xSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ySize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>OffLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ColorIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>填充一个缓冲区 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LayerIndex</td><td>1：前景层 0：背景层 </td></tr>
+    <tr><td class="paramname">pDst</td><td>指向目标缓冲区的指针 </td></tr>
+    <tr><td class="paramname">xSize</td><td>缓冲区宽度 </td></tr>
+    <tr><td class="paramname">ySize</td><td>缓冲区高度 </td></tr>
+    <tr><td class="paramname">OffLine</td><td>偏移量 </td></tr>
+    <tr><td class="paramname">ColorIndex</td><td>填充颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6657ebb2be9c7538015074a022af9d3c" name="a6657ebb2be9c7538015074a022af9d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6657ebb2be9c7538015074a022af9d3c">&#9670;&#160;</a></span>LTDC_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LTDC_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05a9b470a504b444eb29d34bea640652" name="a05a9b470a504b444eb29d34bea640652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a9b470a504b444eb29d34bea640652">&#9670;&#160;</a></span>LTDC_GPIO_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LTDC_GPIO_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="acd3770d26b39dab77fde9d1cbfd261f9" name="acd3770d26b39dab77fde9d1cbfd261f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd3770d26b39dab77fde9d1cbfd261f9">&#9670;&#160;</a></span>ActiveLayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ActiveLayer = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0eb77858345f8c20c4be148635925c01" name="a0eb77858345f8c20c4be148635925c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb77858345f8c20c4be148635925c01">&#9670;&#160;</a></span>DMA2D_Handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DMA2D_HandleTypeDef DMA2D_Handle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad781f76dabee52f2a0f804e889874669" name="ad781f76dabee52f2a0f804e889874669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad781f76dabee52f2a0f804e889874669">&#9670;&#160;</a></span>DrawProp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_l_c_d___draw_prop_type_def.html">LCD_DrawPropTypeDef</a> DrawProp[<a class="el" href="bsp__lcd_8h.html#a03f08faebee92aa36fbcbf4cf77b5173">MAX_LAYER_NUMBER</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18f37c5ed8952025a1be088b131f0cb3" name="a18f37c5ed8952025a1be088b131f0cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f37c5ed8952025a1be088b131f0cb3">&#9670;&#160;</a></span>LTDC_Handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LTDC_HandleTypeDef LTDC_Handle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
